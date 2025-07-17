@@ -1,7 +1,7 @@
 // components/layout/Navigation.tsx
 "use client";
 
-import React, { useState, useTransition } from "react";
+import React, { useState, useTransition, useRef, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Svgs } from "../constants";
 import { Locale } from "@/i18n/config";
@@ -25,16 +25,38 @@ interface NavigationProps {
   onSectionClick: (sectionId: string) => void;
 }
 
+// Custom hook for click outside detection
+const useClickOutside = (handler: () => void) => {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        handler();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [handler]);
+
+  return ref;
+};
+
 export const Navigation: React.FC<NavigationProps> = ({ onSectionClick }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
 
-  // Get current locale from i18n
   const currentLocale = useLocale() as Locale;
   const t = useTranslations("navigation");
 
-  // Get navigation items from translations
+  // References for click outside detection
+  const mobileMenuRef = useClickOutside(() => setMobileMenuOpen(false));
+  const languageMenuRef = useClickOutside(() => setLanguageMenuOpen(false));
+
   const navigationItems = [
     { id: "home", label: t("home"), href: "#home" },
     { id: "about", label: t("about"), href: "#about" },
@@ -82,10 +104,10 @@ export const Navigation: React.FC<NavigationProps> = ({ onSectionClick }) => {
             ))}
           </div>
 
-          {/* Desktop Language Selector & Mobile Menu Button */}
+          {/* Right Side - Language Selector & Mobile Menu Button */}
           <div className="flex items-center space-x-3">
-            {/* Language Selector */}
-            <div className="relative">
+            {/* Desktop Language Selector (Hidden on mobile) */}
+            <div className="relative hidden lg:block" ref={languageMenuRef}>
               <button
                 onClick={() => setLanguageMenuOpen(!languageMenuOpen)}
                 className={`flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-[#032685] hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium ${
@@ -95,9 +117,7 @@ export const Navigation: React.FC<NavigationProps> = ({ onSectionClick }) => {
                 disabled={isPending}
               >
                 <currentLang.flag className="w-5 h-3 rounded-sm shadow-sm" />
-                <span className="hidden sm:inline text-sm">
-                  {currentLang.name}
-                </span>
+                <span className="text-sm">{currentLang.name}</span>
                 <ChevronDown
                   className={`w-4 h-4 transition-transform duration-200 ${
                     languageMenuOpen ? "rotate-180" : ""
@@ -105,7 +125,7 @@ export const Navigation: React.FC<NavigationProps> = ({ onSectionClick }) => {
                 />
               </button>
 
-              {/* Language Dropdown */}
+              {/* Desktop Language Dropdown */}
               {languageMenuOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg py-2 z-50 animate-in slide-in-from-top duration-200">
                   {languages.map((language) => {
@@ -154,7 +174,11 @@ export const Navigation: React.FC<NavigationProps> = ({ onSectionClick }) => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-gray-200 py-2 sm:py-4 animate-in slide-in-from-top duration-200">
+          <div
+            ref={mobileMenuRef}
+            className="lg:hidden bg-white border-t border-gray-200 py-2 sm:py-4 animate-in slide-in-from-top duration-200"
+          >
+            {/* Navigation Items */}
             {navigationItems.map((item) => (
               <button
                 key={item.id}
@@ -201,14 +225,6 @@ export const Navigation: React.FC<NavigationProps> = ({ onSectionClick }) => {
           </div>
         )}
       </div>
-
-      {/* Click outside to close language menu */}
-      {languageMenuOpen && (
-        <div
-          className="fixed inset-0 z-30"
-          onClick={() => setLanguageMenuOpen(false)}
-        />
-      )}
     </nav>
   );
 };
