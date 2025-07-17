@@ -43,7 +43,7 @@ export default function AllProductsPage() {
 
   // Filter and sort products
   const filteredAndSortedProducts = useMemo(() => {
-    let filtered = products.filter((product) => {
+    const filtered = products.filter((product) => {
       const matchesCategory =
         selectedCategory === "all" || product.category === selectedCategory;
       const matchesSearch =
