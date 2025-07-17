@@ -11,11 +11,9 @@ import {
   Heart,
   BarChart3,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
 
-export const getBenefits = (): Benefit[] => {
-  const t = useTranslations();
-
+// Update the function to accept the translation function as a parameter
+export const getBenefits = (t: (key: string) => string): Benefit[] => {
   return [
     {
       icon: <Zap className="w-16 h-16 text-[#032685]" />,

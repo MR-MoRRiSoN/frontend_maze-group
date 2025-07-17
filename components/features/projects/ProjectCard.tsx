@@ -7,7 +7,7 @@ interface ProjectCardProps {
   project: Project;
   onViewDetails: (project: Project) => void;
   animationDelay?: number;
-  className: any;
+  className: string;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({

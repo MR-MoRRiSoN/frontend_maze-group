@@ -6,7 +6,7 @@ interface CardProps {
   className?: string;
   hoverable?: boolean;
   padding?: "sm" | "md" | "lg";
-  style?: any;
+  style?: React.CSSProperties;
 }
 
 export const Card: React.FC<CardProps> = ({

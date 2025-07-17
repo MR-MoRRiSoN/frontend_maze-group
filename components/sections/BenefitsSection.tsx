@@ -65,9 +65,12 @@ const BenefitCard: React.FC<BenefitCardProps> = ({
   // Safe icon rendering with type checking
   const renderIcon = (): React.ReactElement => {
     if (React.isValidElement(benefit.icon)) {
-      return React.cloneElement(benefit.icon as React.ReactElement<any>, {
-        className: `w-6 h-6 ${getIconTextColor(index)}`,
-      });
+      return React.cloneElement(
+        benefit.icon as React.ReactElement<React.SVGProps<SVGSVGElement>>,
+        {
+          className: `w-6 h-6 ${getIconTextColor(index)}`,
+        }
+      );
     }
     // Fallback if icon is not a valid React element
     return <div className={`w-6 h-6 ${getIconTextColor(index)}`} />;
@@ -119,7 +122,7 @@ export const BenefitsSection: React.FC<BenefitsSectionProps> = ({
   isVisible = true,
 }) => {
   const t = useTranslations();
-  const benefitsList: Benefit[] = getBenefits();
+  const benefitsList: Benefit[] = getBenefits(t);
 
   return (
     <section id="benefits" className="py-32 bg-gray-50" data-section="benefits">

@@ -9,7 +9,7 @@ interface ProductCardProps {
   onGetQuote: (product: Product) => void;
   animationDelay?: number;
   isVisible?: boolean;
-  className?: any;
+  className?: string;
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({

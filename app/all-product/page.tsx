@@ -23,7 +23,7 @@ export default function AllProductsPage() {
   // State management
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [viewMode, setViewMode] = useState<ViewMode>("grid");
+  const [viewMode] = useState<ViewMode>("grid");
   const [sortBy, setSortBy] = useState<SortOption>("name");
   const [showFilters, setShowFilters] = useState(false);
   const [selectedApplications, setSelectedApplications] = useState<string[]>(
@@ -293,7 +293,7 @@ export default function AllProductsPage() {
       <section className="bg-[#032685] text-white py-12">
         <div className="container mx-auto px-4 max-w-7xl text-center">
           <h2 className="text-xl lg:text-2xl font-bold mb-3">
-            Can't Find What You're Looking For?
+            Can&apos;t Find What You&apos;re Looking For?
           </h2>
           <p className="text-base lg:text-lg mb-6 text-blue-100">
             We specialize in custom solutions tailored to your specific needs
