@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "home": "Главная",
+    "about": "О нас",
+    "services": "Услуги",
+    "projects": "Проекты",
+    "catalog": "Каталог",
+    "contact": "Контакты",
+    "selectLanguage": "Выбрать язык",
+    "toggleMenu": "Переключить меню",
+    "language": "Язык"
+  }
+}

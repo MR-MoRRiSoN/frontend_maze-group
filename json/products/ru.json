@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "name": "Professional 4K Digital Signage Display",
+    "category": "Digital Signage",
+    "price": "Starting from $2,500",
+    "image": "https://picsum.photos/seed/signage1/600/400",
+    "images": [
+      "https://picsum.photos/seed/signage2/800/600",
+      "https://picsum.photos/seed/signage3/800/600",
+      "https://picsum.photos/seed/signage4/800/600"
+    ],
+    "description": "Commercial-grade 4K displays designed for 24/7 hospitality and corporate environments",
+    "specs": {
+      "display": "4K UHD resolution (3840x2160), IPS panel technology, 450 nits brightness",
+      "operation": "24/7 continuous operation rated, 50,000+ hour lifespan",
+      "features": "HDR10 support, Built-in media player, Anti-glare coating",
+      "connectivity": "HDMI 2.0, USB 3.0, Ethernet, WiFi, Bluetooth",
+      "management": "Remote management capability, Cloud-based content management",
+      "environmental": "Temperature range: -10°C to 50°C, IP54 protection rating",
+      "mounting": "VESA mount compatible, Wall/ceiling mount options",
+      "warranty": "3-year commercial warranty, 24/7 technical support"
+    },
+    "applications": [
+      "Hotel Lobbies",
+      "Conference Rooms",
+      "Retail Spaces",
+      "Corporate Offices"
+    ],
+    "certifications": ["CE", "FCC", "Energy Star"],
+    "dimensions": "1094 x 634 x 78 mm (without stand)"
+  },
+  {
+    "id": 2,
+    "name": "Enterprise IP Security Camera System",
+    "category": "Security",
+    "price": "Starting from $800",
+    "image": "https://picsum.photos/seed/camera1/600/400",
+    "images": [
+      "https://picsum.photos/seed/camera2/800/600",
+      "https://picsum.photos/seed/camera3/800/600",
+      "https://picsum.photos/seed/camera4/800/600",
+      "https://picsum.photos/seed/camera5/800/600"
+    ],
+    "description": "Advanced IP cameras with AI-powered detection and night vision capabilities",
+    "specs": {
+      "sensor": "4MP CMOS sensor, 1/2.8 inch progressive scan",
+      "lens": "2.8-12mm varifocal lens, F1.4 aperture",
+      "resolution": "2688 × 1520 @ 30fps, H.265+ compression",
+      "nightVision": "Advanced IR night vision up to 30m range",
+      "ai": "AI motion detection, facial recognition, line crossing detection",
+      "storage": "Cloud and local storage options, Edge recording",
+      "power": "PoE+ powered (25W), DC 12V backup option",
+      "protection": "IP67 weatherproof rating, IK10 vandal resistant",
+      "integration": "Mobile app, web browser, ONVIF compatible",
+      "warranty": "5-year warranty, free software updates"
+    },
+    "applications": [
+      "Hotel Security",
+      "Parking Areas",
+      "Perimeter Security",
+      "Indoor Monitoring"
+    ],
+    "certifications": ["IP67", "IK10", "ONVIF", "NDAA Compliant"],
+    "dimensions": "Ø111 × 82.2 mm"
+  }
+]

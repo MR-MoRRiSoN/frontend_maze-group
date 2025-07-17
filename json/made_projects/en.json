@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "name": "Hilton Batumi Resort",
+    "client": "Hilton",
+    "category": "Hotel",
+    "image": "https://picsum.photos/seed/hilton1/500/350",
+    "images": [
+      "https://picsum.photos/seed/hilton2/800/600",
+      "https://picsum.photos/seed/hilton3/800/600",
+      "https://picsum.photos/seed/hilton4/800/600",
+      "https://picsum.photos/seed/hilton5/800/600"
+    ],
+    "description": "Complete digital signage and room equipment installation",
+    "details": "Full-scale renovation including 150 rooms with smart TV systems, digital signage throughout the property, comprehensive IT infrastructure, premium carpet installation, and advanced video wall systems in lobby areas. Project completed in 6 months with zero downtime.",
+    "timeline": "6 months",
+    "budget": "$2.5M",
+    "teamSize": "25 specialists",
+    "technologies": [
+      "Digital Signage",
+      "Smart TV Systems",
+      "Video Walls",
+      "IT Infrastructure",
+      "Premium Carpets"
+    ],
+    "challenges": "Working within operational hotel environment without disrupting guest experience",
+    "solutions": "Phased implementation during low-occupancy periods, dedicated guest liaison team",
+    "results": "40% increase in guest satisfaction scores, 25% reduction in front desk inquiries"
+  },
+  {
+    "id": 2,
+    "name": "Ministry Defense Center",
+    "client": "Ministry of Defence",
+    "category": "Government",
+    "image": "https://picsum.photos/seed/defense1/500/350",
+    "images": [
+      "https://picsum.photos/seed/defense2/800/600",
+      "https://picsum.photos/seed/defense3/800/600",
+      "https://picsum.photos/seed/defense4/800/600"
+    ],
+    "description": "Secure IT infrastructure and video wall systems",
+    "details": "Advanced security systems implementation, 12-panel video wall installation for command center, complete network infrastructure overhaul, secure server deployment, and specialized communication equipment. High-security clearance project completed with military-grade specifications.",
+    "timeline": "8 months",
+    "budget": "$3.2M",
+    "teamSize": "15 certified specialists",
+    "technologies": [
+      "Video Wall Systems",
+      "Secure Servers",
+      "Military-grade Networks",
+      "Access Control"
+    ],
+    "challenges": "Highest security clearance requirements, zero-tolerance for downtime",
+    "solutions": "Security-cleared team, redundant systems, 24/7 monitoring implementation",
+    "results": "100% uptime achieved, enhanced national security capabilities"
+  },
+  {
+    "id": 3,
+    "name": "Marriott Courtyard Tbilisi",
+    "client": "Marriott",
+    "category": "Hotel",
+    "image": "https://picsum.photos/seed/marriott1/500/350",
+    "images": [
+      "https://picsum.photos/seed/marriott2/800/600",
+      "https://picsum.photos/seed/marriott3/800/600",
+      "https://picsum.photos/seed/marriott4/800/600",
+      "https://picsum.photos/seed/marriott5/800/600",
+      "https://picsum.photos/seed/marriott6/800/600"
+    ],
+    "description": "Modern room technology and digital displays",
+    "details": "Smart room technology integration across 200 rooms, lobby digital displays network, premium carpet installation, advanced WiFi infrastructure, and guest experience enhancement systems. Completed during operational hours with minimal guest disruption.",
+    "timeline": "4 months",
+    "budget": "$1.8M",
+    "teamSize": "20 specialists",
+    "technologies": [
+      "Smart Room Tech",
+      "Digital Displays",
+      "WiFi 6",
+      "Guest Experience Systems"
+    ],
+    "challenges": "Integration with existing Marriott systems, maintaining brand standards",
+    "solutions": "Custom API development, brand-compliant installations, extensive testing",
+    "results": "35% improvement in guest tech satisfaction, 50% faster check-in process"
+  },
+  {
+    "id": 4,
+    "name": "Sheraton Grand Batumi",
+    "client": "Sheraton",
+    "category": "Hotel",
+    "image": "https://picsum.photos/seed/sheraton1/500/350",
+    "images": [
+      "https://picsum.photos/seed/sheraton2/800/600",
+      "https://picsum.photos/seed/sheraton3/800/600",
+      "https://picsum.photos/seed/sheraton4/800/600",
+      "https://picsum.photos/seed/sheraton5/800/600"
+    ],
+    "description": "Luxury hotel technology upgrade and interior solutions",
+    "details": "Complete technology modernization of 180 luxury rooms, advanced digital concierge systems, premium carpet and furniture installation, state-of-the-art conference room equipment, and integrated guest experience platforms.",
+    "timeline": "5 months",
+    "budget": "$2.1M",
+    "teamSize": "22 specialists",
+    "technologies": [
+      "Digital Concierge",
+      "Conference Systems",
+      "Luxury Furnishing",
+      "Guest Experience Platform"
+    ],
+    "challenges": "Maintaining luxury standards while upgrading technology infrastructure",
+    "solutions": "White-glove service approach, premium material sourcing, seamless integration",
+    "results": "45% increase in guest technology satisfaction, 30% improvement in conference bookings"
+  },
+  {
+    "id": 5,
+    "name": "Swiss Hotel Tbilisi",
+    "client": "Swiss Hotel",
+    "category": "Hotel",
+    "image": "https://picsum.photos/seed/swiss1/500/350",
+    "images": [
+      "https://picsum.photos/seed/swiss2/800/600",
+      "https://picsum.photos/seed/swiss3/800/600",
+      "https://picsum.photos/seed/swiss4/800/600"
+    ],
+    "description": "Boutique hotel digital transformation",
+    "details": "Intimate 85-room boutique hotel transformation including personalized digital guest services, custom carpet design and installation, specialized lighting systems, and integrated property management technology.",
+    "timeline": "3 months",
+    "budget": "$950K",
+    "teamSize": "12 specialists",
+    "technologies": [
+      "Personalized Digital Services",
+      "Custom Carpet Design",
+      "Specialized Lighting",
+      "Property Management Systems"
+    ],
+    "challenges": "Preserving boutique character while modernizing infrastructure",
+    "solutions": "Custom design approach, heritage-sensitive installations, personalized guest tech",
+    "results": "50% increase in guest personalization scores, 20% boost in repeat bookings"
+  },
+  {
+    "id": 6,
+    "name": "GT Group Corporate HQ",
+    "client": "GT Group",
+    "category": "Corporate",
+    "image": "https://picsum.photos/seed/gtgroup1/500/350",
+    "images": [
+      "https://picsum.photos/seed/gtgroup2/800/600",
+      "https://picsum.photos/seed/gtgroup3/800/600",
+      "https://picsum.photos/seed/gtgroup4/800/600",
+      "https://picsum.photos/seed/gtgroup5/800/600"
+    ],
+    "description": "Corporate headquarters technology infrastructure",
+    "details": "Modern corporate environment creation including advanced video conferencing systems, digital workplace solutions, premium office carpet installation, integrated communication networks, and smart building technologies across 15 floors.",
+    "timeline": "7 months",
+    "budget": "$2.8M",
+    "teamSize": "30 specialists",
+    "technologies": [
+      "Video Conferencing",
+      "Digital Workplace",
+      "Smart Building Tech",
+      "Integrated Communications"
+    ],
+    "challenges": "Coordinating with ongoing business operations, multi-floor complexity",
+    "solutions": "Phased deployment strategy, after-hours installation, comprehensive testing protocols",
+    "results": "60% improvement in meeting efficiency, 40% reduction in IT support tickets"
+  }
+]

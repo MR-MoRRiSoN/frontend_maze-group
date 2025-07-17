@@ -1,0 +1,252 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "catalog": "Catalog",
+    "contact": "Contact",
+    "selectLanguage": "Select language",
+    "toggleMenu": "Toggle menu",
+    "language": "Language"
+  },
+  "loading": {
+    "title": "Loading...",
+    "description": "Preparing your IT and Hospitality solutions",
+    "innovation": "Innovation"
+  },
+  "hero": {
+    "title": "Leading IT and Hospitality Integrator in the Caucasus",
+    "description": "Providing full-service solutions for hotels and government sectors from digital signage to complete room equipment.",
+    "discoverStory": "Discover our story",
+    "discoverWork": "Discover our work"
+  },
+  "stats": {
+    "completedProjects": "Completed Projects",
+    "globalPartners": "Global Partners",
+    "supportAvailable": "Support Available",
+    "clientSatisfaction": "Client Satisfaction"
+  },
+  "about": {
+    "title": "About Maze Group",
+    "missionTitle": "Our Mission",
+    "missionDescription1": "We are a trusted IT and hospitality integrator in the Caucasus, delivering 100+ projects for global hotel brands and public institutions.",
+    "missionDescription2": "Our services range from video wall systems to complete room equipment — tailored to every client's needs with precision and excellence.",
+    "yearsExperience": "Years Experience",
+    "countriesServed": "Countries Served",
+    "expertTeam": "Expert Team",
+    "qualityRating": "Quality Rating"
+  },
+  "whyUs": {
+    "title": "Why Choose Maze Group?",
+    "subtitle": "We deliver excellence through proven expertise, cutting-edge technology, and unwavering commitment to client success.",
+    "reasons": {
+      "successfulProjects": {
+        "title": "100+ Successful Projects",
+        "description": "Proven track record across the Caucasus region with zero project failures"
+      },
+      "completeSolutions": {
+        "title": "Complete Solutions",
+        "description": "From IT infrastructure to interior equipment, we handle everything"
+      },
+      "completeService": {
+        "title": "Complete Service",
+        "description": "Consulting, delivery, setup & support"
+      },
+      "proTeam": {
+        "title": "Pro Team",
+        "description": "Certified & experienced"
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We specialize in delivering comprehensive solutions tailored to the unique needs of both hospitality and governmental clients.",
+    "keyFeatures": "Key Features",
+    "benefits": "Benefits",
+    "items": {
+      "digitalSignage": {
+        "title": "Hotel Screens & Digital Signage",
+        "description": "Professional display solutions including lobby displays, wayfinding systems, and room information screens designed for hospitality environments",
+        "features": [
+          "4K Display Solutions",
+          "Interactive Wayfinding",
+          "Content Management",
+          "Brand Integration"
+        ],
+        "benefits": [
+          "Enhanced Guest Experience",
+          "Reduced Staff Workload",
+          "Dynamic Content Updates",
+          "Professional Appearance"
+        ]
+      },
+      "videoWalls": {
+        "title": "Video Walls & Controllers",
+        "description": "Large-scale video wall installations with advanced control systems for lobbies, conference centers, and command rooms",
+        "features": [
+          "Seamless Multi-Display",
+          "4K Processing",
+          "Remote Management",
+          "Custom Layouts"
+        ],
+        "benefits": [
+          "Impressive Visual Impact",
+          "Centralized Control",
+          "Scalable Solutions",
+          "Reliable Operation"
+        ]
+      },
+      "itInfrastructure": {
+        "title": "Servers & IT Infrastructure",
+        "description": "Enterprise-grade server solutions, network infrastructure, and comprehensive IT systems for modern hospitality operations",
+        "features": [
+          "Cloud Integration",
+          "Security Solutions",
+          "Backup Systems",
+          "24/7 Monitoring"
+        ],
+        "benefits": [
+          "High Availability",
+          "Data Security",
+          "Performance Optimization",
+          "Cost Efficiency"
+        ]
+      },
+      "roomEquipment": {
+        "title": "Carpets & Room Equipment",
+        "description": "Premium furnishings, commercial-grade carpets, and specialized equipment for hotel rooms and public spaces",
+        "features": [
+          "Custom Designs",
+          "Commercial Grade",
+          "Easy Maintenance",
+          "Fire Resistant"
+        ],
+        "benefits": [
+          "Enhanced Aesthetics",
+          "Durability",
+          "Cost Effective",
+          "Safety Compliance"
+        ]
+      }
+    }
+  },
+  "benefits": {
+    "title": "Benefits of Partnering with Us",
+    "subtitle": "Working with us means more than just hiring a service — it means partnering with a team dedicated to your success.",
+    "lightningFast": {
+      "title": "Lightning Fast Results",
+      "description": "Get your projects completed faster than ever with our streamlined processes and expert team.",
+      "stats": {
+        "speed": "300%",
+        "efficiency": "95%",
+        "satisfaction": "98%"
+      }
+    },
+    "qualityGuaranteed": {
+      "title": "Quality Guaranteed",
+      "description": "Every project undergoes rigorous quality checks to ensure excellence in every detail.",
+      "stats": {
+        "quality": "99.9%",
+        "reviews": "4.9★",
+        "repeat": "89%"
+      }
+    },
+    "expertTeam": {
+      "title": "Expert Team",
+      "description": "Work with seasoned professionals who bring years of experience to your project.",
+      "stats": {
+        "experience": "10+ yrs",
+        "experts": "50+",
+        "success": "100%"
+      }
+    },
+    "costEffective": {
+      "title": "Cost Effective",
+      "description": "Get maximum value for your investment with our competitive pricing and transparent costs.",
+      "stats": {
+        "savings": "40%",
+        "value": "150%",
+        "roi": "250%"
+      }
+    },
+    "support247": {
+      "title": "24/7 Support",
+      "description": "Round-the-clock support ensures your project never stalls and questions are answered instantly.",
+      "stats": {
+        "uptime": "99.9%",
+        "response": "< 1hr",
+        "support": "24/7"
+      }
+    },
+    "realTimeAnalytics": {
+      "title": "Real-Time Analytics",
+      "description": "Monitor performance metrics, audience engagement, and content effectiveness with comprehensive analytics dashboards.",
+      "stats": {
+        "insights": "Real-time",
+        "metrics": "50+",
+        "reports": "Daily"
+      }
+    }
+  },
+  "companies": {
+    "title": "Trusted by Industry Leaders",
+    "subtitle": "We are proud to work with global hotel chains, independent properties, and government organizations, delivering projects that meet the highest international standards.",
+    "labels": {
+      "trustedPartner": "Trusted Partner",
+      "premiumPartnership": "Premium Partnership",
+      "globalExcellence": "Global Excellence",
+      "industryLeader": "Industry Leader",
+      "strategicAlliance": "Strategic Alliance"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Ready to transform your hospitality or enterprise environment? Contact our expert team today.",
+    "phone": {
+      "title": "Call Us Direct",
+      "number1": "+995 514 107 878",
+      "number2": "+995 598 505 522",
+      "subtitle": "Available 24/7 for emergencies"
+    },
+    "email": {
+      "title": "Email Us",
+      "address1": "info@mazegroup.ge",
+      "address2": "projects@mazegroup.ge",
+      "subtitle": "Response within 2 hours"
+    },
+    "office": {
+      "title": "Visit Our Office",
+      "location1": "Tbilisi, Georgia",
+      "location2": "Caucasus Region HQ",
+      "subtitle": "Monday - Friday, 9AM - 6PM"
+    },
+    "cta": "Start Your Project Today"
+  },
+  "whatsapp": {
+    "title": "Contact Us via WhatsApp",
+    "subtitle": "Send us a message directly",
+    "closeButton": "Close",
+    "phoneLabel": "Choose Phone Number",
+    "quickRepliesLabel": "Quick Replies",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Type your message here...",
+    "sendButton": "Send via WhatsApp"
+  },
+  "projects": {
+    "featuredProjects": "Featured Projects",
+    "showcaseSubtitle": "Showcasing our expertise across hospitality and government sectors",
+    "startYourProject": "Start Your Project",
+    "seeAllProjects": "See All Projects"
+  },
+  "catalog": {
+    "title": "Product Catalog",
+    "subtitle": "Browse our comprehensive range of professional products and solutions for hospitality and enterprise environments.",
+    "searchPlaceholder": "Search products, specifications...",
+    "allCategories": "All Categories",
+    "advanced": "Advanced",
+    "filters": "Filters",
+    "requestCustomSolution": "Request Custom Solution",
+    "viewAllProducts": "View All Products"
+  }
+}
