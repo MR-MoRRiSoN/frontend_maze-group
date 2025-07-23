@@ -42,7 +42,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ isVisible }) => {
                   <div className="bg-[#e6f2ff] rounded-xl lg:rounded-2xl p-4 lg:p-6 text-center">
                     <Award className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-[#032685] mx-auto mb-2 lg:mb-3" />
                     <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#032685]">
-                      15+
+                      7+
                     </div>
                     <div className="text-xs sm:text-sm lg:text-base text-gray-600 font-semibold">
                       {t("yearsExperience")}

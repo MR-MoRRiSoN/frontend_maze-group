@@ -204,7 +204,7 @@ export const WhyUsSection: React.FC<WhyUsSectionProps> = ({ isVisible }) => {
       icon: <Star className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20" />,
       title: t("reasons.proTeam.title"),
       desc: t("reasons.proTeam.description"),
-      metric: "15+ Years",
+      metric: "7+ Years",
       numericValue: 15,
     },
   ];

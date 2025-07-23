@@ -182,9 +182,9 @@ export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
                       />
                     </div>
                   </div>
-                  <p className="text-gray-600 text-sm sm:text-base lg:text-lg font-semibold group-hover:text-blue-600 transition-colors duration-300">
+                  {/* <p className="text-gray-600 text-sm sm:text-base lg:text-lg font-semibold group-hover:text-blue-600 transition-colors duration-300">
                     {t("companies.labels.premiumPartnership")}
-                  </p>
+                  </p> */}
                 </Card>
               ))}
             </div>
@@ -217,9 +217,9 @@ export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
                       />
                     </div>
                   </div>
-                  <p className="text-gray-600 text-sm sm:text-base lg:text-lg font-semibold group-hover:text-purple-600 transition-colors duration-300">
+                  {/* <p className="text-gray-600 text-sm sm:text-base lg:text-lg font-semibold group-hover:text-purple-600 transition-colors duration-300">
                     {t("companies.labels.globalExcellence")}
-                  </p>
+                  </p> */}
                 </Card>
               ))}
             </div>
@@ -252,9 +252,9 @@ export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
                       />
                     </div>
                   </div>
-                  <p className="text-gray-600 text-sm sm:text-base lg:text-lg font-semibold group-hover:text-green-600 transition-colors duration-300">
+                  {/* <p className="text-gray-600 text-sm sm:text-base lg:text-lg font-semibold group-hover:text-green-600 transition-colors duration-300">
                     {t("companies.labels.industryLeader")}
-                  </p>
+                  </p> */}
                 </Card>
               ))}
             </div>
@@ -285,9 +285,9 @@ export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
                       />
                     </div>
                   </div>
-                  <p className="text-gray-600 text-sm sm:text-base lg:text-lg font-semibold group-hover:text-orange-600 transition-colors duration-300">
+                  {/* <p className="text-gray-600 text-sm sm:text-base lg:text-lg font-semibold group-hover:text-orange-600 transition-colors duration-300">
                     {t("companies.labels.strategicAlliance")}
-                  </p>
+                  </p> */}
                 </Card>
               ))}
             </div>
