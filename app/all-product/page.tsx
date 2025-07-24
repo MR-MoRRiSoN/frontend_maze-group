@@ -2,6 +2,7 @@
 import React, { useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { Search, Filter, ArrowLeft, SlidersHorizontal } from "lucide-react";
+import { useTranslations, useLocale } from "next-intl";
 import { Navigation } from "@/components/layout/Navigation";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { WhatsAppCard } from "@/components/features/contact/WhatsAppCard";
@@ -10,7 +11,7 @@ import { Card } from "@/components/ui/Card";
 import { ProductCard } from "@/components/features/products/ProductCard";
 import { useWhatsApp } from "@/lib/hooks/useWhatsApp";
 import { scrollToSection } from "@/lib/utils/helpers";
-import { products } from "@/lib/data/products";
+import { getProductsByLocale } from "@/lib/data/products";
 import { Product } from "@/types/product";
 
 type ViewMode = "grid" | "list";
@@ -19,6 +20,11 @@ type SortOption = "name" | "category" | "newest" | "popular";
 export default function AllProductsPage() {
   const router = useRouter();
   const whatsapp = useWhatsApp();
+  const t = useTranslations();
+  const locale = useLocale();
+
+  // Get products based on current locale
+  const products = useMemo(() => getProductsByLocale(locale), [locale]);
 
   // State management
   const [searchTerm, setSearchTerm] = useState("");
@@ -33,12 +39,12 @@ export default function AllProductsPage() {
   // Get unique categories and applications
   const categories = useMemo(
     () => ["all", ...new Set(products.map((p) => p.category))],
-    []
+    [products]
   );
 
   const applications = useMemo(
     () => [...new Set(products.flatMap((p) => p.applications || []))],
-    []
+    [products]
   );
 
   // Filter and sort products
@@ -129,21 +135,20 @@ export default function AllProductsPage() {
                 className="flex items-center gap-2 w-fit"
               >
                 <ArrowLeft className="w-4 h-4" />
-                <span>Back</span>
+                <span>{t("allProducts.back")}</span>
               </Button>
               <div>
                 <h1 className="text-2xl lg:text-3xl font-bold text-gray-900">
-                  All Products
+                  {t("allProducts.title")}
                 </h1>
                 <p className="text-sm lg:text-base text-gray-600 mt-1">
-                  Discover our complete range of professional solutions
+                  {t("allProducts.subtitle")}
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       {/* Filters and Search Section - Improved layout */}
       <section className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 max-w-7xl py-4">
@@ -154,7 +159,7 @@ export default function AllProductsPage() {
                 <Search className="absolute left-3 top-3 w-4 h-4 text-gray-400" />
                 <input
                   type="text"
-                  placeholder="Search products..."
+                  placeholder={t("allProducts.searchPlaceholder")}
                   className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#032685] focus:border-transparent text-sm"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
@@ -171,7 +176,9 @@ export default function AllProductsPage() {
               >
                 {categories.map((category) => (
                   <option key={category} value={category}>
-                    {category === "all" ? "All Categories" : category}
+                    {category === "all"
+                      ? t("allProducts.allCategories")
+                      : category}
                   </option>
                 ))}
               </select>
@@ -184,10 +191,14 @@ export default function AllProductsPage() {
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as SortOption)}
               >
-                <option value="name">Sort by Name</option>
-                <option value="category">Sort by Category</option>
-                <option value="newest">Newest First</option>
-                <option value="popular">Oldest First</option>
+                <option value="name">{t("allProducts.sortBy.name")}</option>
+                <option value="category">
+                  {t("allProducts.sortBy.category")}
+                </option>
+                <option value="newest">{t("allProducts.sortBy.newest")}</option>
+                <option value="popular">
+                  {t("allProducts.sortBy.oldest")}
+                </option>
               </select>
             </div>
 
@@ -200,7 +211,9 @@ export default function AllProductsPage() {
                 className="flex items-center gap-2 whitespace-nowrap"
               >
                 <SlidersHorizontal className="w-4 h-4" />
-                <span className="hidden sm:inline">Filters</span>
+                <span className="hidden sm:inline">
+                  {t("allProducts.filters")}
+                </span>
               </Button>
               <Button
                 variant="outline"
@@ -208,7 +221,7 @@ export default function AllProductsPage() {
                 onClick={clearFilters}
                 className="whitespace-nowrap"
               >
-                Clear
+                {t("allProducts.clear")}
               </Button>
             </div>
           </div>
@@ -220,7 +233,7 @@ export default function AllProductsPage() {
                 {/* Applications Filter */}
                 <div className="md:col-span-2">
                   <h3 className="font-semibold text-gray-900 mb-3 text-sm">
-                    Applications
+                    {t("allProducts.applications")}
                   </h3>
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 max-h-32 overflow-y-auto">
                     {applications.map((application) => (
@@ -246,7 +259,6 @@ export default function AllProductsPage() {
           )}
         </div>
       </section>
-
       {/* Products Section */}
       <section className="py-8">
         <div className="container mx-auto px-4 max-w-7xl">
@@ -255,13 +267,13 @@ export default function AllProductsPage() {
               <div className="text-gray-500">
                 <Filter className="w-12 h-12 mx-auto mb-4 text-gray-300" />
                 <h3 className="text-lg font-semibold mb-2">
-                  No products found
+                  {t("allProducts.noProducts.title")}
                 </h3>
                 <p className="text-gray-600 mb-4 text-sm">
-                  Try adjusting your search criteria or filters
+                  {t("allProducts.noProducts.description")}
                 </p>
                 <Button size="sm" onClick={clearFilters}>
-                  Clear All Filters
+                  {t("allProducts.noProducts.clearFilters")}
                 </Button>
               </div>
             </Card>
@@ -269,7 +281,7 @@ export default function AllProductsPage() {
             <div
               className={`grid gap-8 ${
                 viewMode === "grid"
-                  ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3" // Even fewer columns
+                  ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3"
                   : "grid-cols-1 max-w-3xl mx-auto"
               }`}
             >
@@ -281,22 +293,20 @@ export default function AllProductsPage() {
                   onGetQuote={handleProductContact}
                   animationDelay={index * 50}
                   isVisible={true}
-                  //  compact={true}
                 />
               ))}
             </div>
           )}
         </div>
       </section>
-
       {/* Call to Action Section - Reduced size */}
       <section className="bg-[#032685] text-white py-12">
         <div className="container mx-auto px-4 max-w-7xl text-center">
           <h2 className="text-xl lg:text-2xl font-bold mb-3">
-            Can&apos;t Find What You&apos;re Looking For?
+            {t("allProducts.cta.title")}
           </h2>
           <p className="text-base lg:text-lg mb-6 text-blue-100">
-            We specialize in custom solutions tailored to your specific needs
+            {t("allProducts.cta.subtitle")}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button
@@ -305,7 +315,7 @@ export default function AllProductsPage() {
               className="border-white text-white hover:bg-white hover:text-[#032685]"
               onClick={() => whatsapp.setIsOpen(true)}
             >
-              Request Custom Solution
+              {t("allProducts.cta.requestCustomSolution")}
             </Button>
             <Button
               variant="outline"
@@ -313,14 +323,12 @@ export default function AllProductsPage() {
               className="border-white text-white hover:bg-white hover:text-[#032685]"
               onClick={handleBackToHome}
             >
-              Back to Home
+              {t("allProducts.cta.backToHome")}
             </Button>
           </div>
         </div>
       </section>
-
       <WhatsAppButton onClick={() => whatsapp.setIsOpen(!whatsapp.isOpen)} />
-
       <WhatsAppCard
         isOpen={whatsapp.isOpen}
         selectedPhone={whatsapp.selectedPhone}

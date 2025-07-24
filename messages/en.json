@@ -248,5 +248,118 @@
     "filters": "Filters",
     "requestCustomSolution": "Request Custom Solution",
     "viewAllProducts": "View All Products"
+  },
+  "toDo": "translate All after this en ge",
+  "allProducts": {
+    "title": "All Products",
+    "subtitle": "Discover our complete range of professional solutions",
+    "back": "Back",
+    "searchPlaceholder": "Search products...",
+    "allCategories": "All Categories",
+    "filters": "Filters",
+    "clear": "Clear",
+    "applications": "Applications",
+    "sortBy": {
+      "name": "Sort by Name",
+      "category": "Sort by Category",
+      "newest": "Newest First",
+      "oldest": "Oldest First"
+    },
+    "noProducts": {
+      "title": "No products found",
+      "description": "Try adjusting your search criteria or filters",
+      "clearFilters": "Clear All Filters"
+    },
+    "cta": {
+      "title": "Can't Find What You're Looking For?",
+      "subtitle": "We specialize in custom solutions tailored to your specific needs",
+      "requestCustomSolution": "Request Custom Solution",
+      "backToHome": "Back to Home"
+    }
+  },
+  "productDetail": {
+    "notFound": {
+      "title": "Product Not Found",
+      "description": "The product you're looking for doesn't exist.",
+      "backToHome": "Back to Home"
+    }
+  },
+  "productDetailPage": {
+    "backToCatalog": "Back to Catalog",
+    "productDetails": "Product Details",
+    "pause": "Pause",
+    "play": "Play",
+    "idealApplications": "Ideal Applications",
+    "certifications": "Certifications",
+    "requestQuote": "Request Quote & Information",
+    "scheduleConsultation": "Schedule Consultation",
+    "technicalSpecifications": "Technical Specifications",
+    "dimensions": "Dimensions",
+    "keyFeatures": "Key Features",
+    "primaryUseCases": "Primary Use Cases",
+    "qualityAssurance": "Quality Assurance",
+    "certified": "Certified",
+    "professionalGrade": "Professional Grade Equipment",
+    "supportWarranty": {
+      "title": "Support & Warranty",
+      "extendedWarranty": "Extended warranty coverage",
+      "technicalSupport": "24/7 technical support",
+      "installation": "Professional installation",
+      "training": "Training and documentation"
+    },
+    "whyChoose": {
+      "title": "Why Choose This Product?",
+      "reliability": "Enterprise-grade reliability",
+      "pricing": "Competitive pricing",
+      "deployment": "Fast deployment",
+      "performance": "Proven performance"
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Contact our experts for a personalized quote and consultation on how this product can enhance your business operations.",
+      "getQuote": "Get Custom Quote",
+      "speakExpert": "Speak with Expert"
+    }
+  },
+
+  "productCard": {
+    "getQuote": "Get Quote",
+    "viewDetails": "View Details"
+  },
+  "allProjects": {
+    "backToHome": "Back to Home",
+    "breadcrumb": "All Projects",
+    "title": "All Projects",
+    "subtitle": "Explore our complete portfolio of successful implementations across hospitality and government sectors",
+    "stats": {
+      "title": "Project Statistics",
+      "totalProjects": "Total Projects",
+      "successRate": "Success Rate",
+      "happyClients": "Happy Clients",
+      "countries": "Countries"
+    }
+  },
+  "projectDetail": {
+    "notFound": {
+      "title": "Project Not Found",
+      "description": "The project you're looking for doesn't exist.",
+      "backToHome": "Back to Home"
+    }
+  },
+  "projectDetailPage": {
+    "backToProjects": "Back to Projects",
+    "back": "Back",
+    "projectDetails": "Project Details",
+    "projectOverview": "Project Overview",
+    "technologiesImplemented": "Technologies Implemented",
+    "challenges": "Challenges",
+    "solutions": "Solutions",
+    "projectStats": "Project Stats",
+    "timeline": "Timeline",
+    "budget": "Budget",
+    "teamSize": "Team Size",
+    "resultsAchieved": "Results Achieved",
+    "getSimilarQuote": "Get Similar Project Quote",
+    "contactTeam": "Contact Our Team"
   }
 }

@@ -1,6 +1,7 @@
 // components/pages/ProductDetailPage.tsx
 import React, { useState, useEffect } from "react";
 import { ArrowLeft, ChevronRight, X, ChevronLeft } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { useImageCarousel } from "@/lib/hooks/useImageCarousel";
@@ -19,6 +20,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
   onContact,
   onSectionClick,
 }) => {
+  const t = useTranslations();
   const { currentImageIndex, goToImage } = useImageCarousel(
     product.images,
     false
@@ -80,11 +82,11 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               className="flex items-center text-[#032685] hover:text-[#021d5a] font-semibold text-base sm:text-lg mb-2 sm:mb-0 sm:mr-6"
             >
               <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6 mr-2" />
-              Back to Catalog
+              {t("productDetailPage.backToCatalog")}
             </button>
             <span className="hidden sm:inline text-gray-400">|</span>
             <span className="sm:ml-6 text-gray-600 text-sm sm:text-base">
-              Product Details
+              {t("productDetailPage.productDetails")}
             </span>
           </div>
 
@@ -110,7 +112,9 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                         }
                         className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium hover:bg-black/70 transition-colors"
                       >
-                        {isAutoScrollEnabled ? "Pause" : "Play"}
+                        {isAutoScrollEnabled
+                          ? t("productDetailPage.pause")
+                          : t("productDetailPage.play")}
                       </button>
                     )}
 
@@ -194,7 +198,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   {/* Applications */}
                   <div className="mb-6 sm:mb-8">
                     <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">
-                      Ideal Applications
+                      {t("productDetailPage.idealApplications")}
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                       {product.applications.map((app, index) => (
@@ -211,7 +215,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   {/* Certifications */}
                   <div className="mb-6 sm:mb-8">
                     <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">
-                      Certifications
+                      {t("productDetailPage.certifications")}
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       {product.certifications.map((cert, index) => (
@@ -232,7 +236,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                       className="w-full text-sm sm:text-base"
                       onClick={() => onContact(product)}
                     >
-                      Request Quote & Information
+                      {t("productDetailPage.requestQuote")}
                     </Button>
                     <Button
                       variant="outline"
@@ -240,7 +244,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                       className="w-full text-sm sm:text-base"
                       onClick={() => onSectionClick("contact")}
                     >
-                      Schedule Consultation
+                      {t("productDetailPage.scheduleConsultation")}
                     </Button>
                   </div>
                 </div>
@@ -249,7 +253,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               {/* Technical Specifications */}
               <div className="border-t border-gray-200 pt-8 sm:pt-12 mt-8 sm:mt-12">
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
-                  Technical Specifications
+                  {t("productDetailPage.technicalSpecifications")}
                 </h2>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
                   {Object.entries(product.specs).map(([category, details]) => (
@@ -270,7 +274,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 {/* Product Dimensions */}
                 <div className="mt-6 sm:mt-8 bg-[#e6f2ff] rounded-xl sm:rounded-2xl p-4 sm:p-6">
                   <h3 className="text-lg sm:text-xl font-bold text-[#032685] mb-2 sm:mb-3">
-                    Dimensions
+                    {t("productDetailPage.dimensions")}
                   </h3>
                   <p className="text-[#032685] text-sm sm:text-base">
                     {product.dimensions}
@@ -284,7 +288,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   {/* Key Features */}
                   <div className="bg-blue-50 rounded-xl sm:rounded-2xl p-4 sm:p-6">
                     <h3 className="text-lg sm:text-xl font-bold text-blue-900 mb-3 sm:mb-4">
-                      Key Features
+                      {t("productDetailPage.keyFeatures")}
                     </h3>
                     <ul className="space-y-2">
                       {Object.values(product.specs)
@@ -293,7 +297,9 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                           <li key={index} className="flex items-start">
                             <ChevronRight className="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
                             <span className="text-blue-800 text-xs sm:text-sm">
-                              {spec.split(",")[0]}
+                              {typeof spec === "string"
+                                ? spec.split(",")[0]
+                                : spec}
                             </span>
                           </li>
                         ))}
@@ -303,7 +309,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   {/* Use Cases */}
                   <div className="bg-purple-50 rounded-xl sm:rounded-2xl p-4 sm:p-6">
                     <h3 className="text-lg sm:text-xl font-bold text-purple-900 mb-3 sm:mb-4">
-                      Primary Use Cases
+                      {t("productDetailPage.primaryUseCases")}
                     </h3>
                     <ul className="space-y-2">
                       {product.applications.map((app, index) => (
@@ -320,20 +326,20 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   {/* Quality Assurance */}
                   <div className="bg-green-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:col-span-2 lg:col-span-1">
                     <h3 className="text-lg sm:text-xl font-bold text-green-900 mb-3 sm:mb-4">
-                      Quality Assurance
+                      {t("productDetailPage.qualityAssurance")}
                     </h3>
                     <div className="space-y-3">
                       {product.certifications.map((cert, index) => (
                         <div key={index} className="flex items-center">
                           <div className="w-2 h-2 bg-green-600 rounded-full mr-3 flex-shrink-0"></div>
                           <span className="text-green-800 font-semibold text-xs sm:text-sm">
-                            {cert} Certified
+                            {cert} {t("productDetailPage.certified")}
                           </span>
                         </div>
                       ))}
                       <div className="mt-4 pt-3 border-t border-green-200">
                         <span className="text-green-700 text-xs sm:text-sm font-medium">
-                          Professional Grade Equipment
+                          {t("productDetailPage.professionalGrade")}
                         </span>
                       </div>
                     </div>
@@ -346,14 +352,14 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
                   <div className="bg-orange-50 rounded-xl sm:rounded-2xl p-6 sm:p-8">
                     <h3 className="text-xl sm:text-2xl font-bold text-orange-900 mb-3 sm:mb-4">
-                      Support & Warranty
+                      {t("productDetailPage.supportWarranty.title")}
                     </h3>
                     <div className="space-y-3">
                       {[
-                        "Extended warranty coverage",
-                        "24/7 technical support",
-                        "Professional installation",
-                        "Training and documentation",
+                        t("productDetailPage.supportWarranty.extendedWarranty"),
+                        t("productDetailPage.supportWarranty.technicalSupport"),
+                        t("productDetailPage.supportWarranty.installation"),
+                        t("productDetailPage.supportWarranty.training"),
                       ].map((item, index) => (
                         <div key={index} className="flex items-center">
                           <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-orange-600 mr-3 flex-shrink-0" />
@@ -367,14 +373,14 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
 
                   <div className="bg-gray-100 rounded-xl sm:rounded-2xl p-6 sm:p-8">
                     <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
-                      Why Choose This Product?
+                      {t("productDetailPage.whyChoose.title")}
                     </h3>
                     <div className="space-y-3">
                       {[
-                        "Enterprise-grade reliability",
-                        "Competitive pricing",
-                        "Fast deployment",
-                        "Proven performance",
+                        t("productDetailPage.whyChoose.reliability"),
+                        t("productDetailPage.whyChoose.pricing"),
+                        t("productDetailPage.whyChoose.deployment"),
+                        t("productDetailPage.whyChoose.performance"),
                       ].map((item, index) => (
                         <div key={index} className="flex items-start">
                           <div className="w-2 h-2 bg-[#032685] rounded-full mr-3 mt-2 flex-shrink-0"></div>
@@ -391,11 +397,10 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               {/* Call to Action */}
               <div className="border-t border-gray-200 pt-8 sm:pt-12 mt-8 sm:mt-12 text-center">
                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
-                  Ready to Get Started?
+                  {t("productDetailPage.cta.title")}
                 </h3>
                 <p className="text-lg sm:text-xl text-gray-700 mb-6 sm:mb-8 max-w-2xl mx-auto">
-                  Contact our experts for a personalized quote and consultation
-                  on how this product can enhance your business operations.
+                  {t("productDetailPage.cta.description")}
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                   <Button
@@ -403,7 +408,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                     onClick={() => onContact(product)}
                     className="w-full sm:w-auto"
                   >
-                    Get Custom Quote
+                    {t("productDetailPage.cta.getQuote")}
                   </Button>
                   <Button
                     variant="outline"
@@ -411,7 +416,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                     onClick={() => onSectionClick("contact")}
                     className="w-full sm:w-auto"
                   >
-                    Speak with Expert
+                    {t("productDetailPage.cta.speakExpert")}
                   </Button>
                 </div>
               </div>

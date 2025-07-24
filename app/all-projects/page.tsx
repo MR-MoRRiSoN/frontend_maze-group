@@ -1,7 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 import { Navigation } from "@/components/layout/Navigation";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { WhatsAppCard } from "@/components/features/contact/WhatsAppCard";
@@ -10,14 +11,17 @@ import { ProjectCard } from "@/components/features/projects/ProjectCard";
 import { Project } from "@/types/project";
 import { useIntersectionObserver } from "@/lib/hooks/useIntersectionObserver";
 import { useWhatsApp } from "@/lib/hooks/useWhatsApp";
-import { scrollToSection } from "@/lib/utils/helpers";
-import { projects } from "@/lib/data/projects";
+import { getProjectsByLocale } from "@/lib/data/projects";
+import { projects } from "../../lib/data/projects";
 
 export default function AllProjectsPage() {
   const router = useRouter();
+  const t = useTranslations();
   const [isLoaded, setIsLoaded] = useState(false);
   const isVisible = useIntersectionObserver();
   const whatsapp = useWhatsApp();
+  const locale = useLocale();
+  const projects = useMemo(() => getProjectsByLocale(locale), [locale]);
 
   useEffect(() => {
     // Trigger initial animation after component mounts
@@ -66,11 +70,13 @@ export default function AllProjectsPage() {
               className="flex items-center justify-start text-[#032685] hover:text-[#021d5a] active:text-[#021d5a] font-semibold text-base sm:text-lg mb-3 sm:mb-0 sm:mr-6 transition-colors duration-300 min-h-[44px] touch-manipulation"
             >
               <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6 mr-2 flex-shrink-0" />
-              <span className="whitespace-nowrap">Back to Home</span>
+              <span className="whitespace-nowrap">
+                {t("allProjects.backToHome")}
+              </span>
             </button>
             <span className="hidden sm:inline text-gray-400">|</span>
             <span className="text-gray-600 text-sm sm:text-base sm:ml-6 self-start sm:self-center">
-              All Projects
+              {t("allProjects.breadcrumb")}
             </span>
           </div>
 
@@ -84,11 +90,10 @@ export default function AllProjectsPage() {
             data-section="projects-header"
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6 leading-tight">
-              All Projects
+              {t("allProjects.title")}
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto px-4 sm:px-0 leading-relaxed">
-              Explore our complete portfolio of successful implementations
-              across hospitality and government sectors
+              {t("allProjects.subtitle")}
             </p>
           </div>
 
@@ -132,7 +137,7 @@ export default function AllProjectsPage() {
           >
             <Card className="text-center" padding="lg">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8">
-                Project Statistics
+                {t("allProjects.stats.title")}
               </h3>
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
                 <div
@@ -147,7 +152,7 @@ export default function AllProjectsPage() {
                     {projects.length}+
                   </div>
                   <div className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-700">
-                    Total Projects
+                    {t("allProjects.stats.totalProjects")}
                   </div>
                 </div>
                 <div
@@ -162,7 +167,7 @@ export default function AllProjectsPage() {
                     100%
                   </div>
                   <div className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-700">
-                    Success Rate
+                    {t("allProjects.stats.successRate")}
                   </div>
                 </div>
                 <div
@@ -177,7 +182,7 @@ export default function AllProjectsPage() {
                     50+
                   </div>
                   <div className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-700">
-                    Happy Clients
+                    {t("allProjects.stats.happyClients")}
                   </div>
                 </div>
                 <div
@@ -192,7 +197,7 @@ export default function AllProjectsPage() {
                     5+
                   </div>
                   <div className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-700">
-                    Countries
+                    {t("allProjects.stats.countries")}
                   </div>
                 </div>
               </div>

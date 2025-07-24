@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslations } from "next-intl";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Product } from "@/types/product";
@@ -20,6 +21,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   isVisible = true,
   className,
 }) => {
+  const t = useTranslations();
+
   return (
     <Card
       className={`${className} cursor-pointer overflow-hidden transition-all duration-500 hover:shadow-lg hover:scale-105 ${
@@ -57,7 +60,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             }}
             size="sm"
           >
-            Get Quote
+            {t("productCard.getQuote")}
           </Button>
           <Button
             variant="outline"
@@ -67,7 +70,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             }}
             size="sm"
           >
-            View Details
+            {t("productCard.viewDetails")}
           </Button>
         </div>
       </div>

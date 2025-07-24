@@ -13,6 +13,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { useImageCarousel } from "@/lib/hooks/useImageCarousel";
@@ -31,6 +32,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
   onContact,
   onSectionClick,
 }) => {
+  const t = useTranslations();
   const {
     currentImageIndex,
     isPlaying,
@@ -101,12 +103,14 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
               className="flex items-center text-[#032685] hover:text-[#021d5a] font-semibold text-base md:text-lg mr-4 md:mr-6"
             >
               <ArrowLeft className="w-5 h-5 md:w-6 md:h-6 mr-2" />
-              <span className="hidden sm:inline">Back to Projects</span>
-              <span className="sm:hidden">Back</span>
+              <span className="hidden sm:inline">
+                {t("projectDetailPage.backToProjects")}
+              </span>
+              <span className="sm:hidden">{t("projectDetailPage.back")}</span>
             </button>
             <span className="text-gray-400 hidden sm:inline">|</span>
             <span className="ml-4 md:ml-6 text-gray-600 text-sm md:text-base hidden sm:inline">
-              Project Details
+              {t("projectDetailPage.projectDetails")}
             </span>
           </div>
 
@@ -173,7 +177,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
 
                   <div className="bg-gray-50 rounded-2xl p-6 md:p-8 mb-8">
                     <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-                      Project Overview
+                      {t("projectDetailPage.projectOverview")}
                     </h3>
                     <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                       {project.details}
@@ -183,7 +187,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
                   {/* Technologies Used */}
                   <div className="mb-8">
                     <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-                      Technologies Implemented
+                      {t("projectDetailPage.technologiesImplemented")}
                     </h3>
                     <div className="flex flex-wrap gap-2 md:gap-3">
                       {project.technologies.map((tech, index) => (
@@ -201,7 +205,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                     <div className="bg-red-50 rounded-2xl p-6">
                       <h4 className="text-lg md:text-xl font-bold text-red-800 mb-3">
-                        Challenges
+                        {t("projectDetailPage.challenges")}
                       </h4>
                       <p className="text-red-700 text-sm md:text-base">
                         {project.challenges}
@@ -209,7 +213,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
                     </div>
                     <div className="bg-green-50 rounded-2xl p-6">
                       <h4 className="text-lg md:text-xl font-bold text-green-800 mb-3">
-                        Solutions
+                        {t("projectDetailPage.solutions")}
                       </h4>
                       <p className="text-green-700 text-sm md:text-base">
                         {project.solutions}
@@ -222,14 +226,14 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
                 <div className="order-first lg:order-last">
                   <div className="bg-[#e6f2ff] rounded-2xl p-6 md:p-8 mb-6 md:mb-8">
                     <h3 className="text-xl md:text-2xl font-bold text-[#032685] mb-6">
-                      Project Stats
+                      {t("projectDetailPage.projectStats")}
                     </h3>
                     <div className="space-y-6">
                       <div>
                         <div className="flex items-center mb-2">
                           <Clock className="w-4 h-4 md:w-5 md:h-5 text-[#032685] mr-2" />
                           <span className="font-semibold text-gray-700 text-sm md:text-base">
-                            Timeline
+                            {t("projectDetailPage.timeline")}
                           </span>
                         </div>
                         <span className="text-xl md:text-2xl font-bold text-[#032685]">
@@ -240,7 +244,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
                         <div className="flex items-center mb-2">
                           <Target className="w-4 h-4 md:w-5 md:h-5 text-[#032685] mr-2" />
                           <span className="font-semibold text-gray-700 text-sm md:text-base">
-                            Budget
+                            {t("projectDetailPage.budget")}
                           </span>
                         </div>
                         <span className="text-xl md:text-2xl font-bold text-[#032685]">
@@ -251,7 +255,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
                         <div className="flex items-center mb-2">
                           <Users className="w-4 h-4 md:w-5 md:h-5 text-[#032685] mr-2" />
                           <span className="font-semibold text-gray-700 text-sm md:text-base">
-                            Team Size
+                            {t("projectDetailPage.teamSize")}
                           </span>
                         </div>
                         <span className="text-xl md:text-2xl font-bold text-[#032685]">
@@ -264,7 +268,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
                   {/* Results */}
                   <div className="bg-green-50 rounded-2xl p-6 md:p-8">
                     <h3 className="text-xl md:text-2xl font-bold text-green-900 mb-4">
-                      Results Achieved
+                      {t("projectDetailPage.resultsAchieved")}
                     </h3>
                     <p className="text-green-700 leading-relaxed text-sm md:text-base">
                       {project.results}
@@ -280,7 +284,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
                   className="flex-1 w-full sm:w-auto"
                   onClick={() => onContact(project.name, project.client)}
                 >
-                  Get Similar Project Quote
+                  {t("projectDetailPage.getSimilarQuote")}
                 </Button>
                 <Button
                   variant="outline"
@@ -288,7 +292,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
                   className="flex-1 w-full sm:w-auto"
                   onClick={() => onSectionClick("contact")}
                 >
-                  Contact Our Team
+                  {t("projectDetailPage.contactTeam")}
                 </Button>
               </div>
             </div>
