@@ -1,10 +1,6 @@
 import { Benefit } from "@/types/benefit";
 import {
-  Star,
   Zap,
-  Building,
-  Shield,
-  Clock,
   CheckCircle,
   Users,
   DollarSign,

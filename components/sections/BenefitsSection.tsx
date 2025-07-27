@@ -154,28 +154,6 @@ export const BenefitsSection: React.FC<BenefitsSectionProps> = ({
               keyPrefix="first"
             />
           ))}
-
-          {/* Second set of cards for seamless loop */}
-          {benefitsList.map((benefit: Benefit, index: number) => (
-            <BenefitCard
-              key={`second-${index}`}
-              benefit={benefit}
-              index={index}
-              isVisible={isVisible}
-              keyPrefix="second"
-            />
-          ))}
-
-          {/* Third set of cards for extra smoothness */}
-          {benefitsList.map((benefit: Benefit, index: number) => (
-            <BenefitCard
-              key={`third-${index}`}
-              benefit={benefit}
-              index={index}
-              isVisible={isVisible}
-              keyPrefix="third"
-            />
-          ))}
         </div>
       </div>
 

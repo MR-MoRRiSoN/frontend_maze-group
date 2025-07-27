@@ -205,7 +205,7 @@ export const WhyUsSection: React.FC<WhyUsSectionProps> = ({ isVisible }) => {
       title: t("reasons.proTeam.title"),
       desc: t("reasons.proTeam.description"),
       metric: "7+ Years",
-      numericValue: 15,
+      numericValue: 7,
     },
   ];
 
