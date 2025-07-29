@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Modern scrollbar styling */
+html {
+  scrollbar-color: #032685 transparent;
+  scrollbar-width: 20px;
+}

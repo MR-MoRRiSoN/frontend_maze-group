@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 import { Card } from "../ui/Card";
 import { getBenefits } from "@/lib/data/benefits";
 import { Benefit } from "../../types/benefit";
@@ -68,26 +69,27 @@ const BenefitCard: React.FC<BenefitCardProps> = ({
       return React.cloneElement(
         benefit.icon as React.ReactElement<React.SVGProps<SVGSVGElement>>,
         {
-          className: `w-6 h-6 ${getIconTextColor(index)}`,
+          className: `w-5 h-5 sm:w-6 sm:h-6 ${getIconTextColor(index)}`,
         }
       );
     }
     // Fallback if icon is not a valid React element
-    return <div className={`w-6 h-6 ${getIconTextColor(index)}`} />;
+    return (
+      <div className={`w-5 h-5 sm:w-6 sm:h-6 ${getIconTextColor(index)}`} />
+    );
   };
 
   return (
     <Card
       key={`${keyPrefix}-${index}`}
-      className={`flex-shrink-0 w-96 transition-all duration-500 hover:scale-105 cursor-pointer ${
+      className={`flex-shrink-0 w-80 sm:w-96 transition-all duration-500 hover:scale-105 cursor-pointer ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
-      style={{ animationDelay: `${index * 200}ms` }}
     >
-      <div className="flex items-start space-x-6">
+      <div className="flex items-start space-x-4 sm:space-x-6">
         <div className="flex-shrink-0">
           <div
-            className={`w-12 h-12 rounded-lg flex items-center justify-center ${getIconBgColor(
+            className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center ${getIconBgColor(
               index
             )}`}
           >
@@ -95,19 +97,24 @@ const BenefitCard: React.FC<BenefitCardProps> = ({
           </div>
         </div>
         <div className="flex-1">
-          <h3 className="font-bold text-gray-900 text-xl mb-4">
+          <h3 className="font-bold text-gray-900 text-lg sm:text-xl lg:text-xl mb-3 sm:mb-4 leading-tight">
             {benefit.title}
           </h3>
-          <p className="text-gray-700 text-sm leading-relaxed mb-6">
+          <p className="text-gray-700 text-xs sm:text-sm lg:text-sm leading-relaxed mb-4 sm:mb-6">
             {benefit.description}
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-3 gap-2 sm:gap-3">
         {statEntries.map((stat: StatEntry) => (
-          <div key={stat.key} className="bg-blue-50 rounded-lg p-3 text-center">
-            <div className="text-sm font-bold text-blue-800">{stat.value}</div>
-            <div className="text-xs text-gray-600 capitalize">
+          <div
+            key={stat.key}
+            className="bg-blue-50 rounded-lg p-2 sm:p-3 text-center"
+          >
+            <div className="text-xs sm:text-sm font-bold text-blue-800">
+              {stat.value}
+            </div>
+            <div className="text-xs text-gray-600 capitalize leading-tight">
               {stat.key.replace(/([A-Z])/g, " $1").trim()}
             </div>
           </div>
@@ -123,72 +130,80 @@ export const BenefitsSection: React.FC<BenefitsSectionProps> = ({
 }) => {
   const t = useTranslations();
   const benefitsList: Benefit[] = getBenefits(t);
+  const [isPaused, setIsPaused] = React.useState(false);
+
+  // Duplicate the list for seamless scrolling
+  const duplicatedBenefits = [
+    ...benefitsList,
+    ...benefitsList,
+    ...benefitsList,
+  ];
+
+  // Calculate responsive card width for animation
+  const getCardWidth = () => {
+    // Base width: 320px (w-80) for mobile, 384px (w-96) for desktop
+    // Gap: 16px (gap-4) for mobile, 24px (gap-6) for desktop
+    // Using desktop values for animation calculation
+    return 408; // 384px + 24px gap
+  };
 
   return (
-    <section id="benefits" className="py-32 bg-gray-50" data-section="benefits">
-      <div className="container mx-auto px-8 max-w-7xl">
+    <section
+      id="benefits"
+      className="py-16 sm:py-24 lg:py-32 bg-gray-50"
+      data-section="benefits"
+    >
+      <style jsx>{`
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-${benefitsList.length * getCardWidth()}px);
+          }
+        }
+      `}</style>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div
-          className={`text-center mb-20 transition-all duration-1000 ${
+          className={`text-center mb-12 sm:mb-16 lg:mb-20 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
             {t("benefits.title")}
           </h2>
-          <p className="text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 max-w-2xl sm:max-w-3xl lg:max-w-4xl mx-auto leading-relaxed px-4">
             {t("benefits.subtitle")}
           </p>
         </div>
       </div>
 
-      {/* Full width horizontal scrolling container */}
-      <div className="relative overflow-hidden w-full select-none pt-4 pb-16">
-        <div className="flex animate-scroll-infinite gap-6 pl-6">
-          {/* First set of cards */}
-          {benefitsList.map((benefit: Benefit, index: number) => (
+      {/* Horizontal scroll with CSS animation */}
+      <div
+        className="relative overflow-hidden w-full select-none pt-2 sm:pt-4 pb-20 sm:pb-12 lg:pb-16"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        <div
+          className="flex gap-4 sm:gap-6"
+          style={{
+            animation: `scroll-left 50s linear infinite`,
+            animationPlayState: isPaused ? "paused" : "running",
+            willChange: "transform",
+          }}
+        >
+          {duplicatedBenefits.map((benefit: Benefit, index: number) => (
             <BenefitCard
-              key={`first-${index}`}
+              key={`benefit-${index}`}
               benefit={benefit}
-              index={index}
+              index={index % benefitsList.length}
               isVisible={isVisible}
-              keyPrefix="first"
+              keyPrefix="benefit"
             />
           ))}
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes scroll-infinite {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(calc(-100% / 3));
-          }
-        }
-
-        .animate-scroll-infinite {
-          animation: scroll-infinite 20s linear infinite;
-          width: calc(300%);
-        }
-
-        /* Responsive speed adjustments */
-        @media (max-width: 768px) {
-          .animate-scroll-infinite {
-            animation: scroll-infinite 20s linear infinite;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .animate-scroll-infinite {
-            animation: scroll-infinite 15s linear infinite;
-          }
-        }
-
-        .animate-scroll-infinite:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
     </section>
   );
 };

@@ -17,7 +17,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <section
       id="home"
-      className="relative bg-gradient-to-br from-[#e6f2ff] via-white to-[#e6f2ff] min-h-screen overflow-hidden"
+      className="relative bg-gradient-to-br from-[#e6f2ff] via-white to-[#e6f2ff] min-h-dvh overflow-hidden"
     >
       {/* Background Effects */}
       <div className="absolute inset-0">
@@ -28,7 +28,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 py-24 sm:py-32 md:py-40">
+      <div className="relative z-10 flex items-center justify-center min-h-dvh px-4 sm:px-6 lg:px-8 py-24 sm:py-32 md:py-40">
         <div className="max-w-4xl mx-auto text-center lg:text-left lg:max-w-none lg:mx-0 lg:absolute lg:top-1/2 lg:left-20 lg:transform lg:-translate-y-1/2 xl:left-20">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">
             {t("title")}

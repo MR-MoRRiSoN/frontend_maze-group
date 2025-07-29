@@ -231,7 +231,16 @@
     "quickRepliesLabel": "Quick Replies",
     "messageLabel": "Message",
     "messagePlaceholder": "Type your message here...",
-    "sendButton": "Send via WhatsApp"
+    "sendButton": "Send via WhatsApp",
+    "defaultMessage": "Hi Maze Group, I'm interested in learning more about your services...",
+    "productMessage": "Hi Maze Group, I'm interested in learning more about {productName}. Please provide more details about specifications and pricing.",
+    "quickReplies": {
+      "services": "Tell me about your services",
+      "quote": "Request a quote",
+      "consultation": "Schedule a consultation",
+      "pricing": "View pricing",
+      "projects": "Ask about projects"
+    }
   },
   "projects": {
     "featuredProjects": "Featured Projects",
@@ -321,7 +330,6 @@
       "speakExpert": "Speak with Expert"
     }
   },
-
   "productCard": {
     "getQuote": "Get Quote",
     "viewDetails": "View Details"

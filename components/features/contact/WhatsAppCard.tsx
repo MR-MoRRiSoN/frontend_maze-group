@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import { MessageCircle, X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { PHONE_NUMBERS, QUICK_REPLIES } from "@/lib/utils/constants";
+import { PHONE_NUMBERS, QUICK_REPLIES_KEYS } from "@/lib/utils/constants";
 import { useTranslations } from "next-intl";
 
 interface WhatsAppCardProps {
@@ -53,8 +53,9 @@ export const WhatsAppCard: React.FC<WhatsAppCardProps> = ({
 
   if (!isOpen) return null;
 
-  const handleQuickReply = (reply: string) => {
-    setMessage(reply);
+  const handleQuickReply = (replyKey: string) => {
+    const translatedReply = t(replyKey);
+    setMessage(translatedReply);
   };
 
   return (
@@ -103,13 +104,13 @@ export const WhatsAppCard: React.FC<WhatsAppCardProps> = ({
             {t("whatsapp.quickRepliesLabel")}
           </label>
           <div className="flex flex-wrap gap-2">
-            {QUICK_REPLIES.map((reply) => (
+            {QUICK_REPLIES_KEYS.map((replyKey) => (
               <button
-                key={reply}
-                onClick={() => handleQuickReply(reply)}
+                key={replyKey}
+                onClick={() => handleQuickReply(replyKey)}
                 className="text-xs bg-gray-100 hover:bg-green-100 text-gray-700 px-2 py-1 rounded-lg transition-colors"
               >
-                {reply}
+                {t(replyKey)}
               </button>
             ))}
           </div>

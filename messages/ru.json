@@ -231,7 +231,16 @@
     "quickRepliesLabel": "Быстрые ответы",
     "messageLabel": "Сообщение",
     "messagePlaceholder": "Введите ваше сообщение здесь...",
-    "sendButton": "Отправить через WhatsApp"
+    "sendButton": "Отправить через WhatsApp",
+    "defaultMessage": "Привет Maze Group, я хотел(а) бы узнать больше о ваших услугах...",
+    "productMessage": "Привет Maze Group, меня интересует {productName}. Пожалуйста, предоставьте подробную информацию о характеристиках и цене.",
+    "quickReplies": {
+      "services": "Расскажите о ваших услугах",
+      "quote": "Запросить предложение",
+      "consultation": "Записаться на консультацию",
+      "pricing": "Посмотреть цены",
+      "projects": "Спросить о проектах"
+    }
   },
   "projects": {
     "featuredProjects": "Избранные проекты",

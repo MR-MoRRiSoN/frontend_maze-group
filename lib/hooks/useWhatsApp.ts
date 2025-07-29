@@ -1,12 +1,25 @@
 "use client";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export const useWhatsApp = () => {
+  const t = useTranslations();
   const [isOpen, setIsOpen] = useState(false);
   const [selectedPhone, setSelectedPhone] = useState("+995 514 107 878");
-  const [message, setMessage] = useState(
-    "Hi Maze Group, I'm interested in learning more about your services..."
-  );
+  const [message, setMessage] = useState("");
+
+  // Initialize default message with translation
+  const getDefaultMessage = () => {
+    return (
+      t("whatsapp.defaultMessage") ||
+      "Hi Maze Group, I'm interested in learning more about your services..."
+    );
+  };
+
+  // Initialize message on first load
+  useState(() => {
+    setMessage(getDefaultMessage());
+  });
 
   const phoneNumbers = [
     {
@@ -35,9 +48,10 @@ export const useWhatsApp = () => {
   };
 
   const setProductMessage = (productName: string) => {
-    setMessage(
-      `Hi Maze Group, I'm interested in learning more about ${productName}. Please provide more details about specifications and pricing.`
-    );
+    const productMessage =
+      t("whatsapp.productMessage", { productName }) ||
+      `Hi Maze Group, I'm interested in learning more about ${productName}. Please provide more details about specifications and pricing.`;
+    setMessage(productMessage);
     setIsOpen(true);
   };
 

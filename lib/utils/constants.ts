@@ -1,12 +1,12 @@
 import { NavigationItem, PhoneNumber } from "@/types/common";
 
 export const NAVIGATION_ITEMS: NavigationItem[] = [
-  { id: "home", label: "Home", href: "#home" },
-  { id: "about", label: "About Us", href: "#about" },
-  { id: "services", label: "Services", href: "#services" },
-  { id: "projects", label: "Projects", href: "#projects" },
-  { id: "catalog", label: "Catalog", href: "#catalog" },
-  { id: "contact", label: "Contact", href: "#contact" },
+  { id: "home", label: "navigation.home", href: "#home" },
+  { id: "about", label: "navigation.about", href: "#about" },
+  { id: "services", label: "navigation.services", href: "#services" },
+  { id: "projects", label: "navigation.projects", href: "#projects" },
+  { id: "catalog", label: "navigation.catalog", href: "#catalog" },
+  { id: "contact", label: "navigation.contact", href: "#contact" },
 ];
 
 export const PHONE_NUMBERS: PhoneNumber[] = [
@@ -22,25 +22,11 @@ export const PHONE_NUMBERS: PhoneNumber[] = [
   },
 ];
 
-export const QUICK_REPLIES = [
-  "Tell me about your services",
-  "Request a quote",
-  "Schedule a consultation",
-  "View pricing",
-  "Ask about projects",
-];
-
-export const COMPANIES = [
-  "Hilton",
-  "Marriott",
-  "Radisson",
-  "Sheraton",
-  "IHG",
-  "Kempinski",
-  "Biltmore",
-  "Rooms Hotels",
-  "Ministry of Defence",
-  "TAV Georgia",
-  "Government of Georgia",
-  "Courtyard by Marriott",
+// Quick replies translation keys - actual text will come from translations
+export const QUICK_REPLIES_KEYS = [
+  "whatsapp.quickReplies.services",
+  "whatsapp.quickReplies.quote",
+  "whatsapp.quickReplies.consultation",
+  "whatsapp.quickReplies.pricing",
+  "whatsapp.quickReplies.projects",
 ];
