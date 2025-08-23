@@ -49,11 +49,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       style={{ animationDelay: `${animationDelay}ms` }}
       //onClick={() => onViewDetails(product)}
     >
-      <div className="relative">
+      {/* Option 1: Stretch image to fill full width - may distort aspect ratio */}
+      <div className="relative min-h-48 max-h-64 bg-gray-50">
         <img
           src={getProductImage(product.image)}
           alt={product.name}
-          className="w-full h-full object-cover rounded-2xl"
+          className="w-full h-full object-fill rounded-2xl"
         />
         {/* Category badge positioned over image */}
         <div className="absolute top-4 right-4">
@@ -62,7 +63,40 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           </span>
         </div>
       </div>
-      <div className=" flex flex-col flex-1">
+
+      {/* Option 2: Stretch width but maintain aspect ratio by cropping height */}
+      {/* 
+      <div className="relative min-h-48 max-h-64 bg-gray-50 overflow-hidden">
+        <img
+          src={getProductImage(product.image)}
+          alt={product.name}
+          className="w-full h-full object-cover rounded-2xl"
+        />
+        <div className="absolute top-4 right-4">
+          <span className="bg-white/90 backdrop-blur-sm text-gray-900 px-3 py-1.5 rounded-full text-sm font-semibold shadow-lg border border-gray-200">
+            {product.category}
+          </span>
+        </div>
+      </div>
+      */}
+
+      {/* Option 3: Force minimum width stretch with object-cover */}
+      {/* 
+      <div className="relative min-h-48 max-h-64 bg-gray-50">
+        <img
+          src={getProductImage(product.image)}
+          alt={product.name}
+          className="w-full h-full object-cover object-center rounded-2xl min-w-full"
+        />
+        <div className="absolute top-4 right-4">
+          <span className="bg-white/90 backdrop-blur-sm text-gray-900 px-3 py-1.5 rounded-full text-sm font-semibold shadow-lg border border-gray-200">
+            {product.category}
+          </span>
+        </div>
+      </div>
+      */}
+
+      <div className="flex flex-col flex-1">
         <div className="flex-1 flex flex-col justify-center mb-4">
           <h3 className="font-bold text-gray-900 text-2xl mb-2">
             {product.name}
