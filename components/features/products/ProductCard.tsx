@@ -24,7 +24,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   const t = useTranslations();
 
-  const getProductImage = (prodImageName: String) => {
+  const getProductImage = (prodImageName: string) => {
     switch (prodImageName) {
       case "balsan":
         return Images.Balsen;
