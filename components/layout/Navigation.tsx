@@ -59,10 +59,10 @@ export const Navigation: React.FC<NavigationProps> = ({ onSectionClick }) => {
 
   const navigationItems = [
     { id: "home", label: t("home"), href: "#home" },
-    { id: "about", label: t("about"), href: "#about" },
     { id: "services", label: t("services"), href: "#services" },
     { id: "projects", label: t("projects"), href: "#projects" },
     { id: "catalog", label: t("catalog"), href: "#catalog" },
+    { id: "about", label: t("about"), href: "#about" },
     { id: "contact", label: t("contact"), href: "#contact" },
   ];
 

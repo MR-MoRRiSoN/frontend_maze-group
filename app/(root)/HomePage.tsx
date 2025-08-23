@@ -10,7 +10,7 @@ import { StatsSection } from "@/components/sections/StatsSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { WhyUsSection } from "@/components/sections/WhyUsSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
-import { BenefitsSection } from "@/components/sections/BenefitsSection";
+// import { BenefitsSection } from "@/components/sections/BenefitsSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { CatalogSection } from "@/components/sections/CatalogSection";
 import { CompaniesSection } from "@/components/sections/CompaniesSection";
@@ -44,7 +44,7 @@ export default function HomePage() {
 
   // Updated to use Next.js navigation for products
   const handleProductView = (product: Product) => {
-    router.push(`/catalog/${product.id}`);
+    window.open(product.pdfLink, "_blank");
   };
 
   const handleProductContact = (product: Product) => {
@@ -60,10 +60,10 @@ export default function HomePage() {
         onProjectsClick={() => handleSectionClick("projects")}
       />
       <StatsSection />
-      <AboutSection isVisible={isVisible.about} />
+
       <WhyUsSection isVisible={isVisible["why-us"]} />
       <ServicesSection isVisible={isVisible.services} />
-      <BenefitsSection isVisible={isVisible.benefits} />
+      {/* <BenefitsSection isVisible={isVisible.benefits} /> */}
       {/* Projects section now uses locale-based projects */}
       <ProjectsSection
         projects={projects}
@@ -81,6 +81,7 @@ export default function HomePage() {
         onRequestCustomSolution={() => whatsapp.setIsOpen(true)}
       />
       <CompaniesSection isVisible={isVisible.companies} />
+      <AboutSection isVisible={isVisible.about} />
       <ContactSection
         isVisible={isVisible.contact}
         onStartProject={() => whatsapp.setIsOpen(true)}

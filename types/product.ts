@@ -11,4 +11,5 @@ export interface Product {
   applications: string[];
   certifications: string[];
   dimensions: string;
+  pdfLink: string;
 }
