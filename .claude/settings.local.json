@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(xargs ls:*)",
+      "Read(//c/Users/morrison/Downloads/WEB PROJECTS PICS AND DETAILS/WEB PROJECTS PICS AND DETAILS/**)",
+      "Bash(ls:*)",
+      "Bash(node parse-projects.js)",
+      "Bash(node translate-projects.js:*)",
+      "Bash(node -e:*)",
+      "Bash(node reorganize-images.js:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
