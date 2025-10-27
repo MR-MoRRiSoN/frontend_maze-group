@@ -1,5 +1,5 @@
 import React from "react";
-import { Star } from "lucide-react";
+// import { Star } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { Images } from "@/components/constants";
 import { useTranslations } from "next-intl";

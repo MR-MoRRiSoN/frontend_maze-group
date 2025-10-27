@@ -1,7 +1,7 @@
 "use client";
-
 import React, { useRef, useEffect } from "react";
-import Plyr from "plyr-react";
+import Plyr, { APITypes } from "plyr-react";
+
 import "plyr-react/plyr.css";
 
 interface VideoPlayerProps {
@@ -15,7 +15,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   poster,
   className = "",
 }) => {
-  const plyrRef = useRef<any>(null);
+  const plyrRef = useRef<APITypes | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const isHoveredRef = useRef(false);
 

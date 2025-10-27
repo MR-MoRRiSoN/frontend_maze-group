@@ -45,8 +45,8 @@ export const StatsSection: React.FC = () => {
       const progress = currentFrame / totalFrames;
       const easedProgress = 1 - Math.pow(1 - progress, 3); // Ease out cubic
 
-      setAnimatedValues((prev) => {
-        return stats.map((stat, index) => {
+      setAnimatedValues(() => {
+        return stats.map((stat) => {
           return Math.floor(easedProgress * stat.numericValue);
         });
       });

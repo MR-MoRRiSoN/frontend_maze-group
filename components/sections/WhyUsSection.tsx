@@ -38,7 +38,8 @@ const AnimatedCard: React.FC<{
   index: number;
   isVisible: boolean;
   animationDelay: number;
-}> = ({ item, index, isVisible, animationDelay }) => {
+  //index, isVisible,
+}> = ({ item, animationDelay }) => {
   const [animatedValue, setAnimatedValue] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
   const [shouldAnimate, setShouldAnimate] = useState(false);
