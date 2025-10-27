@@ -28,19 +28,21 @@
     "name": "Park Hotel Tsinandali Project",
     "client": "Park Hotel",
     "category": "Hotel & Hospitality",
-    "image": "/assets/project_images/park-hotel-tsinandali/214737392.jpg",
+    "image": "/assets/project_images/park-hotel-tsinandali-estate/214737392.jpg",
     "images": [
-      "/assets/project_images/park-hotel-tsinandali/214737392.jpg",
-      "/assets/project_images/park-hotel-tsinandali/214737434.jpg",
-      "/assets/project_images/park-hotel-tsinandali/217480433.jpg",
-      "/assets/project_images/park-hotel-tsinandali/288465186.jpg"
+      "/assets/project_images/park-hotel-tsinandali-estate/214737392.jpg",
+      "/assets/project_images/park-hotel-tsinandali-estate/214737434.jpg",
+      "/assets/project_images/park-hotel-tsinandali-estate/217480433.jpg",
+      "/assets/project_images/park-hotel-tsinandali-estate/288465186.jpg"
     ],
     "description": "We are proud to feature our completed project at Park Hotel Tsinandali, where we supplied and installed LG 43\" Hotel TVs (US Series) to deliver a mode...",
     "details": "We are proud to feature our completed project at Park Hotel Tsinandali, where we supplied and installed LG 43\" Hotel TVs (US Series) to deliver a modern and reliable in-room entertainment experience. Completed six years ago, the system continues to operate flawlessly, and the client remains fully satisfied with the performance and longevity of the equipment. As an authorized IT and hospitality integrator and distributor of LG Electronics, we are dedicated to providing durable, high-quality, and efficient hospitality solutions that enhance guest comfort and meet the operational standards of leading hotels across the region.",
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs"],
+    "technologies": [
+      "LG Hotel TVs"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -61,7 +63,10 @@
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs", "Room Equipment & Amenities"],
+    "technologies": [
+      "LG Hotel TVs",
+      "Room Equipment & Amenities"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -82,7 +87,9 @@
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs"],
+    "technologies": [
+      "LG Hotel TVs"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -92,13 +99,13 @@
     "name": "Qafqaz Riverside Hotel Project",
     "client": "Qafqaz",
     "category": "Hotel & Hospitality",
-    "image": "/assets/project_images/qafqaz-riverside-hotel/487985221.jpg",
+    "image": "/assets/project_images/qafqaz-riverside-hotel-azerbaijan/487985221.jpg",
     "images": [
-      "/assets/project_images/qafqaz-riverside-hotel/487985221.jpg",
-      "/assets/project_images/qafqaz-riverside-hotel/621675605.jpg",
-      "/assets/project_images/qafqaz-riverside-hotel/621675642.jpg",
-      "/assets/project_images/qafqaz-riverside-hotel/621675646.jpg",
-      "/assets/project_images/qafqaz-riverside-hotel/701357060.jpg"
+      "/assets/project_images/qafqaz-riverside-hotel-azerbaijan/487985221.jpg",
+      "/assets/project_images/qafqaz-riverside-hotel-azerbaijan/621675605.jpg",
+      "/assets/project_images/qafqaz-riverside-hotel-azerbaijan/621675642.jpg",
+      "/assets/project_images/qafqaz-riverside-hotel-azerbaijan/621675646.jpg",
+      "/assets/project_images/qafqaz-riverside-hotel-azerbaijan/701357060.jpg"
     ],
     "description": "We are proud to highlight our completed project at Qafqaz Riverside Hotel, where we supplied and installed LG 55\" Hotel TVs, providing guests with a h...",
     "details": "We are proud to highlight our completed project at Qafqaz Riverside Hotel, where we supplied and installed LG 55\" Hotel TVs, providing guests with a high-quality and reliable in-room entertainment experience. Completed two years ago, the system continues to perform flawlessly, ensuring excellent functionality and client satisfaction. As an authorized IT and hospitality integrator and distributor of LG Electronics, we successfully integrated the LG WebOS platform with the Otrum system and licensing, creating a seamless and user-friendly solution for both guests and hotel management. Additionally, digital signage screens installed in the meeting rooms and lobby operate perfectly, supporting the hotel’s communication and branding needs.",
@@ -160,7 +167,10 @@
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs", "Room Equipment & Amenities"],
+    "technologies": [
+      "LG Hotel TVs",
+      "Room Equipment & Amenities"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -195,9 +205,12 @@
     "name": "Fairmont Baku, Flame Towers Project",
     "client": "Fairmont",
     "category": "Hotel & Hospitality",
-    "image": "/assets/project_images/fairmont-baku-flame-towers/placeholder.webp",
+    "image": "/assets/project_images/fairmont-baku-flame-towers/120013090.jpg",
     "images": [
-      "/assets/project_images/fairmont-baku-flame-towers/placeholder.webp"
+      "/assets/project_images/fairmont-baku-flame-towers/120013090.jpg",
+      "/assets/project_images/fairmont-baku-flame-towers/763695402.jpg",
+      "/assets/project_images/fairmont-baku-flame-towers/766091777.jpg",
+      "/assets/project_images/fairmont-baku-flame-towers/96992623.jpg"
     ],
     "description": "Our team is delighted to present the successful completion of our project with Fairmont Baku, Flame Towers, one of the region’s most prestigious hotel...",
     "details": "Our team is delighted to present the successful completion of our project with Fairmont Baku, Flame Towers, one of the region’s most prestigious hotels. As an authorized IT and hospitality integrator and distributor of LG Electronics, we supplied and installed 55\" and 65\" LG Hotel TVs (UM762 Series) throughout guest rooms and suites. The project also included the full integration of the LG WebOS system with Otrum hospitality software and licensing, ensuring a seamless, interactive guest entertainment experience. Additionally, digital signage displays were installed in the meeting rooms and lobby areas, providing dynamic information and high-impact visuals. Completed one year ago, the system continues to operate flawlessly, and the client has expressed complete satisfaction with the performance, reliability, and ease of use of the LG and Otrum integrated solution.",
@@ -219,16 +232,22 @@
     "name": "JW Marriott Absheron Baku Hotel Project",
     "client": "Marriott",
     "category": "Hotel & Hospitality",
-    "image": "/assets/project_images/jw-marriott-absheron-baku-hotel/placeholder.webp",
+    "image": "/assets/project_images/jw-marriott-absheron-baku-hotel/591474736.jpg",
     "images": [
-      "/assets/project_images/jw-marriott-absheron-baku-hotel/placeholder.webp"
+      "/assets/project_images/jw-marriott-absheron-baku-hotel/591474736.jpg",
+      "/assets/project_images/jw-marriott-absheron-baku-hotel/591474739.jpg",
+      "/assets/project_images/jw-marriott-absheron-baku-hotel/591474770.jpg",
+      "/assets/project_images/jw-marriott-absheron-baku-hotel/591474788.jpg",
+      "/assets/project_images/jw-marriott-absheron-baku-hotel/591474832.jpg"
     ],
     "description": "We are proud to highlight our successful collaboration with JW Marriott Absheron Baku Hotel, where our team supplied and integrated 55-inch LG UR Seri...",
     "details": "We are proud to highlight our successful collaboration with JW Marriott Absheron Baku Hotel, where our team supplied and integrated 55-inch LG UR Series Hotel TVs across guest rooms. Completed one year ago, the project continues to deliver outstanding performance and reliability. Our client reports full satisfaction with the solution — the TVs and hospitality system are operating seamlessly, providing premium in-room entertainment and reinforcing JW Marriott’s commitment to luxury and guest comfort. Below are photos from the completed installation showcasing our work.",
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs"],
+    "technologies": [
+      "LG Hotel TVs"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -238,18 +257,20 @@
     "name": "Afisha Hotel Project",
     "client": "Afisha",
     "category": "Hotel & Hospitality",
-    "image": "/assets/project_images/afisha-hotel/604139326.jpg",
+    "image": "/assets/project_images/hotel-afisha/604139326.jpg",
     "images": [
-      "/assets/project_images/afisha-hotel/604139326.jpg",
-      "/assets/project_images/afisha-hotel/610638182.jpg",
-      "/assets/project_images/afisha-hotel/629045619.jpg"
+      "/assets/project_images/hotel-afisha/604139326.jpg",
+      "/assets/project_images/hotel-afisha/610638182.jpg",
+      "/assets/project_images/hotel-afisha/629045619.jpg"
     ],
     "description": "We are pleased to highlight our completed project at Afisha Hotel, where we supplied and installed LG 50\" Hotel TVs (UM Series) to deliver a reliable ...",
     "details": "We are pleased to highlight our completed project at Afisha Hotel, where we supplied and installed LG 50\" Hotel TVs (UM Series) to deliver a reliable and high-quality in-room entertainment experience. Completed one year ago, the system continues to operate flawlessly, and the client remains fully satisfied with the performance and reliability of the equipment. As an authorized IT and hospitality integrator and distributor of LG Electronics, we take pride in providing advanced and durable technology solutions that enhance guest satisfaction and streamline hotel operations. About Afisha Hotel: Afisha Hotel offers comfortable family rooms equipped with air conditioning, private bathrooms, and a variety of modern amenities. Each room includes a tea and coffee maker, refrigerator, hairdryer, work desk, free toiletries, bath or shower, and an LG TV, ensuring a relaxing and enjoyable stay for every guest.",
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs"],
+    "technologies": [
+      "LG Hotel TVs"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -259,13 +280,13 @@
     "name": "Lopota Lake Resort & Spa Project – Kakheti Region, Georgia",
     "client": "Lopota",
     "category": "Hotel & Hospitality",
-    "image": "/assets/project_images/lopota-lake-resort-spa-kakheti-region-georgia/599856904.jpg",
+    "image": "/assets/project_images/lopota-kkaheti/599856904.jpg",
     "images": [
-      "/assets/project_images/lopota-lake-resort-spa-kakheti-region-georgia/599856904.jpg",
-      "/assets/project_images/lopota-lake-resort-spa-kakheti-region-georgia/727037542.jpg",
-      "/assets/project_images/lopota-lake-resort-spa-kakheti-region-georgia/727038196.jpg",
-      "/assets/project_images/lopota-lake-resort-spa-kakheti-region-georgia/727038470.jpg",
-      "/assets/project_images/lopota-lake-resort-spa-kakheti-region-georgia/727039640.jpg"
+      "/assets/project_images/lopota-kkaheti/599856904.jpg",
+      "/assets/project_images/lopota-kkaheti/727037542.jpg",
+      "/assets/project_images/lopota-kkaheti/727038196.jpg",
+      "/assets/project_images/lopota-kkaheti/727038470.jpg",
+      "/assets/project_images/lopota-kkaheti/727039640.jpg"
     ],
     "description": "We are delighted to present our completed project at Lopota Lake Resort & Spa, located in the beautiful Kakheti region of Georgia. Our team supplied a...",
     "details": "We are delighted to present our completed project at Lopota Lake Resort & Spa, located in the beautiful Kakheti region of Georgia. Our team supplied and installed LG 43\" to 65\" Hotel TVs (UM662 Series), ensuring high-quality performance and an exceptional in-room entertainment experience. The system continues to operate flawlessly, and the client has expressed full satisfaction with the results. As an authorized IT and hospitality integrator and distributor of LG Electronics, we successfully integrated the LG WebOS platform with the Otrum system and licensing, creating a seamless and user-friendly guest experience. Beyond televisions, we also equipped hotel rooms with essential amenities such as minibars, safes, kettles, mirrors, and soap dispensers, providing a complete hospitality solution. Additionally, digital signage screens installed in the meeting rooms and lobby are functioning perfectly, supporting the hotel’s communication and branding efforts.",
@@ -288,12 +309,12 @@
     "name": "Paragraph Freedom Square, a Luxury Collection Hotel, Tbilisi Project",
     "client": "Paragraph",
     "category": "Hotel & Hospitality",
-    "image": "/assets/project_images/paragraph-freedom-square-a-luxury-collection-hotel/510275509.jpg",
+    "image": "/assets/project_images/paragraph-freedom-square-a-luxury-collection-hotel-tbilisi/510275509.jpg",
     "images": [
-      "/assets/project_images/paragraph-freedom-square-a-luxury-collection-hotel/510275509.jpg",
-      "/assets/project_images/paragraph-freedom-square-a-luxury-collection-hotel/538682617.jpg",
-      "/assets/project_images/paragraph-freedom-square-a-luxury-collection-hotel/590255602.jpg",
-      "/assets/project_images/paragraph-freedom-square-a-luxury-collection-hotel/645738077.jpg"
+      "/assets/project_images/paragraph-freedom-square-a-luxury-collection-hotel-tbilisi/510275509.jpg",
+      "/assets/project_images/paragraph-freedom-square-a-luxury-collection-hotel-tbilisi/538682617.jpg",
+      "/assets/project_images/paragraph-freedom-square-a-luxury-collection-hotel-tbilisi/590255602.jpg",
+      "/assets/project_images/paragraph-freedom-square-a-luxury-collection-hotel-tbilisi/645738077.jpg"
     ],
     "description": "We are proud to present our accomplished project at Paragraph Freedom Square, a Luxury Collection Hotel, Tbilisi, where we supplied and installed LG 5...",
     "details": "We are proud to present our accomplished project at Paragraph Freedom Square, a Luxury Collection Hotel, Tbilisi, where we supplied and installed LG 50\"–65\" Hotel TVs (UM Series) to deliver a premium and reliable in-room entertainment experience. Completed five years ago, the system continues to operate flawlessly, and the client remains highly satisfied with the performance, quality, and reliability of the equipment. As an authorized IT and hospitality integrator and distributor of LG Electronics, we provided a full technological solution including touch boards for meeting rooms and digital signage screens with customized software, enhancing both guest engagement and hotel operations. About Paragraph Freedom Square, a Luxury Collection Hotel: Located in the heart of Tbilisi, this elegant property combines comfort and sophistication, offering guests a distinctive luxury experience. Featuring stylish interiors, state-of-the-art technology, and first-class amenities, the hotel stands as one of Georgia’s most prestigious destinations for both business and leisure travelers.",
@@ -338,12 +359,12 @@
     "name": "Greet Hotel by Accor Project",
     "client": "Greet",
     "category": "Hotel & Hospitality",
-    "image": "/assets/project_images/greet-hotel-by-accor/683831785.jpg",
+    "image": "/assets/project_images/greet-hotel-tbilisi/683831785.jpg",
     "images": [
-      "/assets/project_images/greet-hotel-by-accor/683831785.jpg",
-      "/assets/project_images/greet-hotel-by-accor/683831788.jpg",
-      "/assets/project_images/greet-hotel-by-accor/684301484.jpg",
-      "/assets/project_images/greet-hotel-by-accor/684325803.jpg"
+      "/assets/project_images/greet-hotel-tbilisi/683831785.jpg",
+      "/assets/project_images/greet-hotel-tbilisi/683831788.jpg",
+      "/assets/project_images/greet-hotel-tbilisi/684301484.jpg",
+      "/assets/project_images/greet-hotel-tbilisi/684325803.jpg"
     ],
     "description": "We are pleased to highlight our successful project at Greet Hotel by Accor, where we supplied and installed LG 50\"–65\" Hotel TVs (UM Series) to provid...",
     "details": "We are pleased to highlight our successful project at Greet Hotel by Accor, where we supplied and installed LG 50\"–65\" Hotel TVs (UM Series) to provide guests with a reliable, high-quality in-room entertainment experience. Completed two years ago, the system continues to operate perfectly, and the client remains fully satisfied with the quality, stability, and performance of the equipment. As an authorized IT and hospitality integrator and distributor of LG Electronics, we delivered a complete technology solution that included touch boards for meeting rooms and digital signage screens with customized software, enhancing guest engagement and improving operational efficiency. About Greet Hotel by Accor: This modern, eco-conscious hotel offers comfortable accommodations with a stylish design, warm atmosphere, and a focus on sustainability. Featuring contemporary amenities and advanced technology, Greet Hotel by Accor ensures guests enjoy both comfort and convenience during their stay.",
@@ -389,14 +410,14 @@
     "name": "Lachin Hotel Azerbaijan Project",
     "client": "Lachin",
     "category": "Hotel & Hospitality",
-    "image": "/assets/project_images/lachin-hotel-azerbaijan/752357184.jpg",
+    "image": "/assets/project_images/vlachin-azerbaijan-hotel/752357184.jpg",
     "images": [
-      "/assets/project_images/lachin-hotel-azerbaijan/752357184.jpg",
-      "/assets/project_images/lachin-hotel-azerbaijan/752364888.jpg",
-      "/assets/project_images/lachin-hotel-azerbaijan/752377013.jpg",
-      "/assets/project_images/lachin-hotel-azerbaijan/752386814.jpg",
-      "/assets/project_images/lachin-hotel-azerbaijan/752397911.jpg",
-      "/assets/project_images/lachin-hotel-azerbaijan/caption.jpg"
+      "/assets/project_images/vlachin-azerbaijan-hotel/752357184.jpg",
+      "/assets/project_images/vlachin-azerbaijan-hotel/752364888.jpg",
+      "/assets/project_images/vlachin-azerbaijan-hotel/752377013.jpg",
+      "/assets/project_images/vlachin-azerbaijan-hotel/752386814.jpg",
+      "/assets/project_images/vlachin-azerbaijan-hotel/752397911.jpg",
+      "/assets/project_images/vlachin-azerbaijan-hotel/caption.jpg"
     ],
     "description": "We are pleased to present our accomplished project at Lachin Hotel, located in a historic area of Azerbaijan. Our team supplied and installed LG 50\"–6...",
     "details": "We are pleased to present our accomplished project at Lachin Hotel, located in a historic area of Azerbaijan. Our team supplied and installed LG 50\"–65\" Hotel TVs (US Series) to deliver guests a modern, high-quality in-room entertainment experience. Completed one year ago, the system continues to operate flawlessly, and the client remains highly satisfied with its performance and reliability. As an authorized IT and hospitality integrator and distributor of LG Electronics, we provided a full technological solution including interactive touch boards for meeting rooms and digital signage screens with customized software to enhance communication across the property. In addition, as the official distributor of Balsan brand carpets, we furnished corridors and rooms with high-quality carpeting, completing a comfortable and elegant atmosphere throughout the hotel.",
@@ -417,20 +438,23 @@
     "name": "Bellagio Grand Casino Tbilisi Project",
     "client": "Bellagio",
     "category": "Financial & Entertainment",
-    "image": "/assets/project_images/bellagio-grand-casino-tbilisi/06_Grand_Bellagio_Casino_Tbilisi_VIP-1024x683.jpg",
+    "image": "/assets/project_images/bellagio-tbilis/06_Grand_Bellagio_Casino_Tbilisi_VIP-1024x683.jpg",
     "images": [
-      "/assets/project_images/bellagio-grand-casino-tbilisi/06_Grand_Bellagio_Casino_Tbilisi_VIP-1024x683.jpg",
-      "/assets/project_images/bellagio-grand-casino-tbilisi/470209975_17949261164877741_2673139613023418991_n.jpg",
-      "/assets/project_images/bellagio-grand-casino-tbilisi/470218971_17949259859877741_7841832404684012465_n.jpg",
-      "/assets/project_images/bellagio-grand-casino-tbilisi/grand-bellagio-let-yourself.jpg",
-      "/assets/project_images/bellagio-grand-casino-tbilisi/images.jpg"
+      "/assets/project_images/bellagio-tbilis/06_Grand_Bellagio_Casino_Tbilisi_VIP-1024x683.jpg",
+      "/assets/project_images/bellagio-tbilis/470209975_17949261164877741_2673139613023418991_n.jpg",
+      "/assets/project_images/bellagio-tbilis/470218971_17949259859877741_7841832404684012465_n.jpg",
+      "/assets/project_images/bellagio-tbilis/grand-bellagio-let-yourself.jpg",
+      "/assets/project_images/bellagio-tbilis/images.jpg"
     ],
     "description": "We are proud to highlight our successful project at Bellagio Grand Casino Tbilisi, where we supplied and installed three large-scale LED screens total...",
     "details": "We are proud to highlight our successful project at Bellagio Grand Casino Tbilisi, where we supplied and installed three large-scale LED screens totaling over 40 sqm, providing exceptional visual quality and impact for the venue’s dynamic environment. Additionally, we delivered and configured a complete digital signage solution with displays and centralized control software, enabling seamless content management and high-performance operation. As an authorized IT and hospitality integrator and distributor of LG Electronics, we continue to deliver advanced display technologies that enhance guest experiences and meet the demanding visual standards of luxury entertainment venues.",
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs", "Digital Signage"],
+    "technologies": [
+      "LG Hotel TVs",
+      "Digital Signage"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -440,21 +464,24 @@
     "name": "Black Opal Casino Tbilisi Project",
     "client": "Opal",
     "category": "Financial & Entertainment",
-    "image": "/assets/project_images/black-opal-casino-tbilisi/030a5e8d-e7fc-4935-9a75-d161e9caf3d4.jpeg",
+    "image": "/assets/project_images/opal-casino/030a5e8d-e7fc-4935-9a75-d161e9caf3d4.jpeg",
     "images": [
-      "/assets/project_images/black-opal-casino-tbilisi/030a5e8d-e7fc-4935-9a75-d161e9caf3d4.jpeg",
-      "/assets/project_images/black-opal-casino-tbilisi/346e3160-f86b-4623-b922-601b77c9f74e.jpeg",
-      "/assets/project_images/black-opal-casino-tbilisi/unnamed (1).webp",
-      "/assets/project_images/black-opal-casino-tbilisi/unnamed (2).webp",
-      "/assets/project_images/black-opal-casino-tbilisi/unnamed (3).webp",
-      "/assets/project_images/black-opal-casino-tbilisi/unnamed.webp"
+      "/assets/project_images/opal-casino/030a5e8d-e7fc-4935-9a75-d161e9caf3d4.jpeg",
+      "/assets/project_images/opal-casino/346e3160-f86b-4623-b922-601b77c9f74e.jpeg",
+      "/assets/project_images/opal-casino/unnamed (1).webp",
+      "/assets/project_images/opal-casino/unnamed (2).webp",
+      "/assets/project_images/opal-casino/unnamed (3).webp",
+      "/assets/project_images/opal-casino/unnamed.webp"
     ],
     "description": "We are delighted to showcase our successful project at Black Opal Casino Tbilisi, where we supplied and installed three large LED screens, including a...",
     "details": "We are delighted to showcase our successful project at Black Opal Casino Tbilisi, where we supplied and installed three large LED screens, including an impressive curved display, covering a total area of over 40 sqm. The installation provides striking visual performance perfectly suited for the casino’s high-end entertainment environment. In addition, we delivered a complete digital signage solution with integrated control software, allowing seamless content management and real-time display coordination across the property. As an authorized IT and hospitality integrator and distributor of LG Electronics, we specialize in advanced display technologies that enhance guest engagement and elevate the visual experience in premium entertainment venues.",
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs", "Digital Signage"],
+    "technologies": [
+      "LG Hotel TVs",
+      "Digital Signage"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -462,21 +489,24 @@
   {
     "id": 20,
     "name": "Clean House Retail Chain Project",
-    "client": "Clean",
-    "category": "Hotel & Hospitality",
-    "image": "/assets/project_images/clean-house-retail-chain/36909264_15511887349917.max-1920x1080.format-webp.mwtmk.webp",
+    "client": "Clean House",
+    "category": "Retail & Commercial",
+    "image": "/assets/project_images/clean-house/36909264_15511887349917.max-1920x1080.format-webp.mwtmk.webp",
     "images": [
-      "/assets/project_images/clean-house-retail-chain/36909264_15511887349917.max-1920x1080.format-webp.mwtmk.webp",
-      "/assets/project_images/clean-house-retail-chain/Clean_House_01_mdkXqNQ.2e16d0ba.fill-720x405.jpg",
-      "/assets/project_images/clean-house-retail-chain/Clean_House_na_ulitse_C.max-1920x1080.format-webp.mwtmk.webp",
-      "/assets/project_images/clean-house-retail-chain/orig.jpg"
+      "/assets/project_images/clean-house/36909264_15511887349917.max-1920x1080.format-webp.mwtmk.webp",
+      "/assets/project_images/clean-house/Clean_House_01_mdkXqNQ.2e16d0ba.fill-720x405.jpg",
+      "/assets/project_images/clean-house/Clean_House_na_ulitse_C.max-1920x1080.format-webp.mwtmk.webp",
+      "/assets/project_images/clean-house/orig.jpg"
     ],
     "description": "We are proud to highlight our successful collaboration with Clean House, a leading retail chain specializing in household goods and personal care prod...",
     "details": "We are proud to highlight our successful collaboration with Clean House, a leading retail chain specializing in household goods and personal care products. As part of this project, we supplied and installed high-brightness LG digital signage screens across multiple store locations, ensuring excellent visibility and impactful product presentation in all retail environments. This project was implemented in partnership with Fugo.ai, integrating advanced digital signage software for centralized control, dynamic content management, and seamless marketing display automation. As an authorized IT and hospitality integrator and distributor of LG Electronics, we continue to deliver innovative display solutions tailored to the evolving needs of retail and commercial industries.",
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs", "Digital Signage"],
+    "technologies": [
+      "LG Hotel TVs",
+      "Digital Signage"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -486,20 +516,22 @@
     "name": "Radisson Blu Iveria Tbilisi Project",
     "client": "Radisson",
     "category": "Hotel & Hospitality",
-    "image": "/assets/project_images/radisson-blu-iveria-tbilisi/281426593.jpg",
+    "image": "/assets/project_images/radisson-blue-iveria-tbilisi/281426593.jpg",
     "images": [
-      "/assets/project_images/radisson-blu-iveria-tbilisi/281426593.jpg",
-      "/assets/project_images/radisson-blu-iveria-tbilisi/281427713.jpg",
-      "/assets/project_images/radisson-blu-iveria-tbilisi/580044926.jpg",
-      "/assets/project_images/radisson-blu-iveria-tbilisi/580044942.jpg",
-      "/assets/project_images/radisson-blu-iveria-tbilisi/587754540.jpg"
+      "/assets/project_images/radisson-blue-iveria-tbilisi/281426593.jpg",
+      "/assets/project_images/radisson-blue-iveria-tbilisi/281427713.jpg",
+      "/assets/project_images/radisson-blue-iveria-tbilisi/580044926.jpg",
+      "/assets/project_images/radisson-blue-iveria-tbilisi/580044942.jpg",
+      "/assets/project_images/radisson-blue-iveria-tbilisi/587754540.jpg"
     ],
     "description": "We are pleased to present our accomplished project at Radisson Blu Iveria Hotel, part of the Silkroad Group in Tbilisi. Our team supplied and installe...",
     "details": "We are pleased to present our accomplished project at Radisson Blu Iveria Hotel, part of the Silkroad Group in Tbilisi. Our team supplied and installed LG 55\"–65\" Hotel TVs integrated with the Pro:Centric Server solution, providing guests with a seamless, interactive, and high-quality in-room entertainment experience. As an authorized IT and hospitality integrator and distributor of LG Electronics, we take pride in delivering innovative and reliable hospitality technology that enhances guest satisfaction and streamlines hotel operations. The system at Radisson Blu Iveria continues to perform flawlessly, ensuring exceptional service quality for one of Georgia’s most prestigious hotels.",
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs"],
+    "technologies": [
+      "LG Hotel TVs"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -507,7 +539,7 @@
   {
     "id": 22,
     "name": "Gudauri Lodge Project",
-    "client": "Gudauri",
+    "client": "Gudauri Lodge",
     "category": "Hotel & Hospitality",
     "image": "/assets/project_images/gudauri-lodge/248313653.jpg",
     "images": [
@@ -522,7 +554,9 @@
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs"],
+    "technologies": [
+      "LG Hotel TVs"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -545,7 +579,9 @@
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs"],
+    "technologies": [
+      "LG Hotel TVs"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -553,7 +589,7 @@
   {
     "id": 24,
     "name": "Seven Visions Resort and Places, the Dvin Project",
-    "client": "Seven",
+    "client": "Seven Visions",
     "category": "Hotel & Hospitality",
     "image": "/assets/project_images/seven-visions-resort-and-places-the-dvin/581211676.jpg",
     "images": [
@@ -570,7 +606,9 @@
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs"],
+    "technologies": [
+      "LG Hotel TVs"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -580,21 +618,23 @@
     "name": "Yerevan Place Project",
     "client": "Yerevan",
     "category": "Hotel & Hospitality",
-    "image": "/assets/project_images/yerevan-place/573900774.jpg",
+    "image": "/assets/project_images/yerevan-place-hotel/573900774.jpg",
     "images": [
-      "/assets/project_images/yerevan-place/573900774.jpg",
-      "/assets/project_images/yerevan-place/573904701.jpg",
-      "/assets/project_images/yerevan-place/573907353.jpg",
-      "/assets/project_images/yerevan-place/573907792.jpg",
-      "/assets/project_images/yerevan-place/573908192.jpg",
-      "/assets/project_images/yerevan-place/621241151.jpg"
+      "/assets/project_images/yerevan-place-hotel/573900774.jpg",
+      "/assets/project_images/yerevan-place-hotel/573904701.jpg",
+      "/assets/project_images/yerevan-place-hotel/573907353.jpg",
+      "/assets/project_images/yerevan-place-hotel/573907792.jpg",
+      "/assets/project_images/yerevan-place-hotel/573908192.jpg",
+      "/assets/project_images/yerevan-place-hotel/621241151.jpg"
     ],
     "description": "We are pleased to showcase our completed project at Yerevan Place, where we supplied and installed LG 55\" to 65\" Hotel TVs (US Series) to ensure guest...",
     "details": "We are pleased to showcase our completed project at Yerevan Place, where we supplied and installed LG 55\" to 65\" Hotel TVs (US Series) to ensure guests enjoy a modern, reliable, and high-quality in-room entertainment experience. Completed three years ago, the system continues to operate flawlessly, and the client remains fully satisfied with its performance and reliability. As an authorized IT and hospitality integrator and distributor of LG Electronics, we take pride in delivering efficient, durable, and user-friendly solutions tailored to meet the demands of premium hospitality environments. About Yerevan Place: Located in the heart of Armenia’s capital, Yerevan Place offers a 4-star hotel experience featuring a rooftop swimming pool, fitness center, restaurant, bar, and complimentary Wi-Fi. Designed for both business and leisure travelers, the hotel combines elegance, comfort, and convenience to create a welcoming atmosphere for all guests.",
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs"],
+    "technologies": [
+      "LG Hotel TVs"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -604,11 +644,11 @@
     "name": "Mövenpick Winter Park Baku Project",
     "client": "Mövenpick",
     "category": "Hotel & Hospitality",
-    "image": "/assets/project_images/mvenpick-winter-park-baku/753201026.jpg",
+    "image": "/assets/project_images/movenpick-winter-park-baku/753201026.jpg",
     "images": [
-      "/assets/project_images/mvenpick-winter-park-baku/753201026.jpg",
-      "/assets/project_images/mvenpick-winter-park-baku/753201043.jpg",
-      "/assets/project_images/mvenpick-winter-park-baku/753201058.jpg"
+      "/assets/project_images/movenpick-winter-park-baku/753201026.jpg",
+      "/assets/project_images/movenpick-winter-park-baku/753201043.jpg",
+      "/assets/project_images/movenpick-winter-park-baku/753201058.jpg"
     ],
     "description": "We are delighted to present our successful project at Mövenpick Winter Park Baku, where we supplied and installed LG 55\" Hotel TVs, delivering a moder...",
     "details": "We are delighted to present our successful project at Mövenpick Winter Park Baku, where we supplied and installed LG 55\" Hotel TVs, delivering a modern and high-quality in-room entertainment experience. The system operates perfectly, ensuring outstanding performance and guest satisfaction. As an authorized IT and hospitality integrator and distributor of LG Electronics, we integrated the LG WebOS platform with the Otrum system and licensing, offering the hotel a seamless and interactive solution. Additionally, digital signage screens installed in the meeting rooms and lobby continue to function flawlessly, enhancing internal communication and guest engagement across the property.",
@@ -642,7 +682,9 @@
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs"],
+    "technologies": [
+      "LG Hotel TVs"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -663,7 +705,9 @@
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs"],
+    "technologies": [
+      "LG Hotel TVs"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -673,21 +717,24 @@
     "name": "ASAN Service – Ministry of Justice, Azerbaijan Project",
     "client": "ASAN",
     "category": "Government & Public",
-    "image": "/assets/project_images/asan-service-ministry-of-justice-azerbaijan/PHOTO-2024-09-11-02-39-55.jpg",
+    "image": "/assets/project_images/asan-azerbaijan-ministry-of-justice-project/PHOTO-2024-09-11-02-39-55.jpg",
     "images": [
-      "/assets/project_images/asan-service-ministry-of-justice-azerbaijan/PHOTO-2024-09-11-02-39-55.jpg",
-      "/assets/project_images/asan-service-ministry-of-justice-azerbaijan/PHOTO-2024-09-11-02-39-56 (1).jpg",
-      "/assets/project_images/asan-service-ministry-of-justice-azerbaijan/PHOTO-2024-09-11-02-39-56 (2).jpg",
-      "/assets/project_images/asan-service-ministry-of-justice-azerbaijan/PHOTO-2024-09-11-02-39-56.jpg",
-      "/assets/project_images/asan-service-ministry-of-justice-azerbaijan/PHOTO-2024-09-11-02-39-58.jpg",
-      "/assets/project_images/asan-service-ministry-of-justice-azerbaijan/PHOTO-2024-09-11-02-39-59.jpg"
+      "/assets/project_images/asan-azerbaijan-ministry-of-justice-project/PHOTO-2024-09-11-02-39-55.jpg",
+      "/assets/project_images/asan-azerbaijan-ministry-of-justice-project/PHOTO-2024-09-11-02-39-56 (1).jpg",
+      "/assets/project_images/asan-azerbaijan-ministry-of-justice-project/PHOTO-2024-09-11-02-39-56 (2).jpg",
+      "/assets/project_images/asan-azerbaijan-ministry-of-justice-project/PHOTO-2024-09-11-02-39-56.jpg",
+      "/assets/project_images/asan-azerbaijan-ministry-of-justice-project/PHOTO-2024-09-11-02-39-58.jpg",
+      "/assets/project_images/asan-azerbaijan-ministry-of-justice-project/PHOTO-2024-09-11-02-39-59.jpg"
     ],
     "description": "As a leading IT and hospitality integrator in the Caucasus region, we are proud to highlight our project with the ASAN Service, Ministry of Justice of...",
     "details": "As a leading IT and hospitality integrator in the Caucasus region, we are proud to highlight our project with the ASAN Service, Ministry of Justice of Azerbaijan. Our team supplied and installed over 300 units of LG 22\" digital signage displays, providing an efficient and modern information and communication system across ASAN service centers. As an authorized distributor of LG Electronics, we delivered a durable, scalable, and easy-to-manage digital signage solution that enhances public service efficiency and visitor experience across multiple government facilities.",
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs", "Digital Signage"],
+    "technologies": [
+      "LG Hotel TVs",
+      "Digital Signage"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -695,18 +742,22 @@
   {
     "id": 30,
     "name": "Azerbaijan Airport Terminal 1 Project",
-    "client": "Azerbaijan",
+    "client": "Azerbaijan Airport",
     "category": "Transportation & Infrastructure",
-    "image": "/assets/project_images/azerbaijan-airport-terminal-1/placeholder.webp",
+    "image": "/assets/placeholder.webp",
     "images": [
-      "/assets/project_images/azerbaijan-airport-terminal-1/placeholder.webp"
+      "/assets/placeholder.webp"
     ],
     "description": "We are proud to showcase one of our most remarkable projects — the Azerbaijan Airport Terminal 1 installation. Our team supplied and installed LG 49\" ...",
     "details": "We are proud to showcase one of our most remarkable projects — the Azerbaijan Airport Terminal 1 installation. Our team supplied and installed LG 49\" video walls and 75\" digital signage displays, delivering stunning visual performance and reliable information display solutions for one of the country’s busiest and most modern airport terminals. As an authorized IT and hospitality integrator and distributor of LG Electronics, we specialize in implementing large-scale display systems that enhance passenger communication, wayfinding, and visual engagement. The installation continues to perform flawlessly, reflecting our commitment to innovation and quality in every project.",
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs", "Digital Signage", "Video Wall Systems"],
+    "technologies": [
+      "LG Hotel TVs",
+      "Digital Signage",
+      "Video Wall Systems"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -716,16 +767,19 @@
     "name": "BM.GE National Business News Channel Project",
     "client": "BM.GE",
     "category": "Hotel & Hospitality",
-    "image": "/assets/project_images/bmge-national-business-news-channel/Picture1.jpg",
+    "image": "/assets/project_images/bm-ge-office-tbilisi/Picture1.jpg",
     "images": [
-      "/assets/project_images/bmge-national-business-news-channel/Picture1.jpg"
+      "/assets/project_images/bm-ge-office-tbilisi/Picture1.jpg"
     ],
     "description": "We are proud to highlight our completed project with BM.GE, Georgia’s leading national business news channel. Completed five years ago, this project i...",
     "details": "We are proud to highlight our completed project with BM.GE, Georgia’s leading national business news channel. Completed five years ago, this project involved the supply and installation of high-quality LG video walls for the TV broadcasting studio, designed specifically for live on-air transmission and studio operations. As an authorized IT and hospitality integrator and distributor of LG Electronics, we provided a reliable, high-performance video display solution tailored to the demanding requirements of live broadcasting. The system continues to operate seamlessly, delivering exceptional visual quality and performance that supports BM.GE’s daily news production.",
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs", "Video Wall Systems"],
+    "technologies": [
+      "LG Hotel TVs",
+      "Video Wall Systems"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -734,18 +788,21 @@
     "id": 32,
     "name": "Azerbaijan JTI Retail Chain Project",
     "client": "JTI",
-    "category": "Hotel & Hospitality",
-    "image": "/assets/project_images/azerbaijan-jti-retail-chain/PHOTO-2025-04-28-09-48-07.jpg",
+    "category": "Retail & Commercial",
+    "image": "/assets/project_images/jti-azerbaijan/PHOTO-2025-04-28-09-48-07.jpg",
     "images": [
-      "/assets/project_images/azerbaijan-jti-retail-chain/PHOTO-2025-04-28-09-48-07.jpg",
-      "/assets/project_images/azerbaijan-jti-retail-chain/PHOTO-2025-04-28-09-48-36.jpg"
+      "/assets/project_images/jti-azerbaijan/PHOTO-2025-04-28-09-48-07.jpg",
+      "/assets/project_images/jti-azerbaijan/PHOTO-2025-04-28-09-48-36.jpg"
     ],
     "description": "We are proud to highlight our accomplished project with the JTI retail chain in Azerbaijan, where we supplied and installed LG 32\" and 43\" digital sig...",
     "details": "We are proud to highlight our accomplished project with the JTI retail chain in Azerbaijan, where we supplied and installed LG 32\" and 43\" digital signage displays integrated with Omma software. This solution enables centralized content management, dynamic marketing displays, and consistent brand communication across all retail locations. As an authorized IT and hospitality integrator and distributor of LG Electronics, we deliver advanced digital signage systems that combine superior display quality with intelligent software integration — enhancing customer engagement and operational efficiency for leading retail brands.",
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs", "Digital Signage"],
+    "technologies": [
+      "LG Hotel TVs",
+      "Digital Signage"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -755,17 +812,20 @@
     "name": "Kapital Bank Headquarters Project",
     "client": "Kapital Bank",
     "category": "Financial & Entertainment",
-    "image": "/assets/project_images/kapital-bank-headquarters/PHOTO-2025-04-28-07-59-25 (1).jpg",
+    "image": "/assets/project_images/kapital-bank-baku-hq/PHOTO-2025-04-28-07-59-25 (1).jpg",
     "images": [
-      "/assets/project_images/kapital-bank-headquarters/PHOTO-2025-04-28-07-59-25 (1).jpg",
-      "/assets/project_images/kapital-bank-headquarters/PHOTO-2025-04-28-07-59-25.jpg"
+      "/assets/project_images/kapital-bank-baku-hq/PHOTO-2025-04-28-07-59-25 (1).jpg",
+      "/assets/project_images/kapital-bank-baku-hq/PHOTO-2025-04-28-07-59-25.jpg"
     ],
     "description": "We are pleased to highlight our successful project with Kapital Bank Headquarters, where we supplied and installed a state-of-the-art LG video wall sy...",
     "details": "We are pleased to highlight our successful project with Kapital Bank Headquarters, where we supplied and installed a state-of-the-art LG video wall system integrated with VuWall software for centralized control and content management. This collaboration created a dynamic and efficient visual communication solution ideal for corporate operations and monitoring applications. As an authorized IT and hospitality integrator and distributor of LG Electronics, we specialize in advanced display technologies that combine performance, reliability, and intuitive software integration — delivering impactful visual solutions tailored to corporate environments.",
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs", "Video Wall Systems"],
+    "technologies": [
+      "LG Hotel TVs",
+      "Video Wall Systems"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -775,16 +835,19 @@
     "name": "Maqro City Georgia Headquarters Project",
     "client": "Maqro",
     "category": "Corporate Office",
-    "image": "/assets/project_images/maqro-city-georgia-headquarters/561090182_122144954018897038_3296397395415239242_n.jpg",
+    "image": "/assets/project_images/maqro-office/561090182_122144954018897038_3296397395415239242_n.jpg",
     "images": [
-      "/assets/project_images/maqro-city-georgia-headquarters/561090182_122144954018897038_3296397395415239242_n.jpg"
+      "/assets/project_images/maqro-office/561090182_122144954018897038_3296397395415239242_n.jpg"
     ],
     "description": "We are proud to showcase our accomplished project with Maqro City Georgia, one of the leading construction and development companies in Tbilisi. Our t...",
     "details": "We are proud to showcase our accomplished project with Maqro City Georgia, one of the leading construction and development companies in Tbilisi. Our team supplied and installed LG video walls at their headquarters, creating a modern and dynamic display solution for presentations, monitoring, and corporate communications. As an authorized IT and hospitality integrator and distributor of LG Electronics, we delivered a high-performance visual system that enhances workspace functionality and reflects the company’s innovative and forward-thinking spirit. The installation continues to operate seamlessly, providing reliability and superior image quality.",
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs", "Video Wall Systems"],
+    "technologies": [
+      "LG Hotel TVs",
+      "Video Wall Systems"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
@@ -792,11 +855,11 @@
   {
     "id": 35,
     "name": "Azerbaijan Metro Control Room Project",
-    "client": "Azerbaijan",
-    "category": "Hotel & Hospitality",
-    "image": "/assets/project_images/azerbaijan-metro-control-room/placeholder.webp",
+    "client": "Azerbaijan Metro",
+    "category": "Transportation & Infrastructure",
+    "image": "/assets/placeholder.webp",
     "images": [
-      "/assets/project_images/azerbaijan-metro-control-room/placeholder.webp"
+      "/assets/placeholder.webp"
     ],
     "description": "We are pleased to highlight our successful project with the Azerbaijan Metro Control Room, where we supplied and installed advanced LG video walls des...",
     "details": "We are pleased to highlight our successful project with the Azerbaijan Metro Control Room, where we supplied and installed advanced LG video walls designed for real-time traffic monitoring and control operations. The system provides operators with clear, high-resolution visuals essential for managing passenger flow, safety, and metro network efficiency. As an authorized IT and hospitality integrator and distributor of LG Electronics, we specialize in delivering reliable, high-performance display solutions for mission-critical environments. Our installation ensures optimal visibility, seamless operation, and long-term durability in one of the region’s key infrastructure facilities.",
@@ -814,77 +877,85 @@
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
   },
   {
-    "id": 37,
+    "id": 36,
     "name": "Ramada Encore M2 Construction Company Hotel Project",
     "client": "Ramada",
     "category": "Hotel & Hospitality",
-    "image": "/assets/project_images/ramada-encore-m2-construction-company-hotel/79a34ce3243c013674d8e4efe5e0a250.jpg",
+    "image": "/assets/project_images/ramada-encore-m2-tbilisi/79a34ce3243c013674d8e4efe5e0a250.jpg",
     "images": [
-      "/assets/project_images/ramada-encore-m2-construction-company-hotel/79a34ce3243c013674d8e4efe5e0a250.jpg",
-      "/assets/project_images/ramada-encore-m2-construction-company-hotel/892c974fd4f5da84e69f6983292ac51f.jpg",
-      "/assets/project_images/ramada-encore-m2-construction-company-hotel/img-tbilisi-saburtalo-hotel-by-mercure-tbilisi-6.jpg",
-      "/assets/project_images/ramada-encore-m2-construction-company-hotel/img-tbilisi-saburtalo-hotel-by-mercure-tbilisi-9.jpg"
+      "/assets/project_images/ramada-encore-m2-tbilisi/79a34ce3243c013674d8e4efe5e0a250.jpg",
+      "/assets/project_images/ramada-encore-m2-tbilisi/892c974fd4f5da84e69f6983292ac51f.jpg",
+      "/assets/project_images/ramada-encore-m2-tbilisi/img-tbilisi-saburtalo-hotel-by-mercure-tbilisi-6.jpg",
+      "/assets/project_images/ramada-encore-m2-tbilisi/img-tbilisi-saburtalo-hotel-by-mercure-tbilisi-9.jpg"
     ],
     "description": "We are proud to showcase our accomplished project at Ramada Encore by M2 Construction Company, where we supplied and installed LG 43\" Hotel TVs (US Se...",
     "details": "We are proud to showcase our accomplished project at Ramada Encore by M2 Construction Company, where we supplied and installed LG 43\" Hotel TVs (US Series) to deliver a modern and high-quality in-room entertainment experience. Completed five years ago, the system continues to operate flawlessly, and the client remains highly satisfied with the reliability, performance, and durability of the equipment. As an authorized IT and hospitality integrator and distributor of LG Electronics, we take pride in delivering dependable, long-term technology solutions that enhance guest comfort and align with the operational excellence of distinguished hospitality brands.",
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs"],
+    "technologies": [
+      "LG Hotel TVs"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
   },
   {
-    "id": 38,
+    "id": 37,
     "name": "Maqro Group – Swiss Hotel Tbilisi Project",
     "client": "Swiss Hotel",
     "category": "Hotel & Hospitality",
-    "image": "/assets/project_images/maqro-group-swiss-hotel-tbilisi/559563058.jpg",
+    "image": "/assets/project_images/swiss-hotel-tbilisi/559563058.jpg",
     "images": [
-      "/assets/project_images/maqro-group-swiss-hotel-tbilisi/559563058.jpg",
-      "/assets/project_images/maqro-group-swiss-hotel-tbilisi/756268407.jpg",
-      "/assets/project_images/maqro-group-swiss-hotel-tbilisi/759834658.jpg",
-      "/assets/project_images/maqro-group-swiss-hotel-tbilisi/759836906.jpg",
-      "/assets/project_images/maqro-group-swiss-hotel-tbilisi/765270242.jpg",
-      "/assets/project_images/maqro-group-swiss-hotel-tbilisi/765270245.jpg",
-      "/assets/project_images/maqro-group-swiss-hotel-tbilisi/765270250.jpg",
-      "/assets/project_images/maqro-group-swiss-hotel-tbilisi/765270266.jpg",
-      "/assets/project_images/maqro-group-swiss-hotel-tbilisi/765270305.jpg"
+      "/assets/project_images/swiss-hotel-tbilisi/559563058.jpg",
+      "/assets/project_images/swiss-hotel-tbilisi/756268407.jpg",
+      "/assets/project_images/swiss-hotel-tbilisi/759834658.jpg",
+      "/assets/project_images/swiss-hotel-tbilisi/759836906.jpg",
+      "/assets/project_images/swiss-hotel-tbilisi/765270242.jpg",
+      "/assets/project_images/swiss-hotel-tbilisi/765270245.jpg",
+      "/assets/project_images/swiss-hotel-tbilisi/765270250.jpg",
+      "/assets/project_images/swiss-hotel-tbilisi/765270266.jpg",
+      "/assets/project_images/swiss-hotel-tbilisi/765270305.jpg"
     ],
     "description": "We are proud to highlight our successful collaboration with Maqro Group on their prestigious Swiss Hotel Tbilisi project. Our team supplied and instal...",
     "details": "We are proud to highlight our successful collaboration with Maqro Group on their prestigious Swiss Hotel Tbilisi project. Our team supplied and installed LG 55\"–65\" Hotel TVs integrated with the Pro:Centric Server system, delivering a seamless, interactive, and modern in-room entertainment experience for hotel guests. In addition to the guestroom installations, we provided interactive touch boards for meeting rooms, enhancing functionality and efficiency for both business events and corporate use. As an authorized IT and hospitality integrator and distributor of LG Electronics, we take pride in offering high-performance, reliable technology solutions that elevate guest satisfaction and support the technological excellence of top-tier hospitality brands.",
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs", "Meeting Room Solutions"],
+    "technologies": [
+      "LG Hotel TVs",
+      "Meeting Room Solutions"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
   },
   {
-    "id": 39,
+    "id": 38,
     "name": "TBC Bank Branch Renovation Project",
     "client": "TBC",
     "category": "Financial & Entertainment",
-    "image": "/assets/project_images/tbc-bank-branch-renovation/Picture2.jpg",
+    "image": "/assets/project_images/tbc/Picture2.jpg",
     "images": [
-      "/assets/project_images/tbc-bank-branch-renovation/Picture2.jpg",
-      "/assets/project_images/tbc-bank-branch-renovation/Picture3.jpg",
-      "/assets/project_images/tbc-bank-branch-renovation/Picture4.jpg"
+      "/assets/project_images/tbc/Picture2.jpg",
+      "/assets/project_images/tbc/Picture3.jpg",
+      "/assets/project_images/tbc/Picture4.jpg"
     ],
     "description": "We are proud to present our successful collaboration with TBC Bank, one of the leading financial institutions in Georgia. As part of a large-scale ren...",
     "details": "We are proud to present our successful collaboration with TBC Bank, one of the leading financial institutions in Georgia. As part of a large-scale renovation initiative, we won the tender to design and install LG video wall systems across 13 branch locations throughout the city. Completed four years ago, the project continues to perform flawlessly, enhancing visual communication and customer experience within each branch. As an authorized IT and hospitality integrator and distributor of LG Electronics, we specialize in delivering reliable, high-performance display solutions that meet the technological and branding needs of modern financial institutions.",
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs", "Video Wall Systems"],
+    "technologies": [
+      "LG Hotel TVs",
+      "Video Wall Systems"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
   },
   {
-    "id": 40,
+    "id": 39,
     "name": "Tbilisi Philharmonic Hotel by Mercure Project",
     "client": "Mercure",
     "category": "Hotel & Hospitality",
@@ -900,28 +971,32 @@
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs"],
+    "technologies": [
+      "LG Hotel TVs"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."
   },
   {
-    "id": 41,
+    "id": 40,
     "name": "The Telegraph Hotel – The Leading Hotels of the World, Tbilisi Project",
-    "client": "The",
+    "client": "Telegraph",
     "category": "Hotel & Hospitality",
-    "image": "/assets/project_images/the-telegraph-hotel-the-leading-hotels-of-the-worl/700624373.jpg",
+    "image": "/assets/project_images/the-telegraph-hotel-the-leading-hotels-of-the-world/700624373.jpg",
     "images": [
-      "/assets/project_images/the-telegraph-hotel-the-leading-hotels-of-the-worl/700624373.jpg",
-      "/assets/project_images/the-telegraph-hotel-the-leading-hotels-of-the-worl/734993105.jpg",
-      "/assets/project_images/the-telegraph-hotel-the-leading-hotels-of-the-worl/junior-club-suite-22.jpg"
+      "/assets/project_images/the-telegraph-hotel-the-leading-hotels-of-the-world/700624373.jpg",
+      "/assets/project_images/the-telegraph-hotel-the-leading-hotels-of-the-world/734993105.jpg",
+      "/assets/project_images/the-telegraph-hotel-the-leading-hotels-of-the-world/junior-club-suite-22.jpg"
     ],
     "description": "We are proud to showcase our successful project at The Telegraph Hotel, part of The Leading Hotels of the World and operated by the Silkroad Group in ...",
     "details": "We are proud to showcase our successful project at The Telegraph Hotel, part of The Leading Hotels of the World and operated by the Silkroad Group in Tbilisi. For this premium property, we supplied and installed LG 55\"–65\" Hotel TVs (UM762 Series) integrated with the Pro:Centric Server solution, providing an advanced, interactive, and high-quality in-room entertainment experience. As an authorized IT and hospitality integrator and distributor of LG Electronics, we specialize in delivering complete technological solutions that enhance guest satisfaction, optimize hotel operations, and maintain the luxury standards of world-class properties. The system at The Telegraph Hotel continues to operate flawlessly, meeting the expectations of both management and guests alike.",
     "timeline": "3-6 months",
     "budget": "Contact for quote",
     "teamSize": "10-20 specialists",
-    "technologies": ["LG Hotel TVs"],
+    "technologies": [
+      "LG Hotel TVs"
+    ],
     "challenges": "Implementing advanced technology solutions while maintaining operational excellence and meeting strict quality standards.",
     "solutions": "Leveraging our expertise as authorized LG distributors and hospitality integrators, we delivered comprehensive solutions with professional installation and ongoing support.",
     "results": "Successfully completed project with full client satisfaction, delivering reliable performance and enhanced guest/user experience."

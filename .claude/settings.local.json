@@ -8,7 +8,9 @@
       "Bash(node parse-projects.js)",
       "Bash(node translate-projects.js:*)",
       "Bash(node -e:*)",
-      "Bash(node reorganize-images.js:*)"
+      "Bash(node reorganize-images.js:*)",
+      "Bash(node full-rescan.js:*)",
+      "Bash(node copy-missing-images.js:*)"
     ],
     "deny": [],
     "ask": []
