@@ -30,8 +30,14 @@ export default function HomePage() {
   const whatsapp = useWhatsApp();
 
   // Get projects and products based on current locale
-  const projects = useMemo(() => getProjectsByLocale(locale), [locale]);
+  const allProjects = useMemo(() => getProjectsByLocale(locale), [locale]);
   const products = useMemo(() => getProductsByLocale(locale), [locale]);
+
+  // Show only first 10 projects on home page for better performance
+  const featuredProjects = useMemo(
+    () => allProjects.slice(0, 10),
+    [allProjects]
+  );
 
   const handleSectionClick = (sectionId: string) => {
     scrollToSection(sectionId);
@@ -66,7 +72,7 @@ export default function HomePage() {
       {/* <BenefitsSection isVisible={isVisible.benefits} /> */}
       {/* Projects section now uses locale-based projects */}
       <ProjectsSection
-        projects={projects}
+        projects={featuredProjects}
         isVisible={isVisible.projects}
         onProjectView={handleProjectView}
         onStartProject={() => whatsapp.setIsOpen(true)}

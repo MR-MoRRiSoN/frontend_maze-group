@@ -71,7 +71,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
               }`}
-              style={{ animationDelay: `${index * 200}ms` }}
+              style={{ animationDelay: `${index * 200}ms`, minWidth: 340 }}
             >
               <div className="bg-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 transform hover:scale-105 h-full">
                 {info.icon}

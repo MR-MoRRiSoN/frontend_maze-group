@@ -211,8 +211,8 @@
     },
     "email": {
       "title": "მოგვწერეთ ელფოსტაზე",
-      "address1": "info@mazegroup.ge",
-      "address2": "projects@mazegroup.ge",
+      "address1": "guru@mazeegroup.net",
+      "address2": "director@hotelintegration.ge",
       "subtitle": "პასუხი 2 საათში"
     },
     "office": {
@@ -338,6 +338,8 @@
     "breadcrumb": "ყველა პროექტი",
     "title": "ყველა პროექტი",
     "subtitle": "გაეცანით ჩვენს სრულ პორტფოლიოს წარმატებული პროექტების, განხორციელებული სასტუმრო და სახელმწიფო სექტორებში.",
+    "loadMore": "მეტი პროექტის ჩატვირთვა",
+    "remaining": "დარჩა",
     "stats": {
       "title": "პროექტის სტატისტიკა",
       "totalProjects": "სულ პროექტები",
@@ -358,6 +360,8 @@
     "back": "უკან",
     "projectDetails": "პროექტის დეტალები",
     "projectOverview": "პროექტის მიმოხილვა",
+    "projectVideos": "პროექტის ვიდეოები",
+    "video": "ვიდეო",
     "technologiesImplemented": "გამოყენებული ტექნოლოგიები",
     "challenges": "გამოწვევები",
     "solutions": "გადაწყვეტები",

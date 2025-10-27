@@ -211,8 +211,8 @@
     },
     "email": {
       "title": "Email Us",
-      "address1": "info@mazegroup.ge",
-      "address2": "projects@mazegroup.ge",
+      "address1": "guru@mazeegroup.net",
+      "address2": "director@hotelintegration.ge",
       "subtitle": "Response within 2 hours"
     },
     "office": {
@@ -339,6 +339,8 @@
     "breadcrumb": "All Projects",
     "title": "All Projects",
     "subtitle": "Explore our complete portfolio of successful implementations across hospitality and government sectors",
+    "loadMore": "Load More Projects",
+    "remaining": "more",
     "stats": {
       "title": "Project Statistics",
       "totalProjects": "Total Projects",
@@ -359,6 +361,8 @@
     "back": "Back",
     "projectDetails": "Project Details",
     "projectOverview": "Project Overview",
+    "projectVideos": "Project Videos",
+    "video": "Video",
     "technologiesImplemented": "Technologies Implemented",
     "challenges": "Challenges",
     "solutions": "Solutions",

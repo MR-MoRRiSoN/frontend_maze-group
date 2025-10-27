@@ -5,6 +5,7 @@ export interface Project {
   category: string;
   image: string;
   images: string[];
+  videos?: string[];
   description: string;
   details: string;
   timeline: string;

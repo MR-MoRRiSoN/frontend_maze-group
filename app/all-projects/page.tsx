@@ -18,10 +18,16 @@ export default function AllProjectsPage() {
   const router = useRouter();
   const t = useTranslations();
   const [isLoaded, setIsLoaded] = useState(false);
+  const [displayCount, setDisplayCount] = useState(9);
   const isVisible = useIntersectionObserver();
   const whatsapp = useWhatsApp();
   const locale = useLocale();
-  const projects = useMemo(() => getProjectsByLocale(locale), [locale]);
+  const allProjects = useMemo(() => getProjectsByLocale(locale), [locale]);
+  const projects = useMemo(
+    () => allProjects.slice(0, displayCount),
+    [allProjects, displayCount]
+  );
+  const hasMore = displayCount < allProjects.length;
 
   useEffect(() => {
     // Trigger initial animation after component mounts
@@ -48,6 +54,19 @@ export default function AllProjectsPage() {
 
   const handleQuoteClick = () => {
     whatsapp.setIsOpen(true);
+  };
+
+  const handleLoadMore = () => {
+    setDisplayCount((prev) => {
+      // Add 9 items each time
+      const next = prev + 9;
+
+      // Ensure the total never exceeds the project list length
+      const capped = Math.min(next, allProjects.length);
+
+      // ✅ Remove the rounding — just return capped directly
+      return capped;
+    });
   };
 
   return (
@@ -124,6 +143,19 @@ export default function AllProjectsPage() {
               </div>
             ))}
           </div>
+
+          {/* Load More Button */}
+          {hasMore && (
+            <div className="flex justify-center mb-8 sm:mb-12 md:mb-16">
+              <button
+                onClick={handleLoadMore}
+                className="bg-[#032685] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#021d5a] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                {t("allProjects.loadMore")} ({allProjects.length - displayCount}{" "}
+                {t("allProjects.remaining")})
+              </button>
+            </div>
+          )}
 
           {/* Stats with Animation - Responsive */}
           <div

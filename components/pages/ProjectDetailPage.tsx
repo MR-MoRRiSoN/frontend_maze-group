@@ -1,5 +1,6 @@
 // components/pages/ProjectDetailPage.tsx
 import React, { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import {
   ArrowLeft,
   Clock,
@@ -18,6 +19,22 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { useImageCarousel } from "@/lib/hooks/useImageCarousel";
 import { Project } from "@/types/project";
+
+// Dynamically import VideoPlayer with no SSR
+const VideoPlayer = dynamic(
+  () => import("@/components/ui/VideoPlayer").then((mod) => mod.VideoPlayer),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-full aspect-video bg-gray-900 rounded-2xl flex items-center justify-center">
+        <div className="flex flex-col items-center gap-3">
+          <div className="w-12 h-12 border-4 border-[#032685] border-t-transparent rounded-full animate-spin"></div>
+          <p className="text-gray-400 text-sm">Loading video player...</p>
+        </div>
+      </div>
+    ),
+  }
+);
 
 interface ProjectDetailPageProps {
   project: Project;
@@ -183,6 +200,38 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
                       {project.details}
                     </p>
                   </div>
+
+                  {/* Project Videos */}
+                  {project.videos && project.videos.length > 0 && (
+                    <div className="mb-8">
+                      <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">
+                        {t("projectDetailPage.projectVideos")}
+                      </h3>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                        {project.videos.map((video, index) => (
+                          <div
+                            key={index}
+                            className="group relative rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300"
+                            style={{
+                              background: 'linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%)',
+                            }}
+                          >
+                            <VideoPlayer
+                              src={video}
+                              poster={project.images[0]}
+                              className="w-full"
+                            />
+                            {/* Video number badge */}
+                            {project.videos && project.videos.length > 1 && (
+                              <div className="absolute top-4 right-4 bg-[#032685]/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-sm font-semibold z-10 shadow-lg">
+                                {t("projectDetailPage.video")} {index + 1}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
                   {/* Technologies Used */}
                   <div className="mb-8">

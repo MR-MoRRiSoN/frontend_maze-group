@@ -211,8 +211,8 @@
     },
     "email": {
       "title": "Напишите нам",
-      "address1": "info@mazegroup.ge",
-      "address2": "projects@mazegroup.ge",
+      "address1": "guru@mazeegroup.net",
+      "address2": "director@hotelintegration.ge",
       "subtitle": "Ответ в течение 2 часов"
     },
     "office": {
@@ -358,6 +358,8 @@
     "back": "Назад",
     "projectDetails": "Детали Проекта",
     "projectOverview": "Обзор Проекта",
+    "projectVideos": "Видео Проекта",
+    "video": "Видео",
     "technologiesImplemented": "Внедренные Технологии",
     "challenges": "Вызовы",
     "solutions": "Решения",

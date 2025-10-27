@@ -165,10 +165,10 @@ export function ScrollableCardsSection<T extends { id: string | number }>({
 
         {renderFilters && renderFilters()}
 
-        <div className="relative mb-12 md:mb-16">
+        <div className="relative">
           <div
             ref={scrollContainerRef}
-            className="flex gap-6 md:gap-8 lg:gap-12 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-9 pr-4 md:pr-8 lg:pr-12 scroll-smooth"
+            className="flex gap-6 md:gap-8 lg:gap-12 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-16 pr-4 md:pr-8 lg:pr-12 scroll-smooth"
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
@@ -262,12 +262,14 @@ export function ScrollableCardsSection<T extends { id: string | number }>({
         <div className="text-center">
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-6">
             <button
+              style={{ cursor: "pointer" }}
               onClick={primaryButton.onClick}
-              className="w-full sm:w-auto bg-[#032685] text-white px-8 md:px-12 py-3 md:py-4 rounded-xl text-lg md:text-xl font-bold hover:bg-[#021d5a] transition-colors duration-300"
+              className="w-full sm:w-auto bg-[#032685] text-white px-8 md:px-12 py-3  md:py-4 rounded-xl text-lg md:text-xl font-bold hover:bg-[#021d5a] transition-colors duration-300"
             >
               {primaryButton.text}
             </button>
             <button
+              style={{ cursor: "pointer" }}
               onClick={secondaryButton.onClick}
               className="w-full sm:w-auto border-2 border-[#032685] text-[#032685] px-8 md:px-12 py-3 md:py-4 rounded-xl text-lg md:text-xl font-bold hover:bg-[#e6f2ff] transition-colors duration-300"
             >

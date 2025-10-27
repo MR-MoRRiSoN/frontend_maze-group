@@ -10,7 +10,12 @@
       "Bash(node -e:*)",
       "Bash(node reorganize-images.js:*)",
       "Bash(node full-rescan.js:*)",
-      "Bash(node copy-missing-images.js:*)"
+      "Bash(node copy-missing-images.js:*)",
+      "Bash(node add-videos-and-missing-images.js:*)",
+      "Bash(node add-airport-metro.js:*)",
+      "Bash(npm install:*)",
+      "Read(//c/Users/morrison/Downloads/WEB PROJECTS PICS AND DETAILS/**)",
+      "Bash(node add-tatuza-translations.js:*)"
     ],
     "deny": [],
     "ask": []
