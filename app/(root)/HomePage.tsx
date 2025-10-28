@@ -66,10 +66,6 @@ export default function HomePage() {
         onProjectsClick={() => handleSectionClick("projects")}
       />
       <StatsSection />
-
-      <WhyUsSection isVisible={isVisible["why-us"]} />
-      <ServicesSection isVisible={isVisible.services} />
-      {/* <BenefitsSection isVisible={isVisible.benefits} /> */}
       {/* Projects section now uses locale-based projects */}
       <ProjectsSection
         projects={featuredProjects}
@@ -78,6 +74,9 @@ export default function HomePage() {
         onStartProject={() => whatsapp.setIsOpen(true)}
       />
 
+      <ServicesSection isVisible={isVisible.services} />
+
+      <WhyUsSection isVisible={isVisible["why-us"]} />
       {/* Catalog section now uses locale-based products */}
       <CatalogSection
         products={products}
