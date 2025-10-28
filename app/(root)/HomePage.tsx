@@ -10,7 +10,7 @@ import { StatsSection } from "@/components/sections/StatsSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { WhyUsSection } from "@/components/sections/WhyUsSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
-// import { BenefitsSection } from "@/components/sections/BenefitsSection";
+import { BenefitsSection } from "@/components/sections/BenefitsSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { CatalogSection } from "@/components/sections/CatalogSection";
 import { CompaniesSection } from "@/components/sections/CompaniesSection";
