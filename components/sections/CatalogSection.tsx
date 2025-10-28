@@ -42,6 +42,8 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
       return matchesCategory && matchesSearch;
     });
 
+    console.log("Filtered products:", filtered.length);
+
     // If "all" is selected, mix products from different categories
     if (catalogFilter === "all") {
       // Group products by category
@@ -51,28 +53,57 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
         }
         acc[product.category].push(product);
         return acc;
-      }, {});
+      }, {} as Record<string, typeof filtered>);
+
+      console.log("Categories found:", Object.keys(byCategory));
+      console.log(
+        "Products per category:",
+        Object.keys(byCategory).map(
+          (cat) => `${cat}: ${byCategory[cat].length}`
+        )
+      );
 
       // Mix products: take one from each category in round-robin fashion
       const categories = Object.keys(byCategory);
+
+      if (categories.length === 0) {
+        return filtered;
+      }
+
+      if (categories.length === 1) {
+        console.log("Only one category, returning as-is");
+        return filtered;
+      }
+
       const mixed = [];
-      let maxLength = Math.max(
+      const maxLength = Math.max(
         ...categories.map((cat) => byCategory[cat].length)
       );
 
+      console.log("Max length:", maxLength);
+
       for (let i = 0; i < maxLength; i++) {
         for (const category of categories) {
-          if (byCategory[category][i]) {
+          if (byCategory[category] && byCategory[category][i]) {
             mixed.push(byCategory[category][i]);
+            console.log(
+              `Adding: ${byCategory[category][i].name} from ${category}`
+            );
           }
         }
       }
 
+      console.log("Mixed products count:", mixed.length);
+      console.log(
+        "First 5 mixed products:",
+        mixed.slice(0, 5).map((p) => `${p.name} (${p.category})`)
+      );
       return mixed;
     }
 
     return filtered;
   })();
+
   const categories = ["all", ...new Set(products.map((p) => p.category))];
 
   const handleViewAllProducts = () => {
