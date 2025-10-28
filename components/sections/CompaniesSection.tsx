@@ -52,10 +52,10 @@ export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
 
   const CompanyCard: React.FC<CompanyCardProps> = ({ company, index }) => (
     <Card
-      className="flex-shrink-0 w-72 transition-all duration-500 hover:scale-105 cursor-pointer"
+      className="flex-shrink-0 w-44 sm:w-56 lg:w-72 transition-all duration-500 hover:scale-105 cursor-pointer"
       padding="lg"
     >
-      <div className="h-20 sm:h-24 lg:h-28 flex items-center justify-center mb-3 sm:mb-4">
+      <div className="h-14 sm:h-20 lg:h-28 flex items-center justify-center mb-2 sm:mb-3 lg:mb-4">
         <img
           src={company.image}
           alt={company.name}
@@ -90,6 +90,40 @@ export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
             transform: translateX(0);
           }
         }
+        
+        .scroll-animation-row1 {
+          animation: scroll-left 25s linear infinite;
+        }
+        .scroll-animation-row2 {
+          animation: scroll-right 25s linear infinite;
+        }
+        .scroll-animation-row3 {
+          animation: scroll-left 22s linear infinite;
+        }
+        
+        @media (min-width: 640px) {
+          .scroll-animation-row1 {
+            animation: scroll-left 35s linear infinite;
+          }
+          .scroll-animation-row2 {
+            animation: scroll-right 35s linear infinite;
+          }
+          .scroll-animation-row3 {
+            animation: scroll-left 30s linear infinite;
+          }
+        }
+        
+        @media (min-width: 1024px) {
+          .scroll-animation-row1 {
+            animation: scroll-left 40s linear infinite;
+          }
+          .scroll-animation-row2 {
+            animation: scroll-right 40s linear infinite;
+          }
+          .scroll-animation-row3 {
+            animation: scroll-left 35s linear infinite;
+          }
+        }
       `,
         }}
       />
@@ -111,14 +145,13 @@ export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
 
       {/* Row 1: Right to Left */}
       <div
-        className="relative overflow-hidden w-full select-none pt-2 sm:pt-4 pb-8 sm:pb-10"
+        className="relative overflow-hidden w-full select-none pt-2 sm:pt-4 pb-4 sm:pb-8 lg:pb-10"
         onMouseEnter={() => setIsPausedRow1(true)}
         onMouseLeave={() => setIsPausedRow1(false)}
       >
         <div
-          className="flex gap-6"
+          className="flex gap-3 sm:gap-4 lg:gap-6 scroll-animation-row1"
           style={{
-            animation: `scroll-left 40s linear infinite`,
             animationPlayState: isPausedRow1 ? "paused" : "running",
             willChange: "transform",
           }}
@@ -135,14 +168,13 @@ export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
 
       {/* Row 2: Left to Right */}
       <div
-        className="relative overflow-hidden w-full select-none pb-8 sm:pb-10"
+        className="relative overflow-hidden w-full select-none pb-4 sm:pb-8 lg:pb-10"
         onMouseEnter={() => setIsPausedRow2(true)}
         onMouseLeave={() => setIsPausedRow2(false)}
       >
         <div
-          className="flex gap-6"
+          className="flex gap-3 sm:gap-4 lg:gap-6 scroll-animation-row2"
           style={{
-            animation: `scroll-right 40s linear infinite`,
             animationPlayState: isPausedRow2 ? "paused" : "running",
             willChange: "transform",
           }}
@@ -159,14 +191,13 @@ export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
 
       {/* Row 3: Right to Left */}
       <div
-        className="relative overflow-hidden w-full select-none pb-12 sm:pb-16"
+        className="relative overflow-hidden w-full select-none pb-8 sm:pb-12 lg:pb-16"
         onMouseEnter={() => setIsPausedRow3(true)}
         onMouseLeave={() => setIsPausedRow3(false)}
       >
         <div
-          className="flex gap-6"
+          className="flex gap-3 sm:gap-4 lg:gap-6 scroll-animation-row3"
           style={{
-            animation: `scroll-left 35s linear infinite`,
             animationPlayState: isPausedRow3 ? "paused" : "running",
             willChange: "transform",
           }}
