@@ -30,8 +30,6 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
 
   // Filter products based on search and category
   const filteredProducts = (() => {
-    console.log("Filtering products with catalogFilter:", catalogFilter);
-
     // First, apply category and search filters
     const filtered = products.filter((product) => {
       const matchesCategory =
@@ -41,8 +39,6 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
         product.description.toLowerCase().includes(searchTerm.toLowerCase());
       return matchesCategory && matchesSearch;
     });
-
-    console.log("Filtered products:", filtered.length);
 
     // If "all" is selected, mix products from different categories
     if (catalogFilter === "all") {
@@ -55,14 +51,6 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
         return acc;
       }, {} as Record<string, typeof filtered>);
 
-      console.log("Categories found:", Object.keys(byCategory));
-      console.log(
-        "Products per category:",
-        Object.keys(byCategory).map(
-          (cat) => `${cat}: ${byCategory[cat].length}`
-        )
-      );
-
       // Mix products: take one from each category in round-robin fashion
       const categories = Object.keys(byCategory);
 
@@ -71,7 +59,6 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
       }
 
       if (categories.length === 1) {
-        console.log("Only one category, returning as-is");
         return filtered;
       }
 
@@ -80,24 +67,14 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
         ...categories.map((cat) => byCategory[cat].length)
       );
 
-      console.log("Max length:", maxLength);
-
       for (let i = 0; i < maxLength; i++) {
         for (const category of categories) {
           if (byCategory[category] && byCategory[category][i]) {
             mixed.push(byCategory[category][i]);
-            console.log(
-              `Adding: ${byCategory[category][i].name} from ${category}`
-            );
           }
         }
       }
 
-      console.log("Mixed products count:", mixed.length);
-      console.log(
-        "First 5 mixed products:",
-        mixed.slice(0, 5).map((p) => `${p.name} (${p.category})`)
-      );
       return mixed;
     }
 
