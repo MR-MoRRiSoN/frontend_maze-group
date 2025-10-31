@@ -15,7 +15,8 @@
       "Bash(node add-airport-metro.js:*)",
       "Bash(npm install:*)",
       "Read(//c/Users/morrison/Downloads/WEB PROJECTS PICS AND DETAILS/**)",
-      "Bash(node add-tatuza-translations.js:*)"
+      "Bash(node add-tatuza-translations.js:*)",
+      "Read(//c/Users/morrison/Downloads/PROJ_IMG/**)"
     ],
     "deny": [],
     "ask": []

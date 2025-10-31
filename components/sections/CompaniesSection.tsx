@@ -23,6 +23,15 @@ const COMPANIES = [
   { name: "Hilton", image: Images.hilton },
   { name: "Mövenpick", image: Images.movenpick },
   { name: "LW", image: Images.LW },
+  { name: "Accor", image: Images.accor },
+  { name: "Conrad", image: Images.conrad },
+  { name: "Holiday Inn", image: Images.holidayInn },
+  { name: "Hyatt", image: Images.hyatt },
+  { name: "JW Marriott", image: Images.jwMarriott },
+  { name: "Radisson", image: Images.radisson },
+  { name: "Ritz-Carlton", image: Images.ritzCarlton },
+  { name: "Sufta Sakhli", image: Images.suftaSakhli },
+  { name: "W West", image: Images.wwest },
 ];
 
 interface CompanyCardProps {
@@ -32,10 +41,10 @@ interface CompanyCardProps {
 
 const CompanyCard: React.FC<CompanyCardProps> = React.memo(({ company }) => (
   <Card
-    className="flex-shrink-0 w-44 sm:w-56 lg:w-72 transition-all duration-500 hover:scale-105 cursor-pointer"
+    className="flex-shrink-0 w-44 sm:w-56 lg:w-72 transition-all duration-500 hover:scale-105 cursor-pointer !shadow-[0_2px_4px_0_rgba(0,0,0,0.08)] sm:!shadow-xl hover:!shadow-[0_2px_6px_0_rgba(0,0,0,0.1)] sm:hover:!shadow-2xl"
     padding="lg"
   >
-    <div className="h-14 sm:h-20 lg:h-28 flex items-center justify-center mb-2 sm:mb-3 lg:mb-4">
+    <div className="h-24 sm:h-20 lg:h-28 flex items-center justify-center mb-0 sm:mb-3 lg:mb-4">
       <img
         src={company.image}
         alt={company.name}
@@ -60,12 +69,10 @@ export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
   const row2 = COMPANIES.slice(5, 10);
   const row3 = COMPANIES.slice(10, 14);
 
-  // Duplicate for seamless scrolling
-  const duplicatedRow1 = [...row1, ...row1, ...row1];
-  const duplicatedRow2 = [...row2, ...row2, ...row2];
-  const duplicatedRow3 = [...row3, ...row3, ...row3];
-
-  const getCardWidth = () => 320; // Card width + gap
+  // Duplicate 4 times to ensure seamless infinite scrolling with no gaps
+  const duplicatedRow1 = [...row1, ...row1, ...row1, ...row1];
+  const duplicatedRow2 = [...row2, ...row2, ...row2, ...row2];
+  const duplicatedRow3 = [...row3, ...row3, ...row3, ...row3];
 
   return (
     <section
@@ -76,54 +83,112 @@ export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
       <style
         dangerouslySetInnerHTML={{
           __html: `
-        @keyframes scroll-left {
+        @keyframes scroll-left-row1 {
           0% {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-${row1.length * getCardWidth()}px);
+            transform: translateX(calc(-11rem * ${row1.length} - 0.75rem * ${row1.length}));
           }
         }
-        @keyframes scroll-right {
+        @keyframes scroll-right-row2 {
           0% {
-            transform: translateX(-${row2.length * getCardWidth()}px);
+            transform: translateX(calc(-11rem * ${row2.length} - 0.75rem * ${row2.length}));
           }
           100% {
             transform: translateX(0);
           }
         }
-        
+        @keyframes scroll-left-row3 {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(calc(-11rem * ${row3.length} - 0.75rem * ${row3.length}));
+          }
+        }
+
         .scroll-animation-row1 {
-          animation: scroll-left 25s linear infinite;
+          animation: scroll-left-row1 25s linear infinite;
         }
         .scroll-animation-row2 {
-          animation: scroll-right 25s linear infinite;
+          animation: scroll-right-row2 25s linear infinite;
         }
         .scroll-animation-row3 {
-          animation: scroll-left 22s linear infinite;
+          animation: scroll-left-row3 22s linear infinite;
         }
-        
+
         @media (min-width: 640px) {
+          @keyframes scroll-left-row1-sm {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(calc(-14rem * ${row1.length} - 1rem * ${row1.length}));
+            }
+          }
+          @keyframes scroll-right-row2-sm {
+            0% {
+              transform: translateX(calc(-14rem * ${row2.length} - 1rem * ${row2.length}));
+            }
+            100% {
+              transform: translateX(0);
+            }
+          }
+          @keyframes scroll-left-row3-sm {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(calc(-14rem * ${row3.length} - 1rem * ${row3.length}));
+            }
+          }
+
           .scroll-animation-row1 {
-            animation: scroll-left 35s linear infinite;
+            animation: scroll-left-row1-sm 35s linear infinite;
           }
           .scroll-animation-row2 {
-            animation: scroll-right 35s linear infinite;
+            animation: scroll-right-row2-sm 35s linear infinite;
           }
           .scroll-animation-row3 {
-            animation: scroll-left 30s linear infinite;
+            animation: scroll-left-row3-sm 30s linear infinite;
           }
         }
-        
+
         @media (min-width: 1024px) {
+          @keyframes scroll-left-row1-lg {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(calc(-18rem * ${row1.length} - 1.5rem * ${row1.length}));
+            }
+          }
+          @keyframes scroll-right-row2-lg {
+            0% {
+              transform: translateX(calc(-18rem * ${row2.length} - 1.5rem * ${row2.length}));
+            }
+            100% {
+              transform: translateX(0);
+            }
+          }
+          @keyframes scroll-left-row3-lg {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(calc(-18rem * ${row3.length} - 1.5rem * ${row3.length}));
+            }
+          }
+
           .scroll-animation-row1 {
-            animation: scroll-left 40s linear infinite;
+            animation: scroll-left-row1-lg 40s linear infinite;
           }
           .scroll-animation-row2 {
-            animation: scroll-right 40s linear infinite;
+            animation: scroll-right-row2-lg 40s linear infinite;
           }
           .scroll-animation-row3 {
-            animation: scroll-left 35s linear infinite;
+            animation: scroll-left-row3-lg 35s linear infinite;
           }
         }
       `,
@@ -147,12 +212,12 @@ export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
 
       {/* Row 1: Right to Left */}
       <div
-        className="relative overflow-hidden w-full select-none pt-2 sm:pt-4 pb-4 sm:pb-8 lg:pb-10"
+        className="relative overflow-hidden w-full select-none   pb-4 sm:pb-8 lg:pb-10"
         onMouseEnter={() => setIsPausedRow1(true)}
         onMouseLeave={() => setIsPausedRow1(false)}
       >
         <div
-          className="flex gap-3 sm:gap-4 lg:gap-6 scroll-animation-row1"
+          className="flex gap-3 sm:gap-4  lg:gap-6 scroll-animation-row1"
           style={{
             animationPlayState: isPausedRow1 ? "paused" : "running",
             willChange: "transform",
@@ -170,7 +235,7 @@ export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
 
       {/* Row 2: Left to Right */}
       <div
-        className="relative overflow-hidden w-full select-none pb-4 sm:pb-8 lg:pb-10"
+        className="relative overflow-hidden w-full select-none  pb-4 sm:pb-8 lg:pb-10"
         onMouseEnter={() => setIsPausedRow2(true)}
         onMouseLeave={() => setIsPausedRow2(false)}
       >
@@ -193,7 +258,7 @@ export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
 
       {/* Row 3: Right to Left */}
       <div
-        className="relative overflow-hidden w-full select-none pb-8 sm:pb-12 lg:pb-16"
+        className="relative overflow-hidden w-full select-none  pb-3 sm:pb-12 lg:pb-16"
         onMouseEnter={() => setIsPausedRow3(true)}
         onMouseLeave={() => setIsPausedRow3(false)}
       >
