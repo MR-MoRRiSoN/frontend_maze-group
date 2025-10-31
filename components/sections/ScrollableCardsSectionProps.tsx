@@ -1,4 +1,11 @@
-import React, { useState, useRef, useEffect, ReactNode } from "react";
+import React, {
+  useState,
+  useRef,
+  useEffect,
+  ReactNode,
+  useCallback,
+  useMemo,
+} from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 interface ScrollableCardsSectionProps<T> {
@@ -59,10 +66,11 @@ export function ScrollableCardsSection<T extends { id: string | number }>({
   const [isClient, setIsClient] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
-  // Add "See All" card to items if enabled
-  const displayItems = seeAllCard?.enabled
-    ? [...items, { id: -1 } as T]
-    : items;
+  // Memoize displayItems to prevent unnecessary re-renders
+  const displayItems = useMemo(
+    () => (seeAllCard?.enabled ? [...items, { id: -1 } as T] : items),
+    [items, seeAllCard?.enabled]
+  );
 
   const shouldShowNavigation = isClient && displayItems.length > itemsPerPage;
 
@@ -94,8 +102,8 @@ export function ScrollableCardsSection<T extends { id: string | number }>({
     return () => window.removeEventListener("resize", handleResize);
   }, [displayItems.length]);
 
-  // Update current page based on scroll position
-  const handleScroll = () => {
+  // Memoize scroll handler to prevent unnecessary re-renders
+  const handleScroll = useCallback(() => {
     if (!scrollContainerRef.current) return;
 
     const container = scrollContainerRef.current;
@@ -109,9 +117,9 @@ export function ScrollableCardsSection<T extends { id: string | number }>({
       const newPage = Math.round(scrollProgress);
       setCurrentPage(newPage);
     }
-  };
+  }, []);
 
-  const scrollToPage = (pageIndex: number) => {
+  const scrollToPage = useCallback((pageIndex: number) => {
     if (!scrollContainerRef.current) return;
 
     const container = scrollContainerRef.current;
@@ -124,27 +132,28 @@ export function ScrollableCardsSection<T extends { id: string | number }>({
       left: targetScroll,
       behavior: "smooth",
     });
-  };
+  }, []);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     const maxPage = Math.max(0, displayItems.length - itemsPerPage);
     const nextPage = currentPage >= maxPage ? 0 : currentPage + 1;
     scrollToPage(nextPage);
-  };
+  }, [displayItems.length, itemsPerPage, currentPage, scrollToPage]);
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     const maxPage = Math.max(0, displayItems.length - itemsPerPage);
     const prevPage = currentPage <= 0 ? maxPage : currentPage - 1;
     scrollToPage(prevPage);
-  };
+  }, [displayItems.length, itemsPerPage, currentPage, scrollToPage]);
 
-  const getCardWidthClass = () => {
+  // Memoize class calculations
+  const cardWidthClass = useMemo(() => {
     if (itemsPerPage === 1) return "w-full";
     if (itemsPerPage === 2) return "w-[calc(50%-1rem)]";
     return "w-[calc(33.333%-1rem)]";
-  };
+  }, [itemsPerPage]);
 
-  const getMinHeightClass = () => {
+  const minHeightClass = useMemo(() => {
     if (minHeight === "500px") {
       if (itemsPerPage === 1) return "min-h-[500px]";
       if (itemsPerPage === 2) return "min-h-[500px]";
@@ -153,7 +162,16 @@ export function ScrollableCardsSection<T extends { id: string | number }>({
     if (itemsPerPage === 1) return "min-h-[400px]";
     if (itemsPerPage === 2) return "min-h-[400px]";
     return "min-h-[400px] lg:min-h-[450px]";
-  };
+  }, [minHeight, itemsPerPage]);
+
+  // Memoize progress bar width calculation
+  const progressWidth = useMemo(() => {
+    return `${
+      ((currentPage + 1) /
+        Math.max(1, displayItems.length - itemsPerPage + 1)) *
+      100
+    }%`;
+  }, [currentPage, displayItems.length, itemsPerPage]);
 
   return (
     <section
@@ -195,7 +213,7 @@ export function ScrollableCardsSection<T extends { id: string | number }>({
                   isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-10"
-                } ${getCardWidthClass()} ${getMinHeightClass()}`}
+                } ${cardWidthClass} ${minHeightClass}`}
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 {item.id === -1 && seeAllCard?.enabled ? (
@@ -259,13 +277,7 @@ export function ScrollableCardsSection<T extends { id: string | number }>({
                   <div className="w-32 md:w-40 lg:w-48 h-2 bg-gray-200 rounded-full overflow-hidden">
                     <div
                       className="h-full bg-[#032685] rounded-full transition-all duration-300 ease-out"
-                      style={{
-                        width: `${
-                          ((currentPage + 1) /
-                            Math.max(1, displayItems.length - itemsPerPage + 1)) *
-                          100
-                        }%`,
-                      }}
+                      style={{ width: progressWidth }}
                     />
                   </div>
                 </div>

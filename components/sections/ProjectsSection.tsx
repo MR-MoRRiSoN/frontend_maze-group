@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { ScrollableCardsSection } from "./ScrollableCardsSectionProps";
 import { ProjectCard } from "@/components/features/projects/ProjectCard";
@@ -21,11 +21,11 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
   const router = useRouter();
   const t = useTranslations("projects");
 
-  const handleViewAllProjects = () => {
+  const handleViewAllProjects = useCallback(() => {
     router.push("/all-projects");
-  };
+  }, [router]);
 
-  const renderProjectCard = (
+  const renderProjectCard = useCallback((
     project: Project,
     _index: number,
     _isVisible: boolean,
@@ -39,7 +39,26 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
         className="h-full"
       />
     );
-  };
+  }, [onProjectView]);
+
+  const gradientColors = useMemo(() => ({ from: "from-gray-50", to: "to-transparent" }), []);
+
+  const primaryButton = useMemo(() => ({
+    text: t("startYourProject"),
+    onClick: onStartProject,
+  }), [t, onStartProject]);
+
+  const secondaryButton = useMemo(() => ({
+    text: t("seeAllProjects"),
+    onClick: handleViewAllProjects,
+  }), [t, handleViewAllProjects]);
+
+  const seeAllCard = useMemo(() => ({
+    enabled: true,
+    title: t("seeAllProjects"),
+    subtitle: t("exploreAllProjects"),
+    onClick: handleViewAllProjects,
+  }), [t, handleViewAllProjects]);
 
   return (
     <ScrollableCardsSection
@@ -49,23 +68,12 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
       items={projects}
       isVisible={isVisible}
       backgroundColor="bg-gray-50"
-      gradientColors={{ from: "from-gray-50", to: "to-transparent" }}
+      gradientColors={gradientColors}
       minHeight="400px"
       renderCard={renderProjectCard}
-      primaryButton={{
-        text: t("startYourProject"),
-        onClick: onStartProject,
-      }}
-      secondaryButton={{
-        text: t("seeAllProjects"),
-        onClick: handleViewAllProjects,
-      }}
-      seeAllCard={{
-        enabled: true,
-        title: t("seeAllProjects"),
-        subtitle: t("exploreAllProjects"),
-        onClick: handleViewAllProjects,
-      }}
+      primaryButton={primaryButton}
+      secondaryButton={secondaryButton}
+      seeAllCard={seeAllCard}
     />
   );
 };

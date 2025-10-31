@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { ArrowRight } from "lucide-react";
 import { Card } from "../../ui/Card";
 import { Project } from "../../../types/project";
@@ -10,12 +10,16 @@ interface ProjectCardProps {
   className: string;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({
+export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({
   project,
   onViewDetails,
   animationDelay = 0,
   className,
 }) => {
+  const handleClick = useCallback(() => {
+    onViewDetails(project);
+  }, [onViewDetails, project]);
+
   return (
     <Card
       className={`${className} cursor-pointer overflow-hidden opacity-100 translate-y-0 select-none`}
@@ -27,6 +31,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             src={project.image}
             alt={project.name}
             className="w-full h-64 object-cover rounded-2xl"
+            loading="lazy"
+            decoding="async"
           />
           <div className="absolute top-4 right-4">
             <span className="bg-[#032685] text-white px-3 py-1 rounded-full font-semibold text-sm">
@@ -47,11 +53,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               {project.timeline}
             </span>
             <button
-              style={{ cursor: "pointer" }}
-              onClick={() => {
-                onViewDetails(project);
-              }}
+              type="button"
+              onClick={handleClick}
               className="text-[#032685] hover:text-[#021d5a] font-bold flex items-center text-lg"
+              aria-label={`View details for ${project.name}`}
             >
               View Details <ArrowRight className="ml-2 w-5 h-5" />
             </button>
@@ -60,4 +65,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
     </Card>
   );
-};
+});
+
+ProjectCard.displayName = 'ProjectCard';
