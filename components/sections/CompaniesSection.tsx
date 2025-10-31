@@ -8,6 +8,45 @@ interface CompaniesSectionProps {
   isVisible: boolean;
 }
 
+const COMPANIES = [
+  { name: "Silk Road Group", image: Images.SilkRoadGroup },
+  { name: "Wyndham", image: Images.WHYNDHAM },
+  { name: "Ministry of Georgia", image: Images.MinistryOfGeorgia },
+  { name: "GT Group", image: Images.gtGroup },
+  { name: "Swiss Hotel", image: Images.swissHotel },
+  { name: "Sheraton", image: Images.sheraton },
+  { name: "LIBS", image: Images.libs },
+  { name: "Lopota", image: Images.lopota },
+  { name: "Marriott", image: Images.marriott },
+  { name: "Tour Invest Group", image: Images.tourinvestgroup },
+  { name: "GCF", image: Images.gcf },
+  { name: "Hilton", image: Images.hilton },
+  { name: "Mövenpick", image: Images.movenpick },
+  { name: "LW", image: Images.LW },
+];
+
+interface CompanyCardProps {
+  company: { name: string; image: string };
+  index: number;
+}
+
+const CompanyCard: React.FC<CompanyCardProps> = React.memo(({ company }) => (
+  <Card
+    className="flex-shrink-0 w-44 sm:w-56 lg:w-72 transition-all duration-500 hover:scale-105 cursor-pointer"
+    padding="lg"
+  >
+    <div className="h-14 sm:h-20 lg:h-28 flex items-center justify-center mb-2 sm:mb-3 lg:mb-4">
+      <img
+        src={company.image}
+        alt={company.name}
+        className="max-h-full max-w-full object-contain hover:brightness-110 transition-all duration-300"
+      />
+    </div>
+  </Card>
+));
+
+CompanyCard.displayName = "CompanyCard";
+
 export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
   isVisible,
 }) => {
@@ -15,23 +54,6 @@ export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
   const [isPausedRow1, setIsPausedRow1] = React.useState(false);
   const [isPausedRow2, setIsPausedRow2] = React.useState(false);
   const [isPausedRow3, setIsPausedRow3] = React.useState(false);
-
-  const COMPANIES = [
-    { name: "Silk Road Group", image: Images.SilkRoadGroup },
-    { name: "Wyndham", image: Images.WHYNDHAM },
-    { name: "Ministry of Georgia", image: Images.MinistryOfGeorgia },
-    { name: "GT Group", image: Images.gtGroup },
-    { name: "Swiss Hotel", image: Images.swissHotel },
-    { name: "Sheraton", image: Images.sheraton },
-    { name: "LIBS", image: Images.libs },
-    { name: "Lopota", image: Images.lopota },
-    { name: "Marriott", image: Images.marriott },
-    { name: "Tour Invest Group", image: Images.tourinvestgroup },
-    { name: "GCF", image: Images.gcf },
-    { name: "Hilton", image: Images.hilton },
-    { name: "Mövenpick", image: Images.movenpick },
-    { name: "LW", image: Images.LW },
-  ];
 
   // Split companies into 3 rows
   const row1 = COMPANIES.slice(0, 5);
@@ -44,26 +66,6 @@ export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
   const duplicatedRow3 = [...row3, ...row3, ...row3];
 
   const getCardWidth = () => 320; // Card width + gap
-
-  interface CompanyCardProps {
-    company: { name: string; image: string };
-    index: number;
-  }
-
-  const CompanyCard: React.FC<CompanyCardProps> = ({ company, index }) => (
-    <Card
-      className="flex-shrink-0 w-44 sm:w-56 lg:w-72 transition-all duration-500 hover:scale-105 cursor-pointer"
-      padding="lg"
-    >
-      <div className="h-14 sm:h-20 lg:h-28 flex items-center justify-center mb-2 sm:mb-3 lg:mb-4">
-        <img
-          src={company.image}
-          alt={company.name}
-          className="max-h-full max-w-full object-contain hover:brightness-110 transition-all duration-300"
-        />
-      </div>
-    </Card>
-  );
 
   return (
     <section
