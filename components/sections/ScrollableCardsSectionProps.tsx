@@ -28,6 +28,12 @@ interface ScrollableCardsSectionProps<T> {
     text: string;
     onClick: () => void;
   };
+  seeAllCard?: {
+    enabled: boolean;
+    title: string;
+    subtitle: string;
+    onClick: () => void;
+  };
   className?: string;
 }
 
@@ -44,6 +50,7 @@ export function ScrollableCardsSection<T extends { id: string | number }>({
   renderFilters,
   primaryButton,
   secondaryButton,
+  seeAllCard,
   className = "",
 }: ScrollableCardsSectionProps<T>) {
   const [currentPage, setCurrentPage] = useState(0);
@@ -52,7 +59,12 @@ export function ScrollableCardsSection<T extends { id: string | number }>({
   const [isClient, setIsClient] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
-  const shouldShowNavigation = isClient && items.length > itemsPerPage;
+  // Add "See All" card to items if enabled
+  const displayItems = seeAllCard?.enabled
+    ? [...items, { id: -1 } as T]
+    : items;
+
+  const shouldShowNavigation = isClient && displayItems.length > itemsPerPage;
 
   useEffect(() => {
     setIsClient(true);
@@ -80,7 +92,7 @@ export function ScrollableCardsSection<T extends { id: string | number }>({
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [items.length]);
+  }, [displayItems.length]);
 
   // Update current page based on scroll position
   const handleScroll = () => {
@@ -115,13 +127,13 @@ export function ScrollableCardsSection<T extends { id: string | number }>({
   };
 
   const handleNext = () => {
-    const maxPage = Math.max(0, items.length - itemsPerPage);
+    const maxPage = Math.max(0, displayItems.length - itemsPerPage);
     const nextPage = currentPage >= maxPage ? 0 : currentPage + 1;
     scrollToPage(nextPage);
   };
 
   const handlePrev = () => {
-    const maxPage = Math.max(0, items.length - itemsPerPage);
+    const maxPage = Math.max(0, displayItems.length - itemsPerPage);
     const prevPage = currentPage <= 0 ? maxPage : currentPage - 1;
     scrollToPage(prevPage);
   };
@@ -176,7 +188,7 @@ export function ScrollableCardsSection<T extends { id: string | number }>({
             }}
             onScroll={handleScroll}
           >
-            {items.map((item, index) => (
+            {displayItems.map((item, index) => (
               <div
                 key={item.id}
                 className={`flex-shrink-0 snap-center transition-all duration-1000 ${
@@ -186,7 +198,28 @@ export function ScrollableCardsSection<T extends { id: string | number }>({
                 } ${getCardWidthClass()} ${getMinHeightClass()}`}
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                {renderCard(item, index, isVisible, index * 150)}
+                {item.id === -1 && seeAllCard?.enabled ? (
+                  <div
+                    onClick={seeAllCard.onClick}
+                    className="h-full cursor-pointer select-none bg-gradient-to-br from-[#032685] to-[#021d5a] rounded-3xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:scale-101 p-8"
+                  >
+                    <div>
+                      <div className="relative h-64 rounded-2xl flex items-center justify-center">
+                        <ArrowRight className="w-12 h-12 text-white" />
+                      </div>
+                      <div className="mt-6 text-center">
+                        <h3 className="text-xl font-bold text-white mb-3">
+                          {seeAllCard.title}
+                        </h3>
+                        <p className="text-white/80 text-sm">
+                          {seeAllCard.subtitle}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  renderCard(item, index, isVisible, index * 150)
+                )}
               </div>
             ))}
           </div>
@@ -220,7 +253,7 @@ export function ScrollableCardsSection<T extends { id: string | number }>({
                     </span>
                     <span className="text-xs text-gray-500">/</span>
                     <span className="text-sm font-medium text-gray-700">
-                      {Math.max(1, items.length - itemsPerPage + 1)}
+                      {Math.max(1, displayItems.length - itemsPerPage + 1)}
                     </span>
                   </div>
                   <div className="w-32 md:w-40 lg:w-48 h-2 bg-gray-200 rounded-full overflow-hidden">
@@ -229,7 +262,7 @@ export function ScrollableCardsSection<T extends { id: string | number }>({
                       style={{
                         width: `${
                           ((currentPage + 1) /
-                            Math.max(1, items.length - itemsPerPage + 1)) *
+                            Math.max(1, displayItems.length - itemsPerPage + 1)) *
                           100
                         }%`,
                       }}
@@ -252,7 +285,7 @@ export function ScrollableCardsSection<T extends { id: string | number }>({
                 </span>
                 <span className="text-xs text-gray-500">/</span>
                 <span className="text-sm font-medium text-gray-700">
-                  {Math.max(1, items.length - itemsPerPage + 1)}
+                  {Math.max(1, displayItems.length - itemsPerPage + 1)}
                 </span>
               </div>
             )}

@@ -16,7 +16,9 @@
       "Bash(npm install:*)",
       "Read(//c/Users/morrison/Downloads/WEB PROJECTS PICS AND DETAILS/**)",
       "Bash(node add-tatuza-translations.js:*)",
-      "Read(//c/Users/morrison/Downloads/PROJ_IMG/**)"
+      "Read(//c/Users/morrison/Downloads/PROJ_IMG/**)",
+      "Bash(npm run build:*)",
+      "mcp__ide__getDiagnostics"
     ],
     "deny": [],
     "ask": []

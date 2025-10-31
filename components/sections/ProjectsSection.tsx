@@ -27,17 +27,19 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
 
   const renderProjectCard = (
     project: Project,
-    index: number,
-    isVisible: boolean,
+    _index: number,
+    _isVisible: boolean,
     animationDelay: number
-  ) => (
-    <ProjectCard
-      project={project}
-      onViewDetails={onProjectView}
-      animationDelay={animationDelay}
-      className="h-full"
-    />
-  );
+  ) => {
+    return (
+      <ProjectCard
+        project={project}
+        onViewDetails={onProjectView}
+        animationDelay={animationDelay}
+        className="h-full"
+      />
+    );
+  };
 
   return (
     <ScrollableCardsSection
@@ -56,6 +58,12 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
       }}
       secondaryButton={{
         text: t("seeAllProjects"),
+        onClick: handleViewAllProjects,
+      }}
+      seeAllCard={{
+        enabled: true,
+        title: t("seeAllProjects"),
+        subtitle: t("exploreAllProjects"),
         onClick: handleViewAllProjects,
       }}
     />
