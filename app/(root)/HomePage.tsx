@@ -1,5 +1,5 @@
 "use client";
-import React, { useMemo } from "react";
+import React, { useMemo, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
 import { Navigation } from "@/components/layout/Navigation";
@@ -23,11 +23,24 @@ import { getProductsByLocale } from "@/lib/data/products";
 import { Project } from "@/types/project";
 import { Product } from "@/types/product";
 
+const FIRST_VISIT_KEY = "maze_group_first_visit";
+
 export default function HomePage() {
   const router = useRouter();
   const locale = useLocale();
   const isVisible = useIntersectionObserver();
   const whatsapp = useWhatsApp();
+  const [isCheckingVisit, setIsCheckingVisit] = React.useState(true);
+
+  // Check if first-time visitor and redirect to /welcome
+  useEffect(() => {
+    const hasVisited = localStorage.getItem(FIRST_VISIT_KEY);
+    if (!hasVisited) {
+      router.push("/welcome");
+    } else {
+      setIsCheckingVisit(false);
+    }
+  }, [router]);
 
   // Get projects and products based on current locale
   const allProjects = useMemo(() => getProjectsByLocale(locale), [locale]);
@@ -56,6 +69,11 @@ export default function HomePage() {
   const handleProductContact = (product: Product) => {
     whatsapp.setProductMessage(product.name);
   };
+
+  // Don't render anything while checking if user has visited before
+  if (isCheckingVisit) {
+    return null;
+  }
 
   return (
     <div className="min-h-screen bg-white">

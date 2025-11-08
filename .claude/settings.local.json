@@ -18,7 +18,13 @@
       "Bash(node add-tatuza-translations.js:*)",
       "Read(//c/Users/morrison/Downloads/PROJ_IMG/**)",
       "Bash(npm run build:*)",
-      "mcp__ide__getDiagnostics"
+      "mcp__ide__getDiagnostics",
+      "Bash(dir:*)",
+      "Bash(git checkout:*)",
+      "Bash(nul)",
+      "Bash(findstr:*)",
+      "Bash(mkdir:*)",
+      "Bash(copy \"C:\\Users\\morrison\\Downloads\\PROJ_IMG\\maze video.mov\" \"D:\\Github\\frontend_maze-group\\public\\assets\\maze-video.mov\")"
     ],
     "deny": [],
     "ask": []

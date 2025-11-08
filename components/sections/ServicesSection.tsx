@@ -26,6 +26,26 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
   const services = useServicesData();
   const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
+  const [imagesLoaded, setImagesLoaded] = React.useState(false);
+
+  // Preload all images when component mounts
+  React.useEffect(() => {
+    const preloadImages = () => {
+      let loadedCount = 0;
+      HOTEL_ROOM_IMAGES.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => {
+          loadedCount++;
+          if (loadedCount === HOTEL_ROOM_IMAGES.length) {
+            setImagesLoaded(true);
+          }
+        };
+      });
+    };
+
+    preloadImages();
+  }, []);
 
   React.useEffect(() => {
     if (hoveredIndex === 0) {
@@ -43,7 +63,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
       className="py-16 md:py-24 lg:py-32 bg-gray-50 relative"
       data-section="services"
     >
-      {/* Background image carousel for entire section when hovering first card */}
+      {/* Background image carousel - only show on hover */}
       {hoveredIndex === 0 && (
         <div className="absolute inset-0 z-0">
           {HOTEL_ROOM_IMAGES.map((img, imgIdx) => (
