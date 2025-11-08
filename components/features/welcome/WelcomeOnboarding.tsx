@@ -32,20 +32,21 @@ export const WelcomeOnboarding: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 bg-black"
+        className="fixed inset-0 z-50 bg-black flex items-center justify-center"
       >
-        {/* Full-screen video - optimized for mobile */}
+        {/* Full-screen video - optimized for mobile with audio */}
         <video
           autoPlay
           playsInline
-          muted
           preload="auto"
-          className="w-full h-full object-cover"
+          className="w-full h-full"
           onEnded={handleComplete}
           style={{
-            width: "100vw",
-            height: "100vh",
-            objectFit: "cover",
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+            maxWidth: "100vw",
+            maxHeight: "100vh",
           }}
         >
           <source src="/assets/maze-video.mov" type="video/mp4" />
@@ -53,12 +54,24 @@ export const WelcomeOnboarding: React.FC = () => {
           Your browser does not support the video tag.
         </video>
 
+        {/* Mobile landscape orientation hint */}
+        <div className="absolute top-4 left-1/2 -translate-x-1/2 md:hidden">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="bg-black/70 backdrop-blur-sm text-white px-4 py-2 rounded-full text-xs sm:text-sm"
+          >
+            Rotate device for best experience
+          </motion.div>
+        </div>
+
         {/* Skip button overlay - Bottom Right, responsive */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
-          className="absolute bottom-4 right-4 sm:bottom-8 sm:right-8"
+          className="absolute bottom-4 right-4 sm:bottom-8 sm:right-8 z-10"
         >
           <Button
             variant="secondary"
