@@ -34,30 +34,37 @@ export const WelcomeOnboarding: React.FC = () => {
         exit={{ opacity: 0 }}
         className="fixed inset-0 z-50 bg-black"
       >
-        {/* Full-screen video */}
+        {/* Full-screen video - optimized for mobile */}
         <video
           autoPlay
           playsInline
+          muted
+          preload="auto"
           className="w-full h-full object-cover"
           onEnded={handleComplete}
+          style={{
+            width: "100vw",
+            height: "100vh",
+            objectFit: "cover",
+          }}
         >
           <source src="/assets/maze-video.mov" type="video/mp4" />
           <source src="/assets/maze-video.mov" type="video/quicktime" />
           Your browser does not support the video tag.
         </video>
 
-        {/* Skip button overlay - Bottom Right */}
+        {/* Skip button overlay - Bottom Right, responsive */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
-          className="absolute bottom-8 right-8"
+          className="absolute bottom-4 right-4 sm:bottom-8 sm:right-8"
         >
           <Button
             variant="secondary"
             size="md"
             onClick={handleSkip}
-            className="shadow-2xl hover:shadow-3xl backdrop-blur-sm bg-white/90"
+            className="shadow-2xl hover:shadow-3xl backdrop-blur-sm bg-white/90 text-sm sm:text-base"
           >
             Skip
           </Button>
@@ -189,21 +196,6 @@ export const WelcomeOnboarding: React.FC = () => {
           </motion.div>
         </AnimatePresence>
       </div>
-
-      {/* Skip button - Bottom Right */}
-      <motion.div
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
-        className="absolute bottom-8 right-8"
-      >
-        <button
-          onClick={handleSkip}
-          className="text-gray-600 hover:text-[#032685] transition-colors duration-300 text-sm underline font-medium"
-        >
-          Skip introduction
-        </button>
-      </motion.div>
 
       {/* Decorative grid pattern with brand colors */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(3,38,133,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(3,38,133,.03)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_110%)]" />
