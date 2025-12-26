@@ -20,7 +20,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
         <Phone className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 text-white mx-auto mb-4 sm:mb-6" />
       ),
       title: t("contact.phone.title"),
-      details: [t("contact.phone.number1"), t("contact.phone.number2")],
+      details: [
+        t("contact.phone.number1"),
+        t("contact.phone.number2"),
+        t("contact.phone.number3"),
+      ],
       subtitle: t("contact.phone.subtitle"),
     },
     {

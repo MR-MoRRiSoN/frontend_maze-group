@@ -20,6 +20,11 @@ export const PHONE_NUMBERS: PhoneNumber[] = [
     label: "+995 598 505 522",
     display: "+995 598 505 522",
   },
+  {
+    value: "+995598004778",
+    label: "+995 598 004 778",
+    display: "+995 598 004 778",
+  },
 ];
 
 // Quick replies translation keys - actual text will come from translations

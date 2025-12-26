@@ -32,6 +32,11 @@ export const useWhatsApp = () => {
       label: "+995 598 505 522",
       display: "+995 598 505 522",
     },
+    {
+      value: "+995598004778",
+      label: "+995 598 004 778",
+      display: "+995 598 004 778",
+    },
   ];
 
   const sendMessage = () => {
