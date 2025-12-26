@@ -151,6 +151,9 @@ export default async function LocaleLayout({ children }: Props) {
   return (
     <html lang={locale}>
       <head>
+        {/* Plyr CSS from CDN - fixes Vercel build issue */}
+        <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+
         {/* JSON-LD Structured Data for Google */}
         <script
           type="application/ld+json"

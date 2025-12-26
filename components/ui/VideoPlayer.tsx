@@ -2,7 +2,8 @@
 import React, { useRef, useEffect } from "react";
 import Plyr, { APITypes } from "plyr-react";
 
-import "plyr-react/plyr.css";
+// ❌ წაშლილია CSS import - ახლა CDN-დან იტვირთება layout.tsx-დან
+// import "plyr-react/plyr.css";
 
 interface VideoPlayerProps {
   src: string;
