@@ -1,0 +1,6 @@
+# Mazee Group - Hotel Equipment Supplier
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://mazeegroup.net/sitemap.xml
