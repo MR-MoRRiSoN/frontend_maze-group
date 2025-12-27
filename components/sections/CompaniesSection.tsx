@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 // import { Star } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { Images } from "@/components/constants";
@@ -44,11 +45,13 @@ const CompanyCard: React.FC<CompanyCardProps> = React.memo(({ company }) => (
     className="flex-shrink-0 w-44 sm:w-56 lg:w-72 transition-all duration-500 hover:scale-105 cursor-pointer !shadow-[0_2px_4px_0_rgba(0,0,0,0.08)] sm:!shadow-xl hover:!shadow-[0_2px_6px_0_rgba(0,0,0,0.1)] sm:hover:!shadow-2xl"
     padding="lg"
   >
-    <div className="h-24 sm:h-20 lg:h-28 flex items-center justify-center mb-0 sm:mb-3 lg:mb-4">
-      <img
+    <div className="relative h-24 sm:h-20 lg:h-28 flex items-center justify-center mb-0 sm:mb-3 lg:mb-4">
+      <Image
         src={company.image}
-        alt={company.name}
-        className="max-h-full max-w-full object-contain hover:brightness-110 transition-all duration-300"
+        alt={`${company.name} - Maze Group hotel equipment and IT solutions partner`}
+        fill
+        className="object-contain hover:brightness-110 transition-all duration-300"
+        sizes="(max-width: 640px) 176px, (max-width: 1024px) 224px, 288px"
       />
     </div>
   </Card>
@@ -212,12 +215,12 @@ export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
 
       {/* Row 1: Right to Left */}
       <div
-        className="relative overflow-hidden w-full select-none   pb-4 sm:pb-8 lg:pb-10"
+        className="relative overflow-hidden w-full select-none pb-4 sm:pb-8 lg:pb-10"
         onMouseEnter={() => setIsPausedRow1(true)}
         onMouseLeave={() => setIsPausedRow1(false)}
       >
         <div
-          className="flex gap-3 sm:gap-4  lg:gap-6 scroll-animation-row1"
+          className="flex gap-3 sm:gap-4 lg:gap-6 scroll-animation-row1"
           style={{
             animationPlayState: isPausedRow1 ? "paused" : "running",
             willChange: "transform",
@@ -235,7 +238,7 @@ export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
 
       {/* Row 2: Left to Right */}
       <div
-        className="relative overflow-hidden w-full select-none  pb-4 sm:pb-8 lg:pb-10"
+        className="relative overflow-hidden w-full select-none pb-4 sm:pb-8 lg:pb-10"
         onMouseEnter={() => setIsPausedRow2(true)}
         onMouseLeave={() => setIsPausedRow2(false)}
       >
@@ -258,7 +261,7 @@ export const CompaniesSection: React.FC<CompaniesSectionProps> = ({
 
       {/* Row 3: Right to Left */}
       <div
-        className="relative overflow-hidden w-full select-none  pb-3 sm:pb-12 lg:pb-16"
+        className="relative overflow-hidden w-full select-none pb-3 sm:pb-12 lg:pb-16"
         onMouseEnter={() => setIsPausedRow3(true)}
         onMouseLeave={() => setIsPausedRow3(false)}
       >

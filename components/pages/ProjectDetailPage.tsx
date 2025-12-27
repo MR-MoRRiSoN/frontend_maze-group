@@ -1,5 +1,6 @@
 // components/pages/ProjectDetailPage.tsx
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import dynamic from "next/dynamic";
 import {
   ArrowLeft,
@@ -134,24 +135,29 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
           {/* Project Header */}
           <Card className="overflow-hidden mb-8 md:mb-12" padding="sm">
             <div className="relative h-64 sm:h-80 md:h-96">
-              <img
+              <Image
                 src={project.images[currentImageIndex]}
-                alt={project.name}
-                className="w-full h-full object-cover cursor-pointer hover:opacity-95 transition-opacity"
+                alt={`${project.name} - ${project.category} project for ${project.client}`}
+                fill
+                className="object-cover cursor-pointer hover:opacity-95 transition-opacity"
                 onClick={() => openModal(currentImageIndex)}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                priority
               />
 
               {/* Image Controls */}
-              <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 flex items-center space-x-2 md:space-x-4 bg-black/50 rounded-full px-3 py-2 md:px-4 md:py-2">
+              <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 flex items-center space-x-2 md:space-x-4 bg-black/50 rounded-full px-3 py-2 md:px-4 md:py-2 z-10">
                 <button
                   onClick={prevImage}
                   className="text-white hover:text-[#6b93ff] transition-colors"
+                  aria-label="Previous image"
                 >
                   <SkipBack className="w-4 h-4 md:w-5 md:h-5" />
                 </button>
                 <button
                   onClick={() => setIsPlaying(!isPlaying)}
                   className="text-white hover:text-[#6b93ff] transition-colors"
+                  aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}
                 >
                   {isPlaying ? (
                     <Pause className="w-4 h-4 md:w-5 md:h-5" />
@@ -162,6 +168,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
                 <button
                   onClick={nextImage}
                   className="text-white hover:text-[#6b93ff] transition-colors"
+                  aria-label="Next image"
                 >
                   <SkipForward className="w-4 h-4 md:w-5 md:h-5" />
                 </button>
@@ -171,7 +178,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
               </div>
 
               {/* Project Category Badge */}
-              <div className="absolute top-4 left-4 md:top-6 md:left-6">
+              <div className="absolute top-4 left-4 md:top-6 md:left-6 z-10">
                 <span className="bg-[#032685] text-white px-3 py-1 md:px-4 md:py-2 rounded-full font-bold text-sm md:text-lg">
                   {project.category}
                 </span>
@@ -213,7 +220,8 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
                             key={index}
                             className="group relative rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300"
                             style={{
-                              background: 'linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%)',
+                              background:
+                                "linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%)",
                             }}
                           >
                             <VideoPlayer
@@ -357,6 +365,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 z-10 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+              aria-label="Close modal"
             >
               <X className="w-6 h-6" />
             </button>
@@ -366,6 +375,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
               <button
                 onClick={prevModalImage}
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-colors"
+                aria-label="Previous image"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
@@ -376,40 +386,48 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
               <button
                 onClick={nextModalImage}
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-colors"
+                aria-label="Next image"
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
             )}
 
             {/* Modal Image */}
-            <img
-              src={project.images[modalImageIndex]}
-              alt={project.name}
-              className="max-w-full max-h-full object-contain rounded-lg"
-            />
+            <div className="relative w-full h-full">
+              <Image
+                src={project.images[modalImageIndex]}
+                alt={`${project.name} - Full view ${modalImageIndex + 1}`}
+                fill
+                className="object-contain rounded-lg"
+                sizes="(max-width: 1536px) 100vw, 1536px"
+                priority
+              />
+            </div>
 
             {/* Image Counter */}
             {project.images.length > 1 && (
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-4 py-2 rounded-full text-sm">
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-4 py-2 rounded-full text-sm z-10">
                 {modalImageIndex + 1} / {project.images.length}
               </div>
             )}
 
             {/* Thumbnail Navigation */}
             {project.images.length > 1 && (
-              <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-2 max-w-md overflow-x-auto">
+              <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-2 max-w-md overflow-x-auto z-10">
                 {project.images.map((image, index) => (
                   <button
                     key={index}
                     onClick={() => setModalImageIndex(index)}
-                    className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden ${
+                    className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden relative ${
                       index === modalImageIndex ? "ring-2 ring-white" : ""
                     }`}
                   >
-                    <img
+                    <Image
                       src={image}
-                      alt=""
-                      className="w-full h-full object-cover"
+                      alt={`Thumbnail ${index + 1}`}
+                      fill
+                      className="object-cover"
+                      sizes="64px"
                     />
                   </button>
                 ))}

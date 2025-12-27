@@ -1,5 +1,6 @@
 // components/pages/ProductDetailPage.tsx
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { ArrowLeft, ChevronRight, X, ChevronLeft } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
@@ -96,12 +97,15 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
                 {/* Product Images */}
                 <div>
-                  <div className="relative mb-4 sm:mb-6">
-                    <img
+                  <div className="relative mb-4 sm:mb-6 h-64 sm:h-80 lg:h-96 rounded-xl sm:rounded-2xl overflow-hidden">
+                    <Image
                       src={product.images[currentImageIndex]}
-                      alt={product.name}
-                      className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-xl sm:rounded-2xl cursor-pointer hover:opacity-95 transition-opacity"
+                      alt={`${product.name} - ${product.category}`}
+                      fill
+                      className="object-cover cursor-pointer hover:opacity-95 transition-opacity"
                       onClick={() => handleImageClick(currentImageIndex)}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+                      priority
                     />
 
                     {/* Auto-scroll toggle */}
@@ -110,7 +114,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                         onClick={() =>
                           setIsAutoScrollEnabled(!isAutoScrollEnabled)
                         }
-                        className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium hover:bg-black/70 transition-colors"
+                        className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium hover:bg-black/70 transition-colors z-10"
                       >
                         {isAutoScrollEnabled
                           ? t("productDetailPage.pause")
@@ -120,7 +124,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
 
                     {/* Image Navigation Dots */}
                     {product.images.length > 1 && (
-                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
                         {product.images.map((_, index) => (
                           <button
                             key={index}
@@ -157,16 +161,18 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                               5000
                             );
                           }}
-                          className={`relative rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition-opacity ${
+                          className={`relative h-16 sm:h-20 rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition-opacity ${
                             index === currentImageIndex
                               ? "ring-2 ring-[#032685]"
                               : ""
                           }`}
                         >
-                          <img
+                          <Image
                             src={image}
-                            alt=""
-                            className="w-full h-16 sm:h-20 object-cover"
+                            alt={`${product.name} thumbnail ${index + 1}`}
+                            fill
+                            className="object-cover"
+                            sizes="100px"
                           />
                         </button>
                       ))}
@@ -433,6 +439,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 z-10 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+              aria-label="Close modal"
             >
               <X className="w-6 h-6" />
             </button>
@@ -442,6 +449,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               <button
                 onClick={() => navigateModal("prev")}
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-colors"
+                aria-label="Previous image"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
@@ -452,40 +460,48 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               <button
                 onClick={() => navigateModal("next")}
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-colors"
+                aria-label="Next image"
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
             )}
 
             {/* Modal Image */}
-            <img
-              src={product.images[modalImageIndex]}
-              alt={product.name}
-              className="max-w-full max-h-full object-contain rounded-lg"
-            />
+            <div className="relative w-full h-full">
+              <Image
+                src={product.images[modalImageIndex]}
+                alt={`${product.name} - Full view ${modalImageIndex + 1}`}
+                fill
+                className="object-contain rounded-lg"
+                sizes="(max-width: 1536px) 100vw, 1536px"
+                priority
+              />
+            </div>
 
             {/* Image Counter */}
             {product.images.length > 1 && (
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-4 py-2 rounded-full text-sm">
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-4 py-2 rounded-full text-sm z-10">
                 {modalImageIndex + 1} / {product.images.length}
               </div>
             )}
 
             {/* Thumbnail Navigation */}
             {product.images.length > 1 && (
-              <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-2 max-w-md overflow-x-auto">
+              <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-2 max-w-md overflow-x-auto z-10">
                 {product.images.map((image, index) => (
                   <button
                     key={index}
                     onClick={() => setModalImageIndex(index)}
-                    className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden ${
+                    className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden relative ${
                       index === modalImageIndex ? "ring-2 ring-white" : ""
                     }`}
                   >
-                    <img
+                    <Image
                       src={image}
-                      alt=""
-                      className="w-full h-full object-cover"
+                      alt={`Thumbnail ${index + 1}`}
+                      fill
+                      className="object-cover"
+                      sizes="64px"
                     />
                   </button>
                 ))}

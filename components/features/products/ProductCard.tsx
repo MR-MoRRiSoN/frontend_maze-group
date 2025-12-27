@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
@@ -40,6 +41,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         return Images.RakCeramics;
       default:
         console.error("NoProdFound");
+        return Images.Balsen; // fallback image
     }
   };
 
@@ -49,54 +51,23 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
       style={{ animationDelay: `${animationDelay}ms` }}
-      //onClick={() => onViewDetails(product)}
     >
-      {/* Option 1: Stretch image to fill full width - may distort aspect ratio */}
-      <div className="relative min-h-48 max-h-64 bg-gray-50">
-        <img
+      {/* Image container with Next.js Image */}
+      <div className="relative min-h-48 max-h-64 bg-gray-50 overflow-hidden rounded-2xl">
+        <Image
           src={getProductImage(product.image)}
-          alt={product.name}
-          className="w-full h-full object-fill rounded-2xl"
+          alt={`${product.name} - ${product.category}`}
+          fill
+          className="object-fill"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         {/* Category badge positioned over image */}
-        <div className="absolute top-4 right-4">
+        <div className="absolute top-4 right-4 z-10">
           <span className="bg-white/90 backdrop-blur-sm text-gray-900 px-3 py-1.5 rounded-full text-sm font-semibold shadow-lg border border-gray-200">
             {product.category}
           </span>
         </div>
       </div>
-
-      {/* Option 2: Stretch width but maintain aspect ratio by cropping height */}
-      {/* 
-      <div className="relative min-h-48 max-h-64 bg-gray-50 overflow-hidden">
-        <img
-          src={getProductImage(product.image)}
-          alt={product.name}
-          className="w-full h-full object-cover rounded-2xl"
-        />
-        <div className="absolute top-4 right-4">
-          <span className="bg-white/90 backdrop-blur-sm text-gray-900 px-3 py-1.5 rounded-full text-sm font-semibold shadow-lg border border-gray-200">
-            {product.category}
-          </span>
-        </div>
-      </div>
-      */}
-
-      {/* Option 3: Force minimum width stretch with object-cover */}
-      {/* 
-      <div className="relative min-h-48 max-h-64 bg-gray-50">
-        <img
-          src={getProductImage(product.image)}
-          alt={product.name}
-          className="w-full h-full object-cover object-center rounded-2xl min-w-full"
-        />
-        <div className="absolute top-4 right-4">
-          <span className="bg-white/90 backdrop-blur-sm text-gray-900 px-3 py-1.5 rounded-full text-sm font-semibold shadow-lg border border-gray-200">
-            {product.category}
-          </span>
-        </div>
-      </div>
-      */}
 
       <div className="flex flex-col flex-1">
         <div className="flex-1 flex flex-col justify-center mb-4">

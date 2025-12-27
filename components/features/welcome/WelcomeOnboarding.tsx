@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/Button";
@@ -151,11 +152,16 @@ export const WelcomeOnboarding: React.FC = () => {
               className="mb-12"
             >
               <div className="inline-block p-8 bg-white/80 backdrop-blur-lg rounded-3xl border-2 border-[#032685]/20 shadow-2xl">
-                <img
-                  src={Svgs.MainLogo}
-                  alt="Maze Group Logo"
-                  className="w-48 h-auto md:w-64"
-                />
+                <div className="relative w-48 h-24 md:w-64 md:h-32">
+                  <Image
+                    src={Svgs.MainLogo}
+                    alt="Maze Group Logo - Professional IT and Hospitality Solutions"
+                    fill
+                    className="object-contain"
+                    priority
+                    sizes="(max-width: 768px) 192px, 256px"
+                  />
+                </div>
               </div>
             </motion.div>
 

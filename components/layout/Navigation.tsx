@@ -2,6 +2,7 @@
 "use client";
 
 import React, { useState, useTransition, useRef, useEffect } from "react";
+import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Svgs } from "../constants";
 import { Locale } from "@/i18n/config";
@@ -84,9 +85,16 @@ export const Navigation: React.FC<NavigationProps> = ({ onSectionClick }) => {
           <div className="flex items-center">
             <div
               onClick={() => onSectionClick("home")}
-              className="text-xl sm:text-2xl md:text-3xl font-black text-[#032685] cursor-pointer"
+              className="text-xl sm:text-2xl md:text-3xl font-black text-[#032685] cursor-pointer relative w-[120px] h-[40px]"
             >
-              <img width={120} src={Svgs.MainLogo} alt="App Logo" />
+              <Image
+                src={Svgs.MainLogo}
+                alt="Maze Group - Hotel Equipment & IT Solutions"
+                fill
+                className="object-contain"
+                priority
+                sizes="120px"
+              />
             </div>
           </div>
 

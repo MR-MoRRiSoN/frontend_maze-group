@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Svgs } from "@/components/constants";
 import { useTranslations } from "next-intl";
 
@@ -12,7 +13,13 @@ const Loading = () => {
         <div className="relative">
           <div className="w-32 h-32 bg-white rounded-full shadow-lg flex items-center justify-center animate-pulse">
             <div className="w-24 h-24 rounded-full flex items-center justify-center text-white font-bold text-xl">
-              <img src={Svgs.MainLogo} />
+              <Image
+                src={Svgs.MainLogo}
+                alt="Maze Group Logo"
+                width={96}
+                height={96}
+                priority
+              />
             </div>
           </div>
 

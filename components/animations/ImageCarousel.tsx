@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Play, Pause, SkipBack, SkipForward } from "lucide-react";
 import { useImageCarousel } from "@/lib/hooks/useImageCarousel";
 
@@ -28,11 +29,16 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
   return (
     <div className="relative">
-      <img
-        src={images[currentImageIndex]}
-        alt={alt}
-        className="w-full h-96 object-cover rounded-2xl"
-      />
+      <div className="relative w-full h-96 rounded-2xl overflow-hidden">
+        <Image
+          src={images[currentImageIndex]}
+          alt={`${alt} - Image ${currentImageIndex + 1}`}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority={currentImageIndex === 0}
+        />
+      </div>
 
       {showControls && images.length > 1 && (
         <>
@@ -41,6 +47,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
             <button
               onClick={prevImage}
               className="text-white hover:text-[#6b93ff]"
+              aria-label="Previous image"
             >
               <SkipBack className="w-5 h-5" />
             </button>
@@ -48,6 +55,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
               <button
                 onClick={() => setIsPlaying(!isPlaying)}
                 className="text-white hover:text-[#6b93ff]"
+                aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}
               >
                 {isPlaying ? (
                   <Pause className="w-5 h-5" />
@@ -59,6 +67,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
             <button
               onClick={nextImage}
               className="text-white hover:text-[#6b93ff]"
+              aria-label="Next image"
             >
               <SkipForward className="w-5 h-5" />
             </button>
@@ -73,6 +82,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
               <button
                 key={index}
                 onClick={() => goToImage(index)}
+                aria-label={`Go to image ${index + 1}`}
                 className={`w-3 h-3 rounded-full transition-colors ${
                   index === currentImageIndex ? "bg-[#032685]" : "bg-white/50"
                 }`}
