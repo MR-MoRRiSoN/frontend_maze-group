@@ -85,16 +85,9 @@ export const Navigation: React.FC<NavigationProps> = ({ onSectionClick }) => {
           <div className="flex items-center">
             <div
               onClick={() => onSectionClick("home")}
-              className="text-xl sm:text-2xl md:text-3xl font-black text-[#032685] cursor-pointer relative w-[120px] h-[40px]"
+              className="text-xl sm:text-2xl md:text-3xl font-black text-[#032685] cursor-pointer"
             >
-              <Image
-                src={Svgs.MainLogo}
-                alt="Maze Group - Hotel Equipment & IT Solutions"
-                fill
-                className="object-contain"
-                priority
-                sizes="120px"
-              />
+              <img width={120} src={Svgs.MainLogo} alt="App Logo" />
             </div>
           </div>
 

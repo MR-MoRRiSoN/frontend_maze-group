@@ -153,14 +153,7 @@ export const WelcomeOnboarding: React.FC = () => {
             >
               <div className="inline-block p-8 bg-white/80 backdrop-blur-lg rounded-3xl border-2 border-[#032685]/20 shadow-2xl">
                 <div className="relative w-48 h-24 md:w-64 md:h-32">
-                  <Image
-                    src={Svgs.MainLogo}
-                    alt="Maze Group Logo - Professional IT and Hospitality Solutions"
-                    fill
-                    className="object-contain"
-                    priority
-                    sizes="(max-width: 768px) 192px, 256px"
-                  />
+                  <img width={200} src={Svgs.MainLogo} alt="App Logo" />
                 </div>
               </div>
             </motion.div>
