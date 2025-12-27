@@ -32,36 +32,6 @@ export const metadata: Metadata = {
     "LED screens for hotels and casinos",
     "LED video wall supplier Georgia",
     "outdoor LED screen supplier Georgia",
-
-    // Room equipment
-    "hotel minibar supplier Georgia",
-    "hotel safe box supplier Georgia",
-    "hotel room equipment Georgia",
-    "hotel kettle and tray set supplier",
-    "hotel hair dryer supplier",
-
-    // Flooring & Carpets
-    "hotel carpet supplier Georgia",
-    "Balsan carpet tiles Georgia",
-    "hotel corridor carpet supplier",
-    "hotel flooring solutions Georgia",
-    "hotel bathroom ceramics supplier",
-
-    // IT Infrastructure
-    "hotel IT infrastructure integrator Georgia",
-    "hospitality Wi-Fi solutions",
-    "hotel server solutions",
-    "data center virtualization",
-
-    // Russian keywords
-    "Поставщик оборудования для отелей в Грузии",
-    "Поставщик оборудования для отелей в Тбилиси",
-    "LG телевизоры для отелей Грузия",
-    "Samsung телевизоры для отелей Грузия",
-    "LED экраны для отелей Грузия",
-    "Минибары для отелей Грузия",
-    "Сейфы для отелей Грузия",
-    "ИТ-инфраструктура для отелей Грузия",
   ],
   authors: [{ name: "Maze Group" }],
   creator: "Maze Group",
