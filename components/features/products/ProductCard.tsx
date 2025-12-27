@@ -36,8 +36,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         return Images.Surglasses;
       case "eastonhk":
         return Images.Eastonhk;
-      case "rak_ceramics":
-        return Images.RakCeramics;
       default:
         console.error("NoProdFound");
     }

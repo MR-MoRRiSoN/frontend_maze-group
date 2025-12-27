@@ -27,7 +27,6 @@ import radisson from "@/assets/images/Radisson-Logo-1909.png";
 import ritzCarlton from "@/assets/images/RitzCarlton.svg";
 import suftaSakhli from "@/assets/images/suftasakhli.svg";
 import wwest from "@/assets/images/wwest.jpg";
-import RakCeramics from "@/assets/catalog_images/rak_ceramics.png";
 
 const Images = {
   SilkRoadGroup: SilkRoadGroup.src,
@@ -59,7 +58,6 @@ const Images = {
   ritzCarlton: ritzCarlton.src,
   suftaSakhli: suftaSakhli.src,
   wwest: wwest.src,
-  RakCeramics: RakCeramics.src,
 };
 
 export default Images;
